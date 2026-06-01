@@ -27,7 +27,7 @@ export default async function DynamicPage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <div className="min-h-screen bg-background pt-32 pb-16 px-6">
+    <div className="min-h-screen bg-background pt-44 lg:pt-48 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 text-sm font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
           <span className="capitalize">{data.category}</span>

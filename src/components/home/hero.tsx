@@ -91,7 +91,7 @@ function LiveDot() {
   );
 }
 
-function StatItem({ stat, index }: { stat: typeof HERO_STATS[0]; index: number }) {
+function StatItem({ stat, index }: { stat: typeof HERO_STATS[number]; index: number }) {
   return (
     <motion.div
       custom={index}

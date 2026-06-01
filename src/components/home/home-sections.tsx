@@ -164,13 +164,6 @@ export function HomeSections() {
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {service.description}
                   </p>
-                  <Link
-                    href={service.href}
-                    className="accent-link mt-4 inline-flex items-center gap-1 text-sm"
-                  >
-                    Learn more
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
                 </motion.div>
               );
             })}
@@ -267,7 +260,16 @@ export function HomeSections() {
       {/* Industries */}
       <section className="relative z-10 border-t border-border py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading title={INDUSTRIES_SECTION.title} />
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <SectionHeading title={INDUSTRIES_SECTION.title} align="left" className="mx-0 text-left max-w-2xl" />
+            <Link
+              href="/portfolio-reapmind"
+              className="btn-primary flex-shrink-0"
+            >
+              Explore Our Industries
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
 
           {/* Modern editorial / floating rail layout */}
           <div className="relative mt-20">
