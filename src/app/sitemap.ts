@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
     '/about-our-company',
+    '/company',
     '/contact-us',
     '/team-reapmind',
     '/careers',

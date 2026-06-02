@@ -1001,7 +1001,7 @@ export function HomeSections() {
             ))}
           </div>
           <Link
-            href="/about-our-company"
+            href="/company"
             className="mx-auto mt-8 flex w-fit items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition hover:border-brand/40 hover:bg-surface"
           >
             About us

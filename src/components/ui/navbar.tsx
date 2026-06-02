@@ -28,7 +28,7 @@ type NavItem = {
   links?: { label: string; href: string }[];
 };
 
-const NAV_ITEMS: NavItem[] = [
+const NAV_ITEMS: NavItem[] = [    
   { label: "About", href: "/about-our-company", links: NAV_ABOUT },
   { label: "Services", href: "/services", sections: NAV_SERVICES },
   { label: "Industries", sections: NAV_INDUSTRIES },
