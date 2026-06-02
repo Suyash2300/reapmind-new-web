@@ -413,7 +413,7 @@ export default function TeamClient() {
             <div className="absolute inset-0 bg-[#F5F7FA] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] scale-105 pointer-events-none" />
             <div className="relative w-full h-full overflow-hidden rounded-[50%] lg:rounded-[45%_55%_45%_55%/55%_45%_55%_45%] shadow-xl">
               <Image 
-                src="/images/aroofsteam.jpg" 
+                src="/images/group.png" 
                 alt="ReapMind Team"
                 fill
                 className="object-cover"
