@@ -21,6 +21,27 @@ const images = [
   }
 ];
 
+// Testimonial images (saved to public/images/contact/)
+const testimonialImages = [
+  {
+    url: 'https://reapmind.com/wp-content/uploads/2023/10/Reapmind-Client-Testimonials.jpg',
+    name: 'contact/testimonials-bg.jpg',
+    dest: 'contact'
+  },
+  // Matthew Carter – no dedicated photo on site; using testimonials bg as placeholder
+  {
+    url: 'https://reapmind.com/wp-content/uploads/2023/10/Reapmind-Client-Testimonials.jpg',
+    name: 'contact/matthew.jpg',
+    dest: 'contact'
+  },
+  // Dr. Murugan Kandasamy – no dedicated photo on site; using testimonials bg as placeholder
+  {
+    url: 'https://reapmind.com/wp-content/uploads/2023/10/Reapmind-Client-Testimonials.jpg',
+    name: 'contact/murugan.jpg',
+    dest: 'contact'
+  }
+];
+
 const download = (url, dest) => {
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(dest);
