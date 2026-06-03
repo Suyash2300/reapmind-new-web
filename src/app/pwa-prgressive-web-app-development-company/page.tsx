@@ -208,9 +208,9 @@ export default function PwaPage() {
               style={{ color: 'var(--muted-foreground)', opacity: 0.7 }}>Trusted by global enterprises</p>
             <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
               {SHARED_CLIENT_LOGOS.map(l => (
-                <div key={l.name} className="relative h-6 w-20 opacity-50 hover:opacity-90 transition-opacity duration-300">
-                  <Image src={l.src} alt={l.name} fill className="object-contain" />
-                </div>
+                <Image key={l.name} src={l.src} alt={l.name} height={24} width={80}
+                  style={{ width: 'auto', height: '24px', opacity: 0.5 }}
+                  className="hover:opacity-90 transition-opacity duration-300 object-contain" />
               ))}
             </div>
           </div>
