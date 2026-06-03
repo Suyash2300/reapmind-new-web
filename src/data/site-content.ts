@@ -133,7 +133,10 @@ export const NAV_SERVICES: NavSection[] = [
       { label: "AI Copilot Development", href: "/ai-copilot-development-company" },
       { label: "Blockchain App Development", href: "/blockchain-app-development-company" },
       { label: "Chatbots Development", href: "/chatbots-development" },
+      {label:"Business Digital Transformation", href:"/"},
+      {label:"Startup", href:"/top-startup-development-company-in-india"},
       { label: "Metaverse Development", href: "/metaverse-development-company" },
+      {label:"NFT Development",href:"/nft-marketplace-development-company"},
     ],
   },
   {

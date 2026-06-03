@@ -14,7 +14,6 @@ const DEV_TYPES = [
   'Flutter Developer',
   'React Native Developer',
   'Full Stack Developer',
-  'Python Developer',
   'Salesforce Developer',
   'AngularJS Developer',
   'ReactJS Developer',
