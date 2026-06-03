@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact-us',
     '/team-reapmind',
     '/careers',
+    '/generative-ai-development-company',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

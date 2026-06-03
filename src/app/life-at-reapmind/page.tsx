@@ -128,7 +128,7 @@ export default function LifeAtReapMind() {
       <div className="absolute bottom-[20%] right-[5%] w-[500px] h-[500px] rounded-full bg-brand-deep/5 blur-[150px] pointer-events-none z-0" />
 
       {/* ── 1. HERO / BREADCRUMB ── */}
-      <section className="relative z-10 border-b border-border/30">
+      
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 md:py-14">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -159,7 +159,7 @@ export default function LifeAtReapMind() {
             drives our digital transformation success story.
           </motion.p>
         </div>
-      </section>
+      
 
       {/* ── 2. LEADERSHIP TEAM SECTION ── */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28 relative z-10">
