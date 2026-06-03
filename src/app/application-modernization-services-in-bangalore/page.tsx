@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -8,7 +8,7 @@ import {
   HeartPulse, Landmark, ShoppingCart, GraduationCap, Car, Utensils,
   Smartphone, Truck, Plane, Radio, Bitcoin, Film, Layers, Cloud,
   Zap, ShieldCheck, Paintbrush, GitMerge, Phone, Mail, Star,
-  TrendingUp, Users, BarChart3, Rocket,
+  TrendingUp, BarChart3, Rocket,
 } from "lucide-react";
 
 const fadeUp = {
@@ -17,12 +17,7 @@ const fadeUp = {
   viewport: { once: true, margin: "-50px" } as const,
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
 };
-const fadeIn = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  viewport: { once: true } as const,
-  transition: { duration: 0.5 },
-};
+
 const slideLeft = {
   initial: { opacity: 0, x: -32 },
   whileInView: { opacity: 1, x: 0 },
