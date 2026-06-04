@@ -1,3 +1,0 @@
-@charset "UTF-8";
-/* https://reapmind.com/wp-content/plugins/animated-typing-effect/assets/css/cursor.css?ver=6.8.3 */
-.typed-cursor{opacity:1;-webkit-animation:blink 0.7s infinite;-moz-animation:blink 0.7s infinite;animation:blink 0.7s infinite}@-moz-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
