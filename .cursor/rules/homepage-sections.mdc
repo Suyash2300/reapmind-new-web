@@ -1,0 +1,11 @@
+---
+description: Homepage section placement and dark theme defaults
+globs: app/page.tsx,components/home/**/*
+alwaysApply: false
+---
+
+# Homepage sections
+
+- **Bottom placement:** New sections go last in `app/page.tsx` (above footer), not mid-page, unless the user specifies a position.
+- **Dark theme:** `bg-surface-dark` + `text-primary-foreground`. Cards use `border-border-strong`, `bg-surface-elevated`, white/`white/60` text, primary hover — same as existing dark home sections.
+- **Avoid** `bg-surface-warm`, white section backgrounds, or light-theme copy colors unless the user explicitly asks.

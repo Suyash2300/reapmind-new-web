@@ -12,34 +12,34 @@ type PortfolioCaseCardProps = {
 export function PortfolioCaseCard({ study, variant }: PortfolioCaseCardProps) {
   const isCenter = variant === "center";
 
-  const shell = (
-    <article
-      className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] shadow-[0_32px_80px_-28px_rgba(0,0,0,0.55)] [backface-visibility:hidden] ${
-        isCenter
-          ? "min-h-[500px] p-6 sm:min-h-[540px] sm:p-7"
-          : "min-h-[420px] p-5 sm:min-h-[440px]"
-      }`}
-      style={{ backgroundColor: study.accent }}
+  return (
+    <Link
+      href={study.href}
+      aria-label={`View ${study.title} case study`}
+      className="group relative block h-full w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
     >
-      {isCenter ? <CenterCardBody study={study} /> : <SideCardBody study={study} />}
-    </article>
-  );
-
-  if (isCenter) {
-    return (
-      <Link
-        href={study.href}
-        className="group relative block h-full w-full text-left"
+      <article
+        className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] shadow-[0_32px_80px_-28px_rgba(0,0,0,0.55)] transition-[box-shadow,transform] duration-300 [backface-visibility:hidden] group-hover:shadow-[0_36px_90px_-24px_rgba(26,105,253,0.35)] ${
+          isCenter
+            ? "min-h-[500px] p-6 sm:min-h-[540px] sm:p-7"
+            : "min-h-[420px] p-5 sm:min-h-[440px] group-hover:-translate-y-0.5"
+        }`}
+        style={{ backgroundColor: study.accent }}
       >
-        {shell}
-        <span className="pointer-events-none absolute bottom-8 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-black px-7 py-3 text-sm font-semibold text-white opacity-0 shadow-lg transition-all duration-300 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
-          View case study
-        </span>
-      </Link>
-    );
-  }
+        {isCenter ? <CenterCardBody study={study} /> : <SideCardBody study={study} />}
+      </article>
 
-  return <div className="h-full w-full">{shell}</div>;
+      <span
+        className={`pointer-events-none absolute left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-black px-7 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 ease-out ${
+          isCenter
+            ? "bottom-8 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+            : "bottom-6 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+        }`}
+      >
+        View case study
+      </span>
+    </Link>
+  );
 }
 
 function CardHeader({ study }: { study: PortfolioCaseStudy }) {
