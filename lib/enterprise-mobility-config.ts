@@ -31,38 +31,31 @@ export const enterpriseMobilityConfig = {
     items: [
       {
         title: "Custom Enterprise App Development",
-        description: "Our expert team of developers and designers works closely with you to create custom enterprise apps that align perfectly with your business objectives. From ideation to deployment, we ensure that every aspect of the app is tailored to meet your specific requirements. By leveraging the latest technologies and development frameworks, we deliver scalable, secure, and high-performance apps that elevate your enterprise.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+        description: "Our expert team of developers and designers works closely with you to create custom enterprise apps that align perfectly with your business objectives. From ideation to deployment, we ensure that every aspect of the app is tailored to meet your specific requirements. By leveraging the latest technologies and development frameworks, we deliver scalable, secure, and high-performance apps that elevate your enterprise."
       },
       {
         title: "User-Centric Design",
-        description: "We believe in putting your users at the center of the app development process. Our user-centric design approach focuses on understanding your target audience, their needs, and their expectations. By crafting intuitive and visually appealing interfaces, we create enterprise apps that provide exceptional user experiences. We strive to make every interaction seamless, efficient, and delightful, driving user engagement and satisfaction.",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+        description: "We believe in putting your users at the center of the app development process. Our user-centric design approach focuses on understanding your target audience, their needs, and their expectations. By crafting intuitive and visually appealing interfaces, we create enterprise apps that provide exceptional user experiences. We strive to make every interaction seamless, efficient, and delightful, driving user engagement and satisfaction."
       },
       {
         title: "Cross-Platform Development",
-        description: "Reach a wider audience and maximize your app's potential with our cross-platform development expertise. Our team leverages hybrid app development frameworks to create apps that work seamlessly across multiple platforms, including iOS, Android, and web. By ensuring compatibility and consistency across devices, we enable your enterprise to connect with users regardless of their preferred platform.",
-        image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80"
+        description: "Reach a wider audience and maximize your app's potential with our cross-platform development expertise. Our team leverages hybrid app development frameworks to create apps that work seamlessly across multiple platforms, including iOS, Android, and web. By ensuring compatibility and consistency across devices, we enable your enterprise to connect with users regardless of their preferred platform."
       },
       {
         title: "Integration and API Development",
-        description: "Integrate your enterprise apps with existing systems and third-party APIs to enhance functionality and data exchange. Our experienced developers specialize in seamless integration, enabling your apps to communicate with other enterprise systems, databases, and external services. With secure authentication, data synchronization, and real-time connectivity, we ensure smooth and reliable integration for enhanced productivity and efficiency.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
+        description: "Integrate your enterprise apps with existing systems and third-party APIs to enhance functionality and data exchange. Our experienced developers specialize in seamless integration, enabling your apps to communicate with other enterprise systems, databases, and external services. With secure authentication, data synchronization, and real-time connectivity, we ensure smooth and reliable integration for enhanced productivity and efficiency."
       },
       {
         title: "Mobile Backend Development",
-        description: "A robust backend infrastructure is vital for the seamless functioning of your enterprise apps. Our expertise in mobile backend development ensures the efficient handling of data storage, retrieval, and synchronization. We design scalable architectures, develop secure APIs, and implement databases that support your app's operations, providing a strong foundation for reliable and performant app experiences.",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+        description: "A robust backend infrastructure is vital for the seamless functioning of your enterprise apps. Our expertise in mobile backend development ensures the efficient handling of data storage, retrieval, and synchronization. We design scalable architectures, develop secure APIs, and implement databases that support your app's operations, providing a strong foundation for reliable and performant app experiences."
       },
       {
         title: "App Maintenance and Support",
-        description: "We are committed to the long-term success of your enterprise apps. Our comprehensive app maintenance and support services cover everything from bug fixes and updates to enhancements and troubleshooting. We proactively monitor app performance, ensure its compatibility with new operating systems and devices, and provide timely support to address any issues that may arise. With our ongoing maintenance and support, your apps remain optimized, secure, and up-to-date.",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+        description: "We are committed to the long-term success of your enterprise apps. Our comprehensive app maintenance and support services cover everything from bug fixes and updates to enhancements and troubleshooting. We proactively monitor app performance, ensure its compatibility with new operating systems and devices, and provide timely support to address any issues that may arise. With our ongoing maintenance and support, your apps remain optimized, secure, and up-to-date."
       },
       {
         title: "Enterprise App Modernization",
-        description: "Stay ahead of the competition by modernizing your existing enterprise apps. Our app modernization services breathe new life into outdated applications, leveraging the latest technologies and design principles. We revamp and optimize your apps to improve performance, enhance user experiences, and align them with current industry standards. By embracing modernization, your enterprise can unlock new capabilities and seize opportunities for growth.",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
+        description: "Stay ahead of the competition by modernizing your existing enterprise apps. Our app modernization services breathe new life into outdated applications, leveraging the latest technologies and design principles. We revamp and optimize your apps to improve performance, enhance user experiences, and align them with current industry standards. By embracing modernization, your enterprise can unlock new capabilities and seize opportunities for growth."
       }
     ]
   },

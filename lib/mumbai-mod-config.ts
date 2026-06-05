@@ -56,33 +56,27 @@ export const mumbaiModConfig = {
     items: [
       {
         title: "Technology Stack Migration",
-        description: "Upgrade your mobile app smoothly with our tech stack migration services. We carefully check your current tech stack and make a personalized plan to move to better systems using modern tools. Our experts navigate the complexities involved in transitioning your app to modern frameworks, minimizing disruptions and maximizing performance. Whether you're upgrading from legacy systems or optimizing your current stack, we offer end-to-end support for a smooth and efficient migration journey, tailored to your unique needs.",
-        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+        description: "Upgrade your mobile app smoothly with our tech stack migration services. We carefully check your current tech stack and make a personalized plan to move to better systems using modern tools. Our experts navigate the complexities involved in transitioning your app to modern frameworks, minimizing disruptions and maximizing performance. Whether you're upgrading from legacy systems or optimizing your current stack, we offer end-to-end support for a smooth and efficient migration journey, tailored to your unique needs."
       },
       {
         title: "Cloud Integration",
-        description: "Our cloud integration service seamlessly connects your systems and applications to cloud resources, enhancing flexibility and efficiency. We ensure smooth adoption and utilization of cloud technologies tailored to your business needs. Our team of experts ensures an easy switch to cloud technology that suits your needs. Whether you want public, private, or hybrid solutions, we've got you covered. ReapMind's cloud integration service is all about making your operations smoother, collaboration better, and agility top-notch.",
-        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80"
+        description: "Our cloud integration service seamlessly connects your systems and applications to cloud resources, enhancing flexibility and efficiency. We ensure smooth adoption and utilization of cloud technologies tailored to your business needs. Our team of experts ensures an easy switch to cloud technology that suits your needs. Whether you want public, private, or hybrid solutions, we've got you covered. ReapMind's cloud integration service is all about making your operations smoother, collaboration better, and agility top-notch."
       },
       {
         title: "Performance Optimization",
-        description: "Our performance optimization services are crafted with meticulous attention to detail, aimed at enhancing your app's speed, responsiveness, and overall efficiency. Through the utilization of state-of-the-art techniques and tools, we pinpoint and resolve performance bottlenecks, guaranteeing smooth user experiences even during peak usage periods. Whether it's optimizing code or fine-tuning databases, we leave no stone unturned to boost your app's performance and responsiveness, ultimately enhancing user satisfaction and retention.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+        description: "Our performance optimization services are crafted with meticulous attention to detail, aimed at enhancing your app's speed, responsiveness, and overall efficiency. Through the utilization of state-of-the-art techniques and tools, we pinpoint and resolve performance bottlenecks, guaranteeing smooth user experiences even during peak usage periods. Whether it's optimizing code or fine-tuning databases, we leave no stone unturned to boost your app's performance and responsiveness, ultimately enhancing user satisfaction and retention."
       },
       {
         title: "Security Enhancement",
-        description: "Our commitment lies in safeguarding the integrity and confidentiality of your mobile app data through our robust security enhancement services. Utilizing cutting-edge encryption algorithms, resilient authentication mechanisms, and vigilant proactive monitoring systems, we strengthen your app's defenses against cyber threats and vulnerabilities. Our personalized security solutions not only meet stringent regulatory standards but also foster trust and confidence among users, providing a solid foundation for safeguarding your brand reputation in an ever-evolving digital landscape.",
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
+        description: "Our commitment lies in safeguarding the integrity and confidentiality of your mobile app data through our robust security enhancement services. Utilizing cutting-edge encryption algorithms, resilient authentication mechanisms, and vigilant proactive monitoring systems, we strengthen your app's defenses against cyber threats and vulnerabilities. Our personalized security solutions not only meet stringent regulatory standards but also foster trust and confidence among users, providing a solid foundation for safeguarding your brand reputation in an ever-evolving digital landscape."
       },
       {
         title: "UX and UI Redesign",
-        description: "ReapMind's UX and UI redesign services breathe new life into your mobile app, captivating users from the very first interaction. Our experienced designers blend creativity with usability principles to craft intuitive interfaces that resonate with your target audience. Through meticulous user research and iterative design iterations, we optimize every aspect of your app's interface, enhancing usability, accessibility, and visual appeal.",
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80"
+        description: "ReapMind's UX and UI redesign services breathe new life into your mobile app, captivating users from the very first interaction. Our experienced designers blend creativity with usability principles to craft intuitive interfaces that resonate with your target audience. Through meticulous user research and iterative design iterations, we optimize every aspect of your app's interface, enhancing usability, accessibility, and visual appeal."
       },
       {
         title: "Feature Modernization",
-        description: "We help you future-proof your mobile apps with feature modernization services. Assessing against industry trends and user feedback, we prioritize updates, streamline workflows, and introduce functionalities aligned with objectives and needs. Collaborating closely, we integrate AI, enhance social media, or incorporate IoT, leveraging cutting-edge tech to empower you to deliver exceptional value and stay ahead of the competition.",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
+        description: "We help you future-proof your mobile apps with feature modernization services. Assessing against industry trends and user feedback, we prioritize updates, streamline workflows, and introduce functionalities aligned with objectives and needs. Collaborating closely, we integrate AI, enhance social media, or incorporate IoT, leveraging cutting-edge tech to empower you to deliver exceptional value and stay ahead of the competition."
       }
     ]
   },

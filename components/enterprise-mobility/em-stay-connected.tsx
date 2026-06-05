@@ -41,7 +41,7 @@ export function EmStayConnected() {
             
             <GsapScrollReveal className="mt-16" delay={0.3}>
               <a 
-                href="/contact-reapmind"
+                href="/contact-us"
                 className="inline-flex h-14 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 font-bold text-white transition-all hover:bg-white hover:text-black"
               >
                 {enterpriseMobilityConfig.stayConnected.cta}

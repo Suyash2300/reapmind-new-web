@@ -70,7 +70,7 @@ export function EmHero() {
 
           <GsapScrollReveal start="top 90%" delay={0.4} className="mt-10">
             <Link
-              href="/contact-reapmind"
+              href="/contact-us"
               className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full bg-primary px-10 font-bold text-black transition-transform hover:scale-105"
             >
               <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">

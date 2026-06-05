@@ -11,6 +11,7 @@ type GsapScrollRevealProps = {
   /** Pin section while inner content animates — use sparingly (hero / case study) */
   pin?: boolean;
   start?: string;
+  delay?: number;
 };
 
 /** GSAP + ScrollTrigger — parallax, scrubbed timelines, pinned storytelling sections */
@@ -19,6 +20,7 @@ export function GsapScrollReveal({
   className,
   pin = false,
   start = "top 80%",
+  delay = 0,
 }: GsapScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reducedMotion = usePrefersReducedMotion();
@@ -33,6 +35,7 @@ export function GsapScrollReveal({
         y: 48,
         duration: 1,
         ease: "power3.out",
+        delay,
         scrollTrigger: {
           trigger: ref.current,
           start,
@@ -41,7 +44,7 @@ export function GsapScrollReveal({
         },
       });
     },
-    { scope: ref, dependencies: [reducedMotion, pin, start] },
+    { scope: ref, dependencies: [reducedMotion, pin, start, delay] },
   );
 
   return (

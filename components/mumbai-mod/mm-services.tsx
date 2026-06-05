@@ -1,102 +1,58 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 import { GsapScrollReveal } from "@/components/motion/gsap-scroll-reveal";
 import { mumbaiModConfig } from "@/lib/mumbai-mod-config";
 
 export function MmServices() {
-  const [active, setActive] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="services" className="section-app bg-surface-dark py-32">
+    <section ref={containerRef} className="section-app bg-surface-dark py-32 relative">
       <div className="container-app">
-        <GsapScrollReveal>
+        <GsapScrollReveal className="max-w-5xl mx-auto text-center mb-24">
           <span className="text-primary font-bold tracking-widest uppercase text-sm block mb-4">
             Our Services
           </span>
-          <h2 className="mt-4 text-display font-bold text-white leading-none max-w-3xl">
+          <h2 className="text-display font-black text-white leading-tight">
             {mumbaiModConfig.services.title}
           </h2>
         </GsapScrollReveal>
 
-        <div className="mt-20 grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Tabs */}
-          <div className="flex flex-col gap-3">
-            {mumbaiModConfig.services.items.map((service, i) => (
-              <GsapScrollReveal key={service.title} start={`top ${80 + i * 4}%`}>
-                <button
-                  onClick={() => setActive(i)}
-                  className={`w-full text-left p-8 rounded-2xl border transition-all duration-500 ${
-                    active === i
-                      ? "bg-primary/10 border-primary"
-                      : "bg-white/3 border-white/5 hover:border-white/20"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`text-sm font-bold uppercase tracking-widest ${active === i ? "text-primary" : "text-white/40"}`}>
-                      0{i + 1}
-                    </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {mumbaiModConfig.services.items.map((service, i) => (
+            <GsapScrollReveal key={service.title} start={`top ${85 + (i % 3) * 5}%`}>
+              <motion.div
+                className="group relative flex flex-col h-full overflow-hidden rounded-3xl border border-white/5 bg-black p-8 transition-all duration-500 hover:bg-white/5 hover:border-primary/30"
+                whileHover={{ y: -8 }}
+              >
+                {/* Number Watermark */}
+                <span className="absolute top-4 right-6 text-7xl font-black text-white/5 select-none transition-transform duration-500 group-hover:scale-110 group-hover:text-primary/10">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center mb-8 border border-primary/30 group-hover:bg-primary transition-colors duration-500">
+                    <svg className="w-6 h-6 text-primary group-hover:text-black transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                   </div>
-                  <h3 className={`text-h3 font-bold transition-colors ${active === i ? "text-primary" : "text-white"}`}>
+                  
+                  <h3 className="text-h5 font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <AnimatePresence>
-                    {active === i && (
-                      <motion.p
-                        initial={{ height: 0, opacity: 0, marginTop: 0 }}
-                        animate={{ height: "auto", opacity: 1, marginTop: 12 }}
-                        exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                        transition={{ duration: 0.35 }}
-                        className="overflow-hidden text-para text-white/60"
-                      >
-                        {service.description}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
-                </button>
-              </GsapScrollReveal>
-            ))}
-          </div>
+                  
+                  <p className="text-para text-white/60 leading-relaxed mt-auto">
+                    {service.description}
+                  </p>
+                </div>
 
-          {/* Image */}
-          <div className="sticky top-28 hidden lg:block">
-            <div className="relative h-[560px] rounded-3xl overflow-hidden ring-1 ring-white/10">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={active}
-                  className="absolute inset-0"
-                  initial={{ opacity: 0, scale: 1.08 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                >
-                  <Image
-                    src={mumbaiModConfig.services.items[active].image || ""}
-                    alt={mumbaiModConfig.services.items[active].title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <motion.div
-                    key={`label-${active}`}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.25 }}
-                    className="absolute bottom-8 left-8"
-                  >
-                    <span className="text-sm font-bold uppercase tracking-widest text-primary">
-                      0{active + 1} / 0{mumbaiModConfig.services.items.length}
-                    </span>
-                    <p className="mt-1 text-h3 font-bold text-white">
-                      {mumbaiModConfig.services.items[active].title}
-                    </p>
-                  </motion.div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </div>
+                {/* Animated bottom border */}
+                <div className="absolute bottom-0 left-0 h-1 bg-primary w-0 transition-all duration-500 group-hover:w-full" />
+              </motion.div>
+            </GsapScrollReveal>
+          ))}
         </div>
       </div>
     </section>
