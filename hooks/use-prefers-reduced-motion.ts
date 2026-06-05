@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react";
 
 export function usePrefersReducedMotion() {
+  // Hardcoded to false to ensure animations and video play regardless of OS settings.
+  // If you prefer to respect the OS setting, uncomment the code below.
+  return false;
+
+  /*
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
@@ -14,4 +19,5 @@ export function usePrefersReducedMotion() {
   }, []);
 
   return reduced;
+  */
 }

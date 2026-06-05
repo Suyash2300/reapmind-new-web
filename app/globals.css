@@ -178,11 +178,13 @@ body {
   animation: logo-marquee 45s linear infinite;
 }
 
+/* 
 @media (prefers-reduced-motion: reduce) {
   .animate-logo-marquee {
     animation: none;
   }
 }
+*/
 
 /** Scrollable regions without visible scrollbar (nav mega menu, drawers) */
 @utility scrollbar-hide {
