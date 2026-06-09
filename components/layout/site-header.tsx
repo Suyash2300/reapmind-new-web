@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useNavMenuScrollLock } from "@/components/providers/smooth-scroll-provider";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import { mainNav, site } from "@/lib/site-config";
 import { NavMegaMenuPanel, NavMenuTrigger } from "./nav-mega-menu";
 import { NavGroupIcon, NavIconBadge } from "./nav-icons";
@@ -59,7 +60,7 @@ export function SiteHeader() {
             >
               {site.ctaLabel}
             </Link>
-            <button
+            <HydrationButton
               type="button"
               className="inline-flex size-10 items-center justify-center rounded-lg border border-border lg:hidden"
               aria-expanded={mobileOpen}
@@ -76,7 +77,7 @@ export function SiteHeader() {
                   <span className="block h-0.5 w-5 bg-foreground" />
                 </span>
               )}
-            </button>
+            </HydrationButton>
           </div>
         </div>
 

@@ -5,14 +5,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion/fade-in";
 
-type WhyUsItem = {
-  title: string;
-  description: string;
+export type WhyUsItem = {
+  readonly title: string;
+  readonly description: string;
 };
 
 type ServiceWhyUsSectionProps = {
   title: string;
-  items: WhyUsItem[];
+  items: ReadonlyArray<WhyUsItem>;
   cta?: { label: string; href: string };
   promoImage?: { src: string; alt: string };
 };

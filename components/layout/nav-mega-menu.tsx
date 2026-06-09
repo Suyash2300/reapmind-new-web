@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import type { NavGroup, NavItem } from "@/lib/site-config";
 import { NavGroupIcon, NavIconBadge, NavLinkIcon } from "./nav-icons";
 
@@ -67,7 +68,7 @@ export function NavMenuTrigger({
           {inner}
         </Link>
       ) : (
-        <button
+        <HydrationButton
           type="button"
           className={triggerClass}
           aria-expanded={isOpen}
@@ -75,7 +76,7 @@ export function NavMenuTrigger({
           onMouseEnter={onOpen}
         >
           {inner}
-        </button>
+        </HydrationButton>
       )}
     </div>
   );
