@@ -27,3 +27,11 @@ Design direction: premium SaaS / Apple-tier scroll motion (GSAP + Lenis for stor
 - **Images/media:** `sizes` on `next/image`; no horizontal overflow (`overflow-x` on body sections).
 - **Motion:** respect `prefers-reduced-motion`; simplify or disable pin/scrub/heavy GSAP on small viewports when needed.
 - **Test breakpoints:** ~375px (phone), ~768px (tablet), ~1280px+ (desktop) before calling a section done.
+
+## Homepage sections (defaults)
+
+When adding new homepage blocks unless the user says otherwise:
+
+- **Placement:** append at the **bottom** of `app/page.tsx` (last section before the footer) — do not insert mid-page by default.
+- **Theme:** use the site **dark/black** palette — `bg-surface-dark`, `text-primary-foreground`, white headings, `text-white/70` body. Cards: `border-border-strong`, `bg-surface-elevated`, primary hover glow (match `home-intro-stats-section`, `home-digital-excellence-section`). Do **not** use `bg-surface-warm` or light/white section backgrounds unless explicitly requested.
+- **Reuse:** do not extract shared UI primitives or refactor for DRY unless the user asks.

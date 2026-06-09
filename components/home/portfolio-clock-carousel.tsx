@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { portfolioCarouselCases } from "@/lib/portfolio";
@@ -242,9 +243,17 @@ export function PortfolioClockCarousel() {
         </div>
       </div>
 
-      <p className="mt-5 text-center text-xs text-white/40 lg:mt-6">
-        Use the arrows or project names above to browse
-      </p>
+      <div className="mt-5 flex flex-col items-center gap-4 lg:mt-6">
+        <Link
+          href={cases[active].href}
+          className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/25 px-8 py-3 text-sm font-semibold text-white transition-colors hover:border-primary hover:bg-primary/10"
+        >
+          View {cases[active].title} case study
+        </Link>
+        <p className="text-center text-xs text-white/40">
+          Use the arrows or project names above to browse
+        </p>
+      </div>
     </div>
   );
 }

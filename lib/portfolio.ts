@@ -232,6 +232,106 @@ export const portfolioCases = [
       "Trusted network for pet services",
     ],
   },
+  {
+    slug: "deutsche-quality-systems-india-dqs-india-audit-app",
+    tabLabel: "DQS India",
+    title: "Deutsche Quality Systems India",
+    tagline: "Audit App",
+    summary:
+      "A comprehensive audit application for Deutsche Quality Systems India, streamlining compliance workflows and field inspections.",
+    href: "/portfolio/deutsche-quality-systems-india-dqs-india-audit-app",
+    image: "/portfolio/dqs-india.jpg",
+    imageAlt: "DQS India audit application",
+    accent: "#eef4ff",
+    highlights: [
+      { value: "Audit-ready", label: "Compliance workflows" },
+      { value: "Field", label: "Inspection tools" },
+    ],
+    bullets: [
+      "Digitized audit and quality assurance",
+      "Built for enterprise compliance teams",
+    ],
+  },
+  {
+    slug: "lakshya-academy-empowering-education",
+    tabLabel: "Lakshya Academy",
+    title: "Lakshya Academy",
+    tagline: "Empowering education through technology",
+    summary:
+      "Lakshya Academy delivers a modern learning platform that connects students, educators, and institutions with engaging digital tools.",
+    href: "/portfolio/lakshya-academy-empowering-education",
+    image: "/portfolio/dqs-india.jpg",
+    imageAlt: "Lakshya Academy education platform",
+    accent: "#fff4e6",
+    highlights: [
+      { value: "Digital", label: "Learning delivery" },
+      { value: "Scalable", label: "Institution-ready" },
+    ],
+    bullets: [
+      "Student-centric learning experiences",
+      "Tools for educators and administrators",
+    ],
+  },
+  {
+    slug: "mt-educare-education-management",
+    tabLabel: "MTeducare",
+    title: "MTeducare",
+    tagline: "Education management",
+    summary:
+      "MTeducare revolutionizes education management with unified administration, scheduling, and student engagement in one platform.",
+    href: "/portfolio/mt-educare-education-management",
+    image: "/portfolio/mteducare.jpg",
+    imageAlt: "MTeducare education management application",
+    accent: "#f0f7ff",
+    highlights: [
+      { value: "Unified", label: "School operations" },
+      { value: "Engaged", label: "Student experience" },
+    ],
+    bullets: [
+      "End-to-end institution management",
+      "Scheduling and communication in one place",
+    ],
+  },
+  {
+    slug: "organic-world",
+    tabLabel: "Organic World",
+    title: "organic world",
+    tagline: "Organic marketplace",
+    summary:
+      "organic world connects conscious consumers with certified organic products through a seamless mobile commerce experience.",
+    href: "/portfolio/organic-world",
+    image: "/portfolio/organic-world.png",
+    imageAlt: "organic world marketplace application",
+    accent: "#edf7ed",
+    highlights: [
+      { value: "Organic", label: "Certified catalog" },
+      { value: "Direct", label: "Consumer reach" },
+    ],
+    bullets: [
+      "Mobile-first organic grocery experience",
+      "Trusted product discovery and checkout",
+    ],
+  },
+  {
+    slug: "i30-jee-neet-foundation-coaching-programs-app-reapmind",
+    tabLabel: "i30",
+    title: "i30",
+    tagline: "JEE, NEET & Foundation coaching",
+    summary:
+      "i30 is a coaching programs app for JEE, NEET, and foundation courses — delivering structured learning paths and progress tracking.",
+    href: "/portfolio/i30-jee-neet-foundation-coaching-programs-app-reapmind",
+    image: "/portfolio/mteducare.jpg",
+    imageAlt: "i30 coaching programs application",
+    accent: "#f5f0ff",
+    highlights: [
+      { value: "JEE & NEET", label: "Exam prep" },
+      { value: "Foundation", label: "Course tracks" },
+    ],
+    bullets: [
+      "Structured coaching program delivery",
+      "Progress tracking for students and mentors",
+    ],
+  },
 ] as const satisfies readonly PortfolioCaseStudy[];
 
 export type PortfolioSlug = (typeof portfolioCases)[number]["slug"];
