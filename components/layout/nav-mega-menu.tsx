@@ -109,7 +109,7 @@ function NavMegaGroupColumn({ group }: { group: NavGroup }) {
 
       <ul className="m-0 flex list-none flex-col p-0">
         {group.links.map((link) => (
-          <li key={link.href} className="m-0 p-0">
+          <li key={`${group.title ?? "links"}-${link.label}-${link.href}`} className="m-0 p-0">
             <Link
               href={link.href}
               className="flex min-h-9 items-center py-1.5 text-sm font-medium leading-5 tracking-normal text-secondary transition-colors hover:text-primary"
@@ -147,7 +147,7 @@ export function NavMegaMenuPanel({ item }: { item: NavItem }) {
         {isSimpleList ? (
           <ul className="m-0 grid list-none gap-x-10 gap-y-0 p-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {groups[0].links.map((link) => (
-              <li key={link.href} className="m-0 p-0">
+              <li key={`${link.label}-${link.href}`} className="m-0 p-0">
                 <Link
                   href={link.href}
                   className="group/link flex min-h-10 items-center gap-2.5 py-2 text-sm font-medium leading-5 text-secondary transition-colors hover:text-primary"

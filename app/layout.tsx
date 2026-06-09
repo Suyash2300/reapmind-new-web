@@ -33,8 +33,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${plusJakarta.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         <SmoothScrollProvider>
           <SiteHeader />
           <div className="flex flex-1 flex-col">{children}</div>

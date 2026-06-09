@@ -113,7 +113,7 @@ export function SiteHeader() {
                     ) : null}
                     <ul className="m-0 flex list-none flex-col gap-0 p-0">
                       {group.links.map((link) => (
-                        <li key={link.href} className="m-0 p-0">
+                        <li key={`${group.title ?? "links"}-${link.label}-${link.href}`} className="m-0 p-0">
                           <Link
                             href={link.href}
                             className="flex min-h-10 items-center py-1.5 text-sm font-medium leading-5 text-secondary hover:text-primary"

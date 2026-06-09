@@ -131,9 +131,8 @@ export const mainNav: NavItem[] = [
       {
         title: "Hire Developers",
         links: [
-          { label: "Hire Developers", href: "/hire-developers" },
           { label: "Android Developers", href: "/hire-top-android-developers" },
-          { label: "iOS Developers", href: "/hire-the-best-ios-developers" },
+          { label: "IOS Developers", href: "/hire-the-best-ios-developers" },
           { label: "Flutter Developers", href: "/hire-flutter-developers" },
           {
             label: "Salesforce Developers",
