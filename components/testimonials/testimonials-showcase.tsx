@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { FadeIn } from "@/components/motion/fade-in";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import {
   testimonials,
@@ -178,7 +179,7 @@ export function TestimonialsShowcase({
           {items.map((item, index) => {
             const active = index === activeIndex;
             return (
-              <button
+              <HydrationButton
                 key={item.id}
                 type="button"
                 onClick={() => goTo(index)}
@@ -197,13 +198,13 @@ export function TestimonialsShowcase({
                   sizes="64px"
                   className="object-cover"
                 />
-              </button>
+              </HydrationButton>
             );
           })}
         </div>
 
         <div className="mt-6 flex justify-center gap-2">
-          <button
+          <HydrationButton
             type="button"
             onClick={() => goTo(activeIndex - 1)}
             aria-label="Previous testimonial"
@@ -219,8 +220,8 @@ export function TestimonialsShowcase({
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
-          <button
+          </HydrationButton>
+          <HydrationButton
             type="button"
             onClick={() => goTo(activeIndex + 1)}
             aria-label="Next testimonial"
@@ -236,7 +237,7 @@ export function TestimonialsShowcase({
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </HydrationButton>
         </div>
       </div>
     </section>

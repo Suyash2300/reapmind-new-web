@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import { portfolioCarouselCases } from "@/lib/portfolio";
 import { PortfolioCaseCard } from "./portfolio-case-card";
 
@@ -107,7 +108,7 @@ export function PortfolioClockCarousel() {
         className="flex min-w-0 flex-1 items-center gap-2 overflow-x-auto py-1 scrollbar-hide"
       >
         {cases.map((study, index) => (
-          <button
+          <HydrationButton
             key={study.slug}
             type="button"
             data-tab-index={index}
@@ -122,7 +123,7 @@ export function PortfolioClockCarousel() {
             }`}
           >
             {study.tabLabel}
-          </button>
+          </HydrationButton>
         ))}
       </div>
       <CarouselArrow
@@ -270,7 +271,7 @@ function CarouselArrow({
   disabled?: boolean;
 }) {
   return (
-    <button
+    <HydrationButton
       type="button"
       onClick={onClick}
       disabled={disabled}
@@ -278,6 +279,6 @@ function CarouselArrow({
       className="flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-primary text-base font-semibold text-white shadow-[0_0_20px_rgba(26,105,253,0.45)] transition-colors hover:bg-primary-hover hover:border-primary-hover disabled:pointer-events-none disabled:border-white/20 disabled:bg-white/10 disabled:text-white/40 disabled:shadow-none sm:size-11"
     >
       {direction === "prev" ? "←" : "→"}
-    </button>
+    </HydrationButton>
   );
 }

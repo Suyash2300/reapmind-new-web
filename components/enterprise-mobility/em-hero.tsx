@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ContactInquiryForm } from "@/components/contact/contact-inquiry-form";
+import { FadeIn } from "@/components/motion/fade-in";
 import { GsapScrollReveal } from "@/components/motion/gsap-scroll-reveal";
 import { enterpriseMobilityConfig } from "@/lib/enterprise-mobility-config";
 
@@ -18,7 +20,7 @@ export function EmHero() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-32 pb-20">
+    <section ref={containerRef} className="relative overflow-hidden bg-black pb-10 pt-10 md:pb-12 md:pt-12 lg:pt-14">
       {/* Parallax Background */}
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
         <Image
@@ -32,7 +34,7 @@ export function EmHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
       </motion.div>
 
-      <div className="container-app relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-app relative z-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-10">
         <div className="max-w-3xl">
           <GsapScrollReveal>
             <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary mb-6">
@@ -85,6 +87,18 @@ export function EmHero() {
             </Link>
           </GsapScrollReveal>
         </div>
+
+        <FadeIn delay={0.08}>
+          <div className="rounded-[1.5rem] border border-border-strong bg-surface-elevated p-5 sm:p-6 lg:sticky lg:top-24">
+            <h2 className="text-h5 font-bold text-white">Have a Idea? Contact Us</h2>
+            <p className="mt-2 text-sm text-white/60">
+              Free consultation within 24 hours — tell us about your mobility project.
+            </p>
+            <div className="mt-4">
+              <ContactInquiryForm submitLabel="Contact Us Today" showMessage={false} />
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

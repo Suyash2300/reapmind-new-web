@@ -36,7 +36,10 @@ const NAV_BASE =
   "relative text-left text-[clamp(1.5rem,2.4vw,2.5rem)] leading-tight will-change-transform";
 
 const IMAGE_CARD_BASE =
-  "relative h-full w-full overflow-hidden rounded-[2.5rem] border bg-neutral-900 transition-[box-shadow,border-color] duration-500";
+  "relative size-full overflow-hidden rounded-[2.5rem] border bg-neutral-900 p-2 transition-[box-shadow,border-color] duration-500 sm:p-2.5";
+
+const IMAGE_MEDIA_CLASS =
+  "relative size-full overflow-hidden rounded-[1.25rem] bg-black";
 
 export function HomeMeetingIndustriesSection() {
   const reducedMotion = usePrefersReducedMotion();
@@ -65,7 +68,6 @@ export function HomeMeetingIndustriesSection() {
 
       const section = sectionRef.current;
       const pinEl = pinRef.current;
-      const imageStage = imageStageRef.current;
       const navStage = navStageRef.current;
       if (!section || !pinEl) return;
 
@@ -81,18 +83,16 @@ export function HomeMeetingIndustriesSection() {
       const tweenDuration = reducedMotion ? 0 : 0.55;
       const tweenEase = "power3.out";
 
-      if (imageStage) {
-        gsap.set(imageStage, {
-          transformPerspective: 1400,
-          transformStyle: "preserve-3d",
-        });
-      }
       if (navStage) {
         gsap.set(navStage, {
           transformPerspective: 900,
           transformStyle: "preserve-3d",
         });
       }
+
+      const resetImageLayerTransform = (el: HTMLDivElement) => {
+        gsap.set(el, { clearProps: "transform" });
+      };
 
       const setImageCardActive = (idx: number) => {
         getImageEls().forEach((layer, i) => {
@@ -112,12 +112,8 @@ export function HomeMeetingIndustriesSection() {
 
         imageEls.forEach((el, i) => {
           const active = i === idx;
-          gsap.set(el, {
-            opacity: active ? 1 : 0,
-            z: active ? 72 : -140,
-            rotateY: active ? 0 : -10,
-            scale: active ? 1 : 0.88,
-          });
+          gsap.set(el, { opacity: active ? 1 : 0 });
+          resetImageLayerTransform(el);
           el.style.pointerEvents = active ? "auto" : "none";
         });
         descEls.forEach((el, i) => {
@@ -167,13 +163,11 @@ export function HomeMeetingIndustriesSection() {
           const active = i === nextIdx;
           gsap.to(el, {
             opacity: active ? 1 : 0,
-            z: active ? 72 : -140,
-            rotateY: active ? 0 : -10,
-            scale: active ? 1 : 0.88,
             duration: tweenDuration,
             ease: tweenEase,
             overwrite: "auto",
           });
+          resetImageLayerTransform(el);
           el.style.pointerEvents = active ? "auto" : "none";
         });
 
@@ -334,10 +328,9 @@ export function HomeMeetingIndustriesSection() {
           </div>
 
           <div className="mt-10 hidden min-w-0 lg:grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.8fr)_minmax(0,1fr)] lg:items-start lg:gap-8 xl:gap-12">
-            {/* Image stage — 3D depth isolated to this column only */}
             <div
               ref={imageStageRef}
-              className="relative aspect-[4/3] w-full max-w-[520px] justify-self-start [transform-style:preserve-3d]"
+              className="relative aspect-[16/10] w-full max-w-[520px] justify-self-start"
             >
               {items.map((item, idx) => (
                 <div
@@ -345,7 +338,7 @@ export function HomeMeetingIndustriesSection() {
                   ref={(el) => {
                     imageLayersRef.current[idx] = el;
                   }}
-                  className="absolute inset-0 [backface-visibility:hidden] [transform-style:preserve-3d]"
+                  className="absolute inset-0"
                   style={{
                     opacity: idx === 0 ? 1 : 0,
                     pointerEvents: idx === 0 ? "auto" : "none",
@@ -354,7 +347,7 @@ export function HomeMeetingIndustriesSection() {
                   <Link
                     href={item.portfolioHref}
                     aria-label={`View ${item.caseStudyTitle} case study`}
-                    className="group/image block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    className="group/image relative block size-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     tabIndex={idx === activeIndex ? 0 : -1}
                   >
                     <div
@@ -362,15 +355,17 @@ export function HomeMeetingIndustriesSection() {
                       data-active={idx === 0 ? "true" : "false"}
                       className={`${IMAGE_CARD_BASE} border-transparent transition-transform duration-300 group-hover/image:scale-[1.01] group-focus-visible/image:scale-[1.01] data-[active=true]:border-white/15 data-[active=true]:shadow-[0_36px_90px_-24px_rgba(26,105,253,0.45)]`}
                     >
-                      <Image
-                        src={item.imageSrc}
-                        alt={item.caseStudyTitle}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover/image:scale-[1.03]"
-                        sizes="(max-width: 1280px) 45vw, 520px"
-                        priority={idx === 0}
-                        loading={idx === 0 ? "eager" : "lazy"}
-                      />
+                      <div className={IMAGE_MEDIA_CLASS}>
+                        <Image
+                          src={item.imageSrc}
+                          alt={item.caseStudyTitle}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(max-width: 1280px) 45vw, 520px"
+                          priority={idx === 0}
+                          loading={idx === 0 ? "eager" : "lazy"}
+                        />
+                      </div>
                       <div
                         data-image-sheen
                         className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/5 opacity-0 transition-opacity duration-500 data-[active=true]:opacity-100"
@@ -473,20 +468,24 @@ export function HomeMeetingIndustriesSection() {
               >
                 <Link
                   href={item.portfolioHref}
-                  className={`group/image relative block aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] border bg-neutral-900 transition-[opacity,transform,box-shadow,border-color] duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
+                  className={`group/image relative block aspect-[16/10] w-full overflow-hidden rounded-[1.75rem] border bg-neutral-900 transition-[opacity,transform,box-shadow,border-color] duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
                     isActive
                       ? "scale-100 border-white/15 opacity-100 shadow-[0_24px_60px_-20px_rgba(26,105,253,0.35)]"
                       : "scale-[0.97] border-transparent opacity-40"
                   }`}
                 >
-                  <Image
-                    src={item.imageSrc}
-                    alt={item.caseStudyTitle}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover/image:scale-[1.03]"
-                    sizes="92vw"
-                    loading={idx === 0 ? "eager" : "lazy"}
-                  />
+                  <div className="absolute inset-0 overflow-hidden rounded-[1.35rem] bg-black p-2">
+                    <div className="relative size-full overflow-hidden rounded-[1rem]">
+                      <Image
+                        src={item.imageSrc}
+                        alt={item.caseStudyTitle}
+                        fill
+                        className="object-cover object-top"
+                        sizes="92vw"
+                        loading={idx === 0 ? "eager" : "lazy"}
+                      />
+                    </div>
+                  </div>
                 </Link>
                 <h3
                   className={`mt-5 text-h4 font-semibold transition-colors duration-300 ${

@@ -29,6 +29,29 @@ function isUsableGalleryImage(src: string) {
   );
 }
 
+/** Scraped WordPress footer/nav headings — not real case study content */
+const CASE_STUDY_SKIP_TITLE =
+  /^(Explore More|Get In Touch|About|Services|Industries|Hire Developers|Resources|Portfolio|Popular Now|Blogs|Contact Us(\s+for project discussion)?|About\s*\+|Services\s*\+|IndustriesServices\s*\+)$/i;
+
+function normalizeSectionTitle(title: string) {
+  return title.replace(/\s+/g, " ").trim();
+}
+
+function isRenderableCaseStudySection(
+  section: PortfolioCaseStudyContent["sections"][number],
+) {
+  const title = normalizeSectionTitle(section.title);
+  if (CASE_STUDY_SKIP_TITLE.test(title)) return false;
+
+  return (
+    section.paragraphs.some((p) => p.trim().length > 0) ||
+    (section.listItems?.length ?? 0) > 0 ||
+    (section.metrics?.length ?? 0) > 0 ||
+    (section.features?.length ?? 0) > 0 ||
+    (section.images?.filter(isUsableGalleryImage).length ?? 0) > 0
+  );
+}
+
 export function PortfolioCaseStudyLayout({
   study,
   content,
@@ -104,7 +127,7 @@ export function PortfolioCaseStudyLayout({
         </div>
       </section>
 
-      {content.sections.map((section, index) => (
+      {content.sections.filter(isRenderableCaseStudySection).map((section, index) => (
         <section
           key={`${section.title}-${index}`}
           className={`py-10 md:py-14 ${index % 2 === 1 ? "border-y border-white/5 bg-white/[0.02]" : ""}`}

@@ -24,8 +24,17 @@ const NavScrollLockContext = createContext<NavScrollLockContextValue | null>(
   null,
 );
 
+const LenisRefContext = createContext<React.RefObject<Lenis | null> | null>(
+  null,
+);
+
 export function useNavMenuScrollLock() {
   return useContext(NavScrollLockContext)?.setNavMenuOpen;
+}
+
+/** Ref to the active Lenis instance (null when reduced motion or SSR). */
+export function useLenisRef() {
+  return useContext(LenisRefContext);
 }
 
 function isNavMegaPanelNode(node: Element) {
@@ -129,7 +138,17 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
         }
         return lenis.scroll;
       },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
     });
+
+    ScrollTrigger.defaults({ scroller: document.documentElement });
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -137,6 +156,7 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
       lenis.raf(time * 1000);
     };
     gsap.ticker.add(onTick);
+    ScrollTrigger.refresh();
 
     return () => {
       gsap.ticker.remove(onTick);
@@ -163,9 +183,11 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   }, [navMenuOpen]);
 
   return (
-    <NavScrollLockContext.Provider value={{ setNavMenuOpen: setNavMenuOpenStable }}>
-      {children}
-      <RouteScrollReset lenisRef={lenisRef} />
-    </NavScrollLockContext.Provider>
+    <LenisRefContext.Provider value={lenisRef}>
+      <NavScrollLockContext.Provider value={{ setNavMenuOpen: setNavMenuOpenStable }}>
+        {children}
+        <RouteScrollReset lenisRef={lenisRef} />
+      </NavScrollLockContext.Provider>
+    </LenisRefContext.Provider>
   );
 }

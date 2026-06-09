@@ -67,7 +67,7 @@ function extractImages(html) {
 }
 
 const SKIP_HEADINGS =
-  /^(Ready to talk about|Contact us now|We're the Top|Contact Us|Explore More|Let's Spark|Table of Contents|Consult with ERP Expert|Our Recent Works|Latest Insights|Contact Us for project discussion|More Screen|Menu|Scan the code)$/i;
+  /^(Ready to talk about|Contact us now|We're the Top|Contact Us|Explore More|Get In Touch|About|Services|Industries|Hire Developers|Resources|Portfolio|Popular Now|Blogs|Let's Spark|Table of Contents|Consult with ERP Expert|Our Recent Works|Latest Insights|Contact Us for project discussion|More Screen|Menu|Scan the code)$/i;
 
 function extractPortfolioSection(html) {
   const start = html.search(/Happy Harvest|Deutsche Quality|Lakshya Academy|MTeducare|organic world|PawSpace|Muncipal|BeeMate|LeepRide|Carloana|Connection|Vkonnect|MechUni|Formulaw|i30/i);

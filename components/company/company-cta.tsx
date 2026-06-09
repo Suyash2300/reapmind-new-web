@@ -27,17 +27,6 @@ export function CompanyCTA() {
             </Link>
           </div>
         </GsapScrollReveal>
-
-        <div className="mt-32 border-t border-white/10 pt-20">
-          <GsapScrollReveal start="top 85%">
-            <h3 className="text-h3 font-bold text-white">
-              {companyConfig.cta.exploreMore.title}
-            </h3>
-            <p className="mx-auto mt-6 max-w-2xl text-para text-white/60">
-              {companyConfig.cta.exploreMore.description}
-            </p>
-          </GsapScrollReveal>
-        </div>
       </div>
     </section>
   );

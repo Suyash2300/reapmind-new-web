@@ -1,0 +1,32 @@
+{
+  "urls": [
+    "https://reapmind.com/wp-content/uploads/2023/03/Reapmind-New-Logo.png",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/Teams-rl7hpeyg0j7fmvixa3ucfr60r7b50ck8pjrhmofnz4.jpeg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-121-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-021-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-991-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-132-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-000-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpeg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/2022-0022-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/New-Reapmind-rl7hpe0fd9mevnxsfxof53j9l5e7yh61f9zef2lpos.png",
+    "https://reapmind.com/wp-content/uploads/2023/04/Large.png",
+    "https://reapmind.com/wp-content/uploads/2024/09/Reapmind-New-Logo-300x150.png",
+    "https://reapmind.com/wp-content/uploads/elementor/thumbs/caller-rl7hpey8c8vw3iten7rkzbvdkfckww8cqg3bz79kfk.png",
+    "//reapmind.com/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1757336497&amp;ver=1.21.5"
+  ],
+  "local": {
+    "Reapmind-New-Logo.png": "/services/Reapmind-New-Logo.png",
+    "Teams-rl7hpeyg0j7fmvixa3ucfr60r7b50ck8pjrhmofnz4.jpeg": "/services/Teams-rl7hpeyg0j7fmvixa3ucfr60r7b50ck8pjrhmofnz4.jpeg",
+    "2022-121-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg": "/services/2022-121-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "2022-021-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg": "/services/2022-021-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "2022-991-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg": "/services/2022-991-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "2022-132-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg": "/services/2022-132-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "2022-000-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpeg": "/services/2022-000-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpeg",
+    "2022-0022-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg": "/services/2022-0022-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+    "New-Reapmind-rl7hpe0fd9mevnxsfxof53j9l5e7yh61f9zef2lpos.png": "/services/New-Reapmind-rl7hpe0fd9mevnxsfxof53j9l5e7yh61f9zef2lpos.png",
+    "Large.png": "/services/Large.png",
+    "Reapmind-New-Logo-300x150.png": "/services/Reapmind-New-Logo-300x150.png",
+    "caller-rl7hpey8c8vw3iten7rkzbvdkfckww8cqg3bz79kfk.png": "/services/caller-rl7hpey8c8vw3iten7rkzbvdkfckww8cqg3bz79kfk.png",
+    "pum-site-scripts.js": "/services/pum-site-scripts.js"
+  }
+}

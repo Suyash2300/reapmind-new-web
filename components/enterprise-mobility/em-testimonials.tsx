@@ -5,7 +5,20 @@ import { motion } from "framer-motion";
 import { GsapScrollReveal } from "@/components/motion/gsap-scroll-reveal";
 import { enterpriseMobilityConfig } from "@/lib/enterprise-mobility-config";
 
-export function EmTestimonials() {
+type EmTestimonialItem = {
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+};
+
+type EmTestimonialsProps = {
+  items?: readonly EmTestimonialItem[];
+};
+
+export function EmTestimonials({ items: itemsProp }: EmTestimonialsProps = {}) {
+  const items = itemsProp ?? enterpriseMobilityConfig.testimonials;
+
   return (
     <section className="section-app bg-surface-dark py-32">
       <div className="container-app">
@@ -17,7 +30,7 @@ export function EmTestimonials() {
         </GsapScrollReveal>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {enterpriseMobilityConfig.testimonials.map((t, i) => (
+          {items.map((t, i) => (
             <GsapScrollReveal key={t.name} start={`top ${84 + i * 3}%`}>
               <motion.div
                 whileHover={{ y: -6, scale: 1.02 }}

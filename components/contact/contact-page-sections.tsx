@@ -3,7 +3,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { ClientLogoShowcase } from "@/components/home/client-logo-showcase";
 import { ContactInquiryForm } from "@/components/contact/contact-inquiry-form";
+import { FooterCountryFlag } from "@/components/layout/footer-location-marker";
 import { FadeIn } from "@/components/motion/fade-in";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import { StaggerGrid, StaggerItem } from "@/components/motion/stagger-grid";
 import {
   contactAwards,
@@ -121,7 +123,7 @@ export function ContactTopSection() {
             {contactFormTabs.map((tab) => {
               const active = activeFormTab === tab.id;
               return (
-                <button
+                <HydrationButton
                   key={tab.id}
                   type="button"
                   role="tab"
@@ -136,7 +138,7 @@ export function ContactTopSection() {
                   }`}
                 >
                   {tab.label}
-                </button>
+                </HydrationButton>
               );
             })}
           </div>
@@ -332,7 +334,7 @@ export function ContactOfficesSection() {
           aria-label="Office locations"
         >
           {footerLocationTabs.map((tab) => (
-            <button
+            <HydrationButton
               key={tab.id}
               type="button"
               role="tab"
@@ -345,7 +347,7 @@ export function ContactOfficesSection() {
               }`}
             >
               {tab.label}
-            </button>
+            </HydrationButton>
           ))}
         </div>
 
@@ -355,12 +357,17 @@ export function ContactOfficesSection() {
               key={office.city}
               className="rounded-2xl border border-border-strong bg-surface-elevated p-5 sm:p-6"
             >
-              <h3 className="text-subtitle font-bold text-white">
-                {office.city}
-              </h3>
-              <p className="mt-2 text-para leading-relaxed text-white/60">
-                {office.address}
-              </p>
+              <div className="flex items-start gap-3">
+                <FooterCountryFlag code={office.countryCode} />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-subtitle font-bold text-white">
+                    {office.city}
+                  </h3>
+                  <p className="mt-2 text-para leading-relaxed text-white/60">
+                    {office.address}
+                  </p>
+                </div>
+              </div>
               <div className="mt-4 flex flex-wrap gap-4 text-sm">
                 <a
                   href={contactDirect.phoneHref}

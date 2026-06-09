@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import {
   contactDirect,
   contactQuoteForm,
@@ -79,6 +80,7 @@ export function ContactInquiryForm({
       onSubmit={handleSubmit}
       className={`space-y-4 ${className}`}
       noValidate
+      suppressHydrationWarning
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
@@ -93,6 +95,7 @@ export function ContactInquiryForm({
             autoComplete="name"
             className={inputClass}
             placeholder="Your full name"
+            suppressHydrationWarning
           />
         </div>
         <div>
@@ -107,6 +110,7 @@ export function ContactInquiryForm({
             autoComplete="email"
             className={inputClass}
             placeholder="you@company.com"
+            suppressHydrationWarning
           />
         </div>
       </div>
@@ -122,6 +126,7 @@ export function ContactInquiryForm({
             defaultValue="+91"
             className={`${inputClass} sm:max-w-[9.5rem]`}
             aria-label="Country code"
+            suppressHydrationWarning
           >
             {countryCodes.map((code) => (
               <option key={code.value} value={code.value}>
@@ -137,6 +142,7 @@ export function ContactInquiryForm({
             autoComplete="tel"
             className={inputClass}
             placeholder="Phone number"
+            suppressHydrationWarning
           />
         </div>
       </div>
@@ -152,6 +158,7 @@ export function ContactInquiryForm({
             required
             className={inputClass}
             defaultValue=""
+            suppressHydrationWarning
           >
             <option value="" disabled>
               Select budget range
@@ -173,6 +180,7 @@ export function ContactInquiryForm({
             required
             className={inputClass}
             defaultValue=""
+            suppressHydrationWarning
           >
             <option value="" disabled>
               Select service interest
@@ -197,17 +205,18 @@ export function ContactInquiryForm({
             rows={4}
             className={`${inputClass} min-h-[7rem] resize-y`}
             placeholder="Tell us about your project goals..."
+            suppressHydrationWarning
           />
         </div>
       ) : null}
 
-      <button
+      <HydrationButton
         type="submit"
         disabled={loading}
         className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {loading ? "Sending..." : submitLabel}
-      </button>
+      </HydrationButton>
 
       <p className="text-sm text-muted">
         {contactQuoteForm.fallbackNote}{" "}

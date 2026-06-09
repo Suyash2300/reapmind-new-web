@@ -4,28 +4,33 @@ import Image from "next/image";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
 type Logo = { name: string; src: string };
-
 type LogoSize = "default" | "large";
 
-export function ClientLogoShowcase({
-  logos,
-  fadeVariant = "header",
-  size = "default",
-}: {
+type ClientLogoShowcaseProps = {
   logos: readonly Logo[];
   /** Match marquee edge fade to section background */
   fadeVariant?: "header" | "dark";
+  /** Alias for fadeVariant */
+  variant?: "header" | "dark";
   size?: LogoSize;
-}) {
+};
+
+export function ClientLogoShowcase({
+  logos,
+  fadeVariant,
+  variant,
+  size = "default",
+}: ClientLogoShowcaseProps) {
   const reducedMotion = usePrefersReducedMotion();
+  const resolvedFade = fadeVariant ?? variant ?? "header";
   const fadeClass =
-    fadeVariant === "dark"
+    resolvedFade === "dark"
       ? "from-black via-black/80"
       : "from-surface-header via-surface-header/80";
 
   if (reducedMotion) {
     return (
-      <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+      <ul className="grid grid-cols-2 gap-10 sm:grid-cols-3 sm:gap-12 lg:grid-cols-5 lg:gap-14">
         {logos.map((logo) => (
           <LogoItem key={logo.name} logo={logo} size={size} />
         ))}
@@ -35,7 +40,6 @@ export function ClientLogoShowcase({
 
   const rowOne = [...logos, ...logos];
   const rowTwo = [...[...logos].reverse(), ...[...logos].reverse()];
-
   const rowMinH =
     size === "large"
       ? "min-h-[10rem] sm:min-h-[12rem] md:min-h-[14rem]"
@@ -78,7 +82,7 @@ function LogoRow({
   return (
     <div className={`overflow-hidden py-1 ${className}`}>
       <div
-        className={`flex w-max items-center gap-10 animate-logo-marquee sm:gap-14 md:gap-16 ${
+        className={`flex w-max items-center gap-12 animate-logo-marquee sm:gap-16 md:gap-20 lg:gap-24 ${
           reverse ? "[animation-direction:reverse]" : ""
         }`}
         style={{ animationDuration: duration }}
@@ -114,7 +118,7 @@ function LogoItem({ logo, size = "default" }: { logo: Logo; size?: LogoSize }) {
         quality={100}
         unoptimized
         sizes={s.sizes}
-        className="object-contain brightness-0 invert"
+        className="object-contain opacity-90 brightness-0 invert"
       />
     </div>
   );

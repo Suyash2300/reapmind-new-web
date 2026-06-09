@@ -129,24 +129,45 @@ export const footerStats = {
   earthImage: "/footer-earth.png",
 } as const;
 
+export type FooterCountryCode = "IN" | "US";
+
+export const footerCountryFlags: Record<
+  FooterCountryCode,
+  { label: string; src: string }
+> = {
+  IN: { label: "India", src: "/flags/in.svg" },
+  US: { label: "United States", src: "/flags/us.svg" },
+};
+
+export type FooterLocationItem = {
+  title: string;
+  lines: readonly string[];
+  href?: string;
+  countryCode?: FooterCountryCode;
+};
+
 export const footerOfficesAll = [
   {
     city: "Development Center",
+    countryCode: "IN" as const,
     address:
       "4th Floor, Business Hub, IDFC Bank, 401, Sykes Extension, Kolhapur, Maharashtra, 416001",
   },
   {
     city: "Mumbai",
+    countryCode: "IN" as const,
     address:
       "Kalpataru Plaza, 503, Chincholi Bunder Rd, Malad, Nadiyawala Colony 2, W, Mumbai, Maharashtra 400064",
   },
   {
     city: "Bangalore",
+    countryCode: "IN" as const,
     address:
       "175, Bannerghatta Main Rd, Dollars Colony, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560076",
   },
   {
     city: "USA",
+    countryCode: "US" as const,
     address: "Atlanta, Georgia, United States of America (USA).",
   },
 ] as const;
@@ -171,15 +192,17 @@ export const footerLocationTabs: readonly {
 
 export const footerLocationPanels: Record<
   FooterLocationTabId,
-  readonly { title: string; lines: readonly string[]; href?: string }[]
+  readonly FooterLocationItem[]
 > = {
   all: footerOfficesAll.map((o) => ({
     title: o.city,
     lines: [o.address],
+    countryCode: o.countryCode,
   })),
   mumbai: [
     {
       title: "Office Address",
+      countryCode: "IN",
       lines: [
         "Kalpataru Plaza, 503, Chincholi Bunder Rd, Malad, Nadiyawala Colony 2, W, Mumbai, Maharashtra 400064",
       ],
@@ -194,6 +217,7 @@ export const footerLocationPanels: Record<
   bangalore: [
     {
       title: "Office Address",
+      countryCode: "IN",
       lines: [
         "175, Bannerghatta Main Rd, Dollars Colony, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560076",
       ],
@@ -202,12 +226,14 @@ export const footerLocationPanels: Record<
   usa: [
     {
       title: "USA",
+      countryCode: "US",
       lines: ["Atlanta, Georgia, United States of America (USA)."],
     },
   ],
   "development-center": [
     {
       title: "Development Center",
+      countryCode: "IN",
       lines: [
         "4th Floor, Business Hub, IDFC Bank, 401, Sykes Extension, Kolhapur, Maharashtra, 416001",
       ],
@@ -223,7 +249,7 @@ export const footerLinkColumns: readonly {
   {
     title: "About",
     links: [
-      { label: "Who we are", href: "/company" },
+      { label: "Who we are", href: "/about-our-company" },
       { label: "Meet our Team", href: "/team-reapmind" },
       { label: "Life @ ReapMind", href: "/company/life-at-reapmind" },
       { label: "Portfolio", href: "/portfolio-reapmind" },
@@ -304,7 +330,7 @@ export const footerLinkColumns: readonly {
 ];
 
 export const footerBottomLinks = [
-  { label: "About Us", href: "/company" },
+  { label: "About Us", href: "/about-our-company" },
   { label: "Portfolio", href: "/portfolio-reapmind" },
   { label: "Contact", href: "/contact-us" },
 ] as const;

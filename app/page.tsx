@@ -8,7 +8,12 @@ import { HomePortfolioSection } from "@/components/home/home-portfolio-section";
 import { HomeWhyChooseUsSection } from "@/components/home/home-why-choose-us-section";
 import { HomeMeetingIndustriesSection } from "@/components/home/home-meeting-industries-section";
 import { HomeCuttingEdgeTechSection } from "@/components/home/home-cutting-edge-tech-section";
+import { HomeTechPlatformsSection } from "@/components/home/home-tech-platforms-section";
+import { HomePartnershipFlowSection } from "@/components/home/home-partnership-flow-section";
 import { HomeServicesCtaSection } from "@/components/home/home-services-cta-section";
+import { HomeStrategicHiringSection } from "@/components/home/home-strategic-hiring-section";
+import { HomeAboutUsSection } from "@/components/home/home-about-us-section";
+import { TestimonialsShowcase } from "@/components/testimonials/testimonials-showcase";
 
 export default function Home() {
   return (
@@ -24,6 +29,11 @@ export default function Home() {
       <HomeWhyChooseUsSection />
       <HomeCuttingEdgeTechSection />
       <HomeServicesCtaSection />
+      <HomePartnershipFlowSection />
+      <TestimonialsShowcase title="What clients say about us" />
+      <HomeTechPlatformsSection />
+      <HomeStrategicHiringSection />
+      <HomeAboutUsSection />
     </div>
   );
 }

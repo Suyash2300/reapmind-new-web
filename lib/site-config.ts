@@ -51,7 +51,7 @@ export const mainNav: NavItem[] = [
     groups: [
       {
         links: [
-          { label: "Who we are", href: "/company" },
+          { label: "Who we are", href: "/about-our-company" },
           { label: "Meet our Team", href: "/team-reapmind" },
           { label: "Life @ ReapMind", href: "/company/life-at-reapmind" },
           { label: "Portfolio", href: "/portfolio-reapmind" },

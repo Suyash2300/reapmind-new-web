@@ -4,11 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FooterCitySkyline } from "@/components/layout/footer-city-skyline";
+import { HydrationButton } from "@/components/ui/hydration-button";
+import {
+  FooterCountryFlag,
+  FooterLocationMarker,
+} from "@/components/layout/footer-location-marker";
 import {
   footerBlogs,
   footerBottomLinks,
   footerBrand,
-  footerExploreBlurb,
   footerLinkColumns,
   footerLocationPanels,
   footerLocationTabs,
@@ -24,10 +28,12 @@ function FooterHeading({
   children,
   href,
   size = "lg",
+  align = "left",
 }: {
   children: React.ReactNode;
   href?: string;
   size?: "lg" | "md";
+  align?: "left" | "right";
 }) {
   const title = href ? (
     <Link href={href} className="transition-colors hover:text-primary">
@@ -43,9 +49,46 @@ function FooterHeading({
       : "text-subtitle font-bold text-white";
 
   return (
-    <div>
+    <div className={align === "right" ? "text-right" : ""}>
       <h2 className={headingClass}>{title}</h2>
-      <div className="mt-3 h-px w-full max-w-[72px] bg-white/35" />
+      <div
+        className={`mt-3 h-px w-full max-w-[72px] bg-white/35 ${
+          align === "right" ? "ml-auto" : ""
+        }`}
+      />
+    </div>
+  );
+}
+
+function FooterGetInTouch({ align = "left" }: { align?: "left" | "right" }) {
+  const linkRow =
+    "inline-flex items-center gap-3 text-para text-white/80 transition-colors hover:text-white";
+
+  return (
+    <div className={align === "right" ? "text-right" : ""}>
+      <FooterHeading align={align}>Get In Touch</FooterHeading>
+      <ul
+        className={`mt-4 space-y-3 ${
+          align === "right" ? "flex flex-col items-end" : ""
+        }`}
+      >
+        <li>
+          <a href={site.phoneHref} className={linkRow}>
+            <span className="text-white/50" aria-hidden>
+              ☎
+            </span>
+            {site.phone}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${site.email}`} className={linkRow}>
+            <span className="text-white/50" aria-hidden>
+              ✉
+            </span>
+            {site.email}
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
@@ -154,7 +197,7 @@ function FooterLocationSection() {
     <div className="mt-12 border-t border-white/10 pt-10 lg:mt-14 lg:pt-12">
       <div className="flex flex-wrap gap-x-6 gap-y-2 border-b border-white/10 pb-4">
         {footerLocationTabs.map((tab) => (
-          <button
+          <HydrationButton
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
@@ -165,28 +208,15 @@ function FooterLocationSection() {
             }`}
           >
             {tab.label}
-          </button>
+          </HydrationButton>
         ))}
       </div>
 
-      <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start">
+      <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-stretch">
         <div className="grid gap-8 sm:grid-cols-2">
           {panel.map((item) => (
             <div key={item.title} className="flex gap-4">
-              <div
-                className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/70"
-                aria-hidden
-              >
-                <svg viewBox="0 0 24 24" fill="none" className="size-4" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"
-                  />
-                  <circle cx="12" cy="10" r="2.5" strokeWidth="1.5" />
-                </svg>
-              </div>
+              <FooterLocationMarker item={item} />
               <div>
                 <h3 className="text-subtitle font-bold text-white">{item.title}</h3>
                 {item.lines.map((line) =>
@@ -212,6 +242,7 @@ function FooterLocationSection() {
           ))}
         </div>
 
+        <div className="flex flex-col items-end gap-8 lg:justify-between">
         {activeTab === "all" ? (
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-end lg:flex-col lg:items-end">
             <div className="text-left lg:text-right">
@@ -238,6 +269,21 @@ function FooterLocationSection() {
             </div>
           </div>
         ) : null}
+
+        <div className="lg:mt-auto">
+          <div className="mb-3 flex justify-end gap-2">
+            {activeTab === "all" ? (
+              <>
+                <FooterCountryFlag code="IN" />
+                <FooterCountryFlag code="US" />
+              </>
+            ) : (
+              <FooterCountryFlag code={activeTab === "usa" ? "US" : "IN"} />
+            )}
+          </div>
+          <FooterGetInTouch align="right" />
+        </div>
+        </div>
       </div>
     </div>
   );
@@ -252,41 +298,6 @@ export function SiteFooter() {
           <div className="flex flex-wrap items-start justify-between gap-6">
             <FooterBrandBlock />
             <FooterGptwBadge />
-          </div>
-
-          <div>
-            <FooterHeading>Explore More</FooterHeading>
-            <p className="mt-4 max-w-prose text-para leading-relaxed text-white/65">
-              {footerExploreBlurb}
-            </p>
-          </div>
-
-          <div>
-            <FooterHeading>Get In Touch</FooterHeading>
-            <ul className="mt-4 space-y-3">
-              <li>
-                <a
-                  href={site.phoneHref}
-                  className="inline-flex items-center gap-3 text-para text-white/80 transition-colors hover:text-white"
-                >
-                  <span className="text-white/50" aria-hidden>
-                    ☎
-                  </span>
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="inline-flex items-center gap-3 text-para text-white/80 transition-colors hover:text-white"
-                >
-                  <span className="text-white/50" aria-hidden>
-                    ✉
-                  </span>
-                  {site.email}
-                </a>
-              </li>
-            </ul>
           </div>
 
           <FooterCitySkyline className="h-auto w-full max-w-[220px] opacity-90" />
@@ -321,39 +332,7 @@ export function SiteFooter() {
         <div className="hidden lg:block">
           <div className="grid grid-cols-4 gap-8 xl:gap-10">
             <FooterBrandBlock />
-            <div className="pt-10">
-              <FooterHeading>Explore More</FooterHeading>
-              <p className="mt-4 text-para leading-relaxed text-white/65">
-                {footerExploreBlurb}
-              </p>
-            </div>
-            <div className="pt-10">
-              <FooterHeading>Get In Touch</FooterHeading>
-              <ul className="mt-4 space-y-3">
-                <li>
-                  <a
-                    href={site.phoneHref}
-                    className="inline-flex items-center gap-3 text-para text-white/80 transition-colors hover:text-white"
-                  >
-                    <span className="text-white/50" aria-hidden>
-                      ☎
-                    </span>
-                    {site.phone}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="inline-flex items-center gap-3 text-para text-white/80 transition-colors hover:text-white"
-                  >
-                    <span className="text-white/50" aria-hidden>
-                      ✉
-                    </span>
-                    {site.email}
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <div className="col-span-2" aria-hidden />
             <div className="flex justify-end pt-2">
               <FooterGptwBadge />
             </div>

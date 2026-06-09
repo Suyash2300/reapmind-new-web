@@ -28,7 +28,7 @@ export function PdInsights() {
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productDesignConfig.insights.articles.map((article, i) => (
-            <GsapScrollReveal key={article.title} start={`top ${84 + i * 3}%`}>
+            <GsapScrollReveal key={`${article.link}-${article.date}`} start={`top ${84 + i * 3}%`}>
               <Link href={article.link} className="block group h-full">
                 <motion.div
                   whileHover={{ y: -6 }}
