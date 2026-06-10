@@ -1,12 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { BlurFadeIn } from "@/components/digital-product-marketplace/dpm-text-motion";
-import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
-import { freelanceMarketplaceConfig } from "@/lib/freelance-marketplace-config";
-
-const smoothEase = [0.22, 1, 0.36, 1] as const;
+import { HydrationButton } from "@/components/ui/hydration-button";
 
 type FmTestimonialVideoProps = {
   src: string;
@@ -17,7 +13,6 @@ type FmTestimonialVideoProps = {
 };
 
 export function FmTestimonialVideo({ src, poster, title, className, fillHeight = false }: FmTestimonialVideoProps) {
-  const reducedMotion = usePrefersReducedMotion();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -61,20 +56,18 @@ export function FmTestimonialVideo({ src, poster, title, className, fillHeight =
           </video>
 
           {!playing && (
-            <motion.button
+            <HydrationButton
               type="button"
               onClick={togglePlay}
               className="absolute inset-0 flex items-center justify-center bg-black/35 transition-colors hover:bg-black/25"
               aria-label={`Play video: ${title}`}
-              whileHover={reducedMotion ? undefined : { scale: 1.01 }}
-              transition={{ duration: 0.3, ease: smoothEase }}
             >
-              <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 bg-primary/90 shadow-[0_0_40px_rgba(26,105,253,0.55)] backdrop-blur-sm sm:h-20 sm:w-20">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 bg-primary/90 shadow-[0_0_40px_rgba(26,105,253,0.55)] backdrop-blur-sm transition-transform hover:scale-105 sm:h-20 sm:w-20">
                 <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-white sm:h-8 sm:w-8" aria-hidden>
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </span>
-            </motion.button>
+            </HydrationButton>
           )}
         </div>
         <p className="border-t border-white/10 px-4 py-3 text-center text-sm font-medium text-white/70">{title}</p>
