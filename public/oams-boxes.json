@@ -1,0 +1,93 @@
+{
+  "boxes": [],
+  "mgmt": [
+    {
+      "label": "Pre-registration",
+      "description": "1. Pre-registering patients allows crucial data to be collected before the patient even enters the office. 2. Built-in eligibility insurance checks. 3. Decrease the crowding of waiting areas thus reducing the amount of time to wait. 4. Data collected easily be saved and organized into a searchable system."
+    },
+    {
+      "label": "Scheduling",
+      "description": "1. Patients can request appointments by looking at available slots. 2. Automatic reminders to patients, through email or telephone so that they don’t forget an appointment. 3. Rescheduling and other modifications can also be done from the backend. 4. Report walk-in patients when a doctor is available."
+    },
+    {
+      "label": "Appointment Management",
+      "description": "1. Slot customization: date, time, doctor, and other information can all be modified in the actual table slot. 2. The appointment management system is automated by patient planning. 3. Patients & management can change, change or cancel appointments if necessary."
+    },
+    {
+      "label": "Reminder",
+      "description": "1. Ensures that patients are aware of their appointments. 2. Both patients and staff can see individual appointment details. 3. Recall lists are helpful resources for patient care, all drugs or medical devices needed are included in the reminder list."
+    },
+    {
+      "label": "Visit Management",
+      "description": "1. Charge for hourly pays 2. Check-in, check-out, and no-show monitoring. 3. Ensure accurate and value-driven treatment. 4. All elements of this appointment management system contribute to the legal compliance and responsibility under HIPPA guidelines"
+    },
+    {
+      "label": "Physician Management",
+      "description": "1. Patients and clinicians easily managed on daily basis. 2. Ability to manage physician vacation time and calendars. 3. Avoid the need to switch between systems and speeding up the scheduling process."
+    },
+    {
+      "label": "Business Reports",
+      "description": "1. An appointment management system drill down into data that are rarely examined. 2. Reports and dashboards help clinicians visualize a variety of data types."
+    }
+  ],
+  "tabs": [
+    {
+      "title": "Keeps Slots Full",
+      "description": "Online appointment management systems help businesses save money by reducing no-shows and absenteeism."
+    },
+    {
+      "title": "Convenient Appointment Booking",
+      "description": "With an appointment management system, patients can see healthcare provider’s availability and schedule appointments online."
+    },
+    {
+      "title": "Saves Resources",
+      "description": "Reduce documentation and form filing required online system is automated and self-managing can reduce the number of clinic employees & other resources."
+    },
+    {
+      "title": "Better Schedule Management",
+      "description": "Helps plan for the day and organize activities without worrying about client cancellations at the last minute."
+    },
+    {
+      "title": "Mobility",
+      "description": "As an online appointment management system’s data is stored in the cloud, all one needs is an internet-connected device to access the information needed."
+    }
+  ],
+  "customerTabs": [],
+  "h2": [
+    "Celebrating Success Stories Empowering Our Clients to Achieve Unprecedented Heights",
+    "Features of Online Appointment Management System",
+    "Our Recent Works",
+    "What clients say about us",
+    "Latest Insights",
+    "Get a Free Consultation from our Technology Expert",
+    "Let’s Spark A Transformative Conversation"
+  ],
+  "h3": [
+    "Why Choose ReapMind as your Healthcare Online Appointment Management Partner?",
+    "Deutsche Quality Systems India (DQS India) &#8211; Audit App",
+    "Lakshya Academy: Empowering Education Through Technology",
+    "MTeducare: Revolutionizing Education Management",
+    "organic world",
+    "PawSpace",
+    "Muncipal banking",
+    "Benefits of implementing Appointment Management System",
+    "Our end-end development process to get develop a Healthcare Online Appointment",
+    "Catering to Diverse Sectors: Our Targeted Industry Solutions",
+    "How Much Does It Cost to Develop an AI Agent in 2025?",
+    "How Much Does It Cost to Develop an AI Agent in 2025?",
+    "Why Your Enterprise Needs a Custom Intranet Portal (And How to Build One That Actually Works)",
+    "How to Build an AI-Powered Language Learning App: Features, Process & Costs (2025 Guide)",
+    "Smarter School Bus Monitoring Solution with IoT & Mobility in 2025",
+    "DevOps Automation: Approaching Business-Critical Functionality",
+    "The Role of AI in Intelligent Document Processing and Management – Benefits and Applications",
+    "EMR Integration in Healthcare Systems – Benefits, Features, Process, Costs",
+    "Cybersecurity in Manufacturing: Building Cyber Resilience for Smart Factories",
+    "How Much Does It Cost to Develop a Mutual Fund Investment Portal or App?",
+    "Healthcare Workforce Management Software: A Catalyst for Streamlined Business Operations",
+    "How an AI Chatbot for HigherEducation RevolutionizesStudent Support Services",
+    "Hold On! Your Success Story Begins Here... 👋",
+    "Contact Us",
+    "Project Kickoff",
+    "Get A Quotation"
+  ]
+}

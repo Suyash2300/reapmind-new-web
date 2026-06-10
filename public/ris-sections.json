@@ -1,0 +1,106 @@
+{
+  "howIntro": "RIS integrates multiple functions in one comprehensive system that eliminates redundant measures and increases your employees’ effectiveness through easier access to critical data.",
+  "whyItems": [
+    {
+      "title": "Registration",
+      "description": "Registering a new patient is a lengthy task in relying on typically large numbers of papers; with RIS instead, staff can type information in once and never waste time inserting it."
+    },
+    {
+      "title": "Scheduling",
+      "description": "The scheduling is also easier because, with initial consultations and follow-up appointments, can see at first glance which times remain available."
+    },
+    {
+      "title": "Storage & Tracking",
+      "description": "With vast amounts of documents generated during the treatment of patients, one needs a robust system that can store and track those records with large digital files from your scanning department."
+    },
+    {
+      "title": "Interactive Documents",
+      "description": "Cutting-edge interactive papers are made possible by computerized medical systems and networking technology. Ensures that all essential data is entered into the patients’ charts."
+    },
+    {
+      "title": "Result Reporting & Delivery",
+      "description": "RIS simplifies the reporting process, whether for a monthly progress report on unpaid payments or to assess how many cancellations one has received in the last quarter."
+    },
+    {
+      "title": "Medical Billing",
+      "description": "One can shorten the revenue cycle because the RIS allows staff to work more quickly and efficiently as they process documents to bill providers for the services they provided."
+    },
+    {
+      "title": "Material Management",
+      "description": "To manage a data-intensive task as material management it’s best to employ a computerized system. The team can see what is in short supply and needs to be reordered right away, as well as where one has a surplus, at a glance."
+    }
+  ],
+  "portfolio": [
+    {
+      "link": "https://reapmind.com/portfolio/deutsche-quality-systems-india-dqs-india-audit-app/",
+      "image": "https://reapmind.com/wp-content/uploads/2025/04/2.jpg",
+      "title": "DQS"
+    },
+    {
+      "link": "https://reapmind.com/portfolio/lakshya-academy-empowering-education/",
+      "image": "https://reapmind.com/wp-content/uploads/2025/03/3.jpg",
+      "title": "Lakshya Academy"
+    },
+    {
+      "link": "https://reapmind.com/portfolio/mt-educare-education-management/",
+      "image": "https://reapmind.com/wp-content/uploads/2025/03/1.jpg",
+      "title": "MTeducare"
+    },
+    {
+      "link": "https://reapmind.com/portfolio/organic-world/",
+      "image": "https://reapmind.com/wp-content/uploads/2025/03/banner-2.png",
+      "title": ""
+    },
+    {
+      "link": "https://reapmind.com/portfolio/pawspace/",
+      "image": "https://reapmind.com/wp-content/uploads/2025/03/banner-1.png",
+      "title": ""
+    },
+    {
+      "link": "https://reapmind.com/portfolio/muncipal-banking/",
+      "image": "https://reapmind.com/wp-content/uploads/2024/10/Municipal-Bank-hero-image.png",
+      "title": ""
+    }
+  ],
+  "testimonials": [],
+  "heroCtas": [
+    "More on Healtchare",
+    "More on Education",
+    "View More",
+    "Contact Us Today",
+    "Send Inquiry",
+    "Send request"
+  ],
+  "processTitle": "",
+  "processSubtitle": "We believe in delivering flawless mobile apps that ensure our clients gain a legacy in their business space. With the standard development process our team design, deploy and deliver quality products that result in bringing intended outcome in terms of quality and efficiency.",
+  "valueBoxes": [
+    {
+      "title": "Registration",
+      "description": "Registering a new patient is a lengthy task in relying on typically large numbers of papers; with RIS instead, staff can type information in once and never waste time inserting it."
+    },
+    {
+      "title": "Scheduling",
+      "description": "The scheduling is also easier because, with initial consultations and follow-up appointments, can see at first glance which times remain available."
+    },
+    {
+      "title": "Storage & Tracking",
+      "description": "With vast amounts of documents generated during the treatment of patients, one needs a robust system that can store and track those records with large digital files from your scanning department."
+    },
+    {
+      "title": "Interactive Documents",
+      "description": "Cutting-edge interactive papers are made possible by computerized medical systems and networking technology. Ensures that all essential data is entered into the patients’ charts."
+    },
+    {
+      "title": "Result Reporting & Delivery",
+      "description": "RIS simplifies the reporting process, whether for a monthly progress report on unpaid payments or to assess how many cancellations one has received in the last quarter."
+    },
+    {
+      "title": "Medical Billing",
+      "description": "One can shorten the revenue cycle because the RIS allows staff to work more quickly and efficiently as they process documents to bill providers for the services they provided."
+    },
+    {
+      "title": "Material Management",
+      "description": "To manage a data-intensive task as material management it’s best to employ a computerized system. The team can see what is in short supply and needs to be reordered right away, as well as where one has a surplus, at a glance."
+    }
+  ]
+}
