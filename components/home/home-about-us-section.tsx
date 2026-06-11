@@ -101,7 +101,7 @@ export function HomeAboutUsSection() {
               </p>
             </div>
 
-            <StaggerGrid className="grid grid-cols-2 divide-x divide-y divide-white/10 lg:grid-cols-4 lg:divide-y-0">
+            <StaggerGrid className="grid grid-cols-2 divide-x divide-y divide-white/10 sm:grid-cols-3 lg:divide-y-0">
               {homeAboutUs.proof.stats.map((stat) => (
                 <StaggerItem key={stat.id} className="h-full">
                   <article className="flex h-full flex-col justify-center px-5 py-6 sm:px-6 lg:px-8 lg:py-8">

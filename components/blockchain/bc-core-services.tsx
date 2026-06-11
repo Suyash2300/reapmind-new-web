@@ -11,8 +11,13 @@ import { blockchainConfig } from "@/lib/blockchain-config";
 export function BcCoreServices() {
   const { coreServices } = blockchainConfig;
   const [activeId, setActiveId] = useState(coreServices.items[0].id);
+  const [imgFailed, setImgFailed] = useState<Record<string, boolean>>({});
   const active =
     coreServices.items.find((item) => item.id === activeId) ?? coreServices.items[0];
+  const activeImage =
+    imgFailed[active.id] && "fallbackImage" in active && active.fallbackImage
+      ? active.fallbackImage
+      : active.image;
 
   return (
     <section
@@ -59,7 +64,7 @@ export function BcCoreServices() {
 
           <FadeIn delay={0.1}>
             <div className="relative overflow-hidden rounded-[1.5rem] border border-border-strong bg-surface-elevated">
-              <div className="relative aspect-[16/10] sm:aspect-[2/1]">
+              <div className="relative h-52 sm:h-60 md:h-72">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active.id}
@@ -70,12 +75,14 @@ export function BcCoreServices() {
                     className="absolute inset-0"
                   >
                     <Image
-                      src={active.image}
+                      src={activeImage}
                       alt={active.title}
                       fill
-                      quality={90}
+                      quality={92}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
+                      style={{ objectPosition: active.imagePosition ?? "center center" }}
+                      onError={() => setImgFailed((prev) => ({ ...prev, [active.id]: true }))}
                     />
                     <div
                       className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"

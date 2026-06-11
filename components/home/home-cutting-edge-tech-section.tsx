@@ -2,13 +2,14 @@
 
 import { useGSAP } from "@gsap/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FadeIn } from "@/components/motion/fade-in";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { gsap, registerGsapPlugins } from "@/lib/animation/gsap-register";
 import { homeCuttingEdgeTech } from "@/lib/home-cutting-edge-tech";
 
 const ORBIT_RADIUS = 42;
+const AUTO_INTERVAL_MS = 5000;
 
 type TechItem = (typeof homeCuttingEdgeTech.items)[number];
 
@@ -211,12 +212,38 @@ export function HomeCuttingEdgeTechSection() {
   const orbitRingRef = useRef<HTMLDivElement>(null);
   const counterRotateRef = useRef<HTMLDivElement>(null);
   const pulseRef = useRef<HTMLDivElement>(null);
+  const autoIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const activeItem = items[activeIndex];
 
-  const selectNode = useCallback((index: number) => {
-    setActiveIndex(index);
+  const clearAutoRotate = useCallback(() => {
+    if (autoIntervalRef.current) {
+      clearInterval(autoIntervalRef.current);
+      autoIntervalRef.current = null;
+    }
   }, []);
+
+  const startAutoRotate = useCallback(() => {
+    clearAutoRotate();
+    if (reducedMotion) return;
+
+    autoIntervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    }, AUTO_INTERVAL_MS);
+  }, [clearAutoRotate, items.length, reducedMotion]);
+
+  const selectNode = useCallback(
+    (index: number) => {
+      setActiveIndex(index);
+      startAutoRotate();
+    },
+    [startAutoRotate],
+  );
+
+  useEffect(() => {
+    startAutoRotate();
+    return clearAutoRotate;
+  }, [startAutoRotate, clearAutoRotate]);
 
   useGSAP(
     () => {
@@ -268,16 +295,20 @@ export function HomeCuttingEdgeTechSection() {
       aria-labelledby="cutting-edge-tech-heading"
     >
       <div className="container-app">
-        <div className="mx-auto max-w-4xl text-center lg:max-w-5xl">
+        <div className="mx-auto max-w-6xl text-center lg:max-w-7xl">
           <FadeIn>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
               {homeCuttingEdgeTech.eyebrow}
             </p>
             <h2
               id="cutting-edge-tech-heading"
-              className="mt-4 text-h3 font-bold tracking-tight text-white sm:text-h2 lg:text-h1"
+              className="mt-4 text-h4 font-bold leading-snug tracking-tight text-white sm:text-h3 lg:text-h2"
             >
-              {homeCuttingEdgeTech.title}
+              {homeCuttingEdgeTech.titleLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </h2>
           </FadeIn>
         </div>
@@ -352,7 +383,7 @@ export function HomeCuttingEdgeTechSection() {
             </div>
           </div>
 
-          <div className="min-h-[16rem] lg:min-h-[18rem]">
+          <div className="min-h-[16rem] lg:min-h-[18rem]" aria-live="polite">
             <AnimatePresence mode="wait">
               <DetailPanel item={activeItem} />
             </AnimatePresence>
@@ -417,7 +448,7 @@ export function HomeCuttingEdgeTechSection() {
             })}
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4" aria-live="polite">
             <AnimatePresence mode="wait">
               <DetailPanel item={activeItem} />
             </AnimatePresence>

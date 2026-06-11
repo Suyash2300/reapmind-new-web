@@ -60,7 +60,8 @@ export const lifeConfig = {
   },
   stats: [
     { value: "200+", label: "Projects" },
-    { value: "100+", label: "Employees" },
+    { value: "250+", label: "Employees" },
+    { value: "1M+", label: "Users Reached" },
     { value: "250+", label: "Clients" },
     { value: "95+", label: "Retention" }
   ]

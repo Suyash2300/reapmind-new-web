@@ -2,8 +2,10 @@
 
 export const homeCuttingEdgeTech = {
   eyebrow: "Technologies",
-  title:
-    "We Create and Evolve Solutions with Cutting-Edge Technologies that shatter expectations.",
+  titleLines: [
+    "We Create and Evolve Solutions with",
+    "Cutting-Edge Technologies that shatter expectations.",
+  ] as const,
   items: [
     {
       id: "blockchain",

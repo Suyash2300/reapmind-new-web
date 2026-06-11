@@ -1,34 +1,54 @@
 "use client";
 
 import Link from "next/link";
-import { FadeIn } from "@/components/motion/fade-in";
-import { chatbotsConfig } from "@/lib/chatbots-config";
+import { motion } from "framer-motion";
+import { CbChatVisual } from "@/components/chatbots/cb-chat-visual";
+import { BlurFadeIn, WordReveal } from "@/components/digital-product-marketplace/dpm-text-motion";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
+import { CB_ACCENT, chatbotsConfig } from "@/lib/chatbots-config";
+
+const smoothEase = [0.22, 1, 0.36, 1] as const;
 
 export function CbEraIntro() {
   const { eraIntro } = chatbotsConfig;
+  const reducedMotion = usePrefersReducedMotion();
 
   return (
-    <section className="border-t border-white/10 bg-black py-10 md:py-12 lg:py-14">
+    <section className="border-t border-white/10 bg-black py-12 md:py-16 lg:py-20" aria-labelledby="cb-era-heading">
       <div className="container-app">
-        <FadeIn>
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-h3 font-bold text-white sm:text-h2">{eraIntro.title}</h2>
-            {eraIntro.paragraphs.map((paragraph) => (
-              <p
-                key={paragraph.slice(0, 40)}
-                className="mt-5 text-para leading-relaxed text-white/65 sm:text-md"
-              >
-                {paragraph}
-              </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-14">
+          <div>
+            <BlurFadeIn as="h2" id="cb-era-heading" className="max-w-2xl text-h3 font-bold text-white sm:text-h2">
+              {eraIntro.title}
+            </BlurFadeIn>
+            {eraIntro.paragraphs.map((paragraph, i) => (
+              <BlurFadeIn key={paragraph.slice(0, 40)} as="p" delay={0.06 + i * 0.04} className="mt-5 max-w-2xl text-para leading-relaxed text-white/65">
+                <WordReveal text={paragraph} delay={0.08 + i * 0.04} />
+              </BlurFadeIn>
             ))}
-            <Link
-              href="/contact-us#free-consultation"
-              className="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-primary/40 bg-primary/10 px-8 text-sm font-semibold text-white transition-colors hover:bg-primary"
-            >
-              {eraIntro.cta}
-            </Link>
+            <BlurFadeIn delay={0.14} className="mt-8">
+              <motion.div whileHover={reducedMotion ? undefined : { scale: 1.03 }} transition={{ duration: 0.3, ease: smoothEase }}>
+                <Link
+                  href="/contact-us#free-consultation"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full px-8 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: CB_ACCENT }}
+                >
+                  {eraIntro.cta}
+                </Link>
+              </motion.div>
+            </BlurFadeIn>
           </div>
-        </FadeIn>
+
+          <motion.div
+            initial={reducedMotion ? false : { opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.7, ease: smoothEase }}
+            className="shadow-[0_32px_80px_-40px_rgba(26,105,253,0.35)]"
+          >
+            <CbChatVisual />
+          </motion.div>
+        </div>
       </div>
     </section>
   );

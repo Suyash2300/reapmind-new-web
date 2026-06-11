@@ -6,13 +6,16 @@ import { BcHero } from "@/components/blockchain/bc-hero";
 import { BcIndustries } from "@/components/blockchain/bc-industries";
 import { BcNetworks } from "@/components/blockchain/bc-networks";
 import { BcOverview } from "@/components/blockchain/bc-overview";
+import { BcPortfolioCta } from "@/components/blockchain/bc-portfolio-cta";
 import { BcWhyUs } from "@/components/blockchain/bc-why-us";
+import { ServiceClientsSection } from "@/components/service-landing/service-clients-section";
 import { ServiceFaqSection } from "@/components/service-landing/service-faq-section";
 import { ServiceInsightsSection } from "@/components/service-landing/service-insights-section";
 import { HomePortfolioSection } from "@/components/home/home-portfolio-section";
 import { ServiceProcessSection } from "@/components/service-landing/service-process-section";
 import { TestimonialsShowcase } from "@/components/testimonials/testimonials-showcase";
 import { CompanyLocations } from "@/components/company/company-locations";
+import { homeClients } from "@/lib/home-sections";
 import { blockchainConfig } from "@/lib/blockchain-config";
 import { aiInsightsArticles } from "@/lib/recent-works-portfolio";
 
@@ -31,11 +34,16 @@ export const metadata: Metadata = {
 };
 
 export default function BlockchainPage() {
-  const { process, faqs } = blockchainConfig;
+  const { clientSuccess, process, faqs } = blockchainConfig;
 
   return (
     <main className="flex flex-col overflow-x-hidden bg-surface-dark text-primary-foreground">
       <BcHero />
+      <ServiceClientsSection
+        title={clientSuccess.title}
+        subtitle={clientSuccess.subtitle}
+        logos={homeClients.logos}
+      />
       <BcOverview />
       <BcCoreServices />
       <BcExtendedServices />
@@ -48,9 +56,10 @@ export default function BlockchainPage() {
         steps={[...process.steps]}
       />
       <HomePortfolioSection />
-      <ServiceInsightsSection articles={[...aiInsightsArticles]} />
+      <BcPortfolioCta />
       <BcWhyUs />
       <TestimonialsShowcase title="What clients say about us" />
+      <ServiceInsightsSection articles={[...aiInsightsArticles]} />
       <ServiceFaqSection faqs={[...faqs]} />
       <BcConsultationSection />
       <CompanyLocations />

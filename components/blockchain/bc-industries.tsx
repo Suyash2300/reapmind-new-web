@@ -1,71 +1,97 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { FadeIn } from "@/components/motion/fade-in";
+import { BlurFadeIn } from "@/components/digital-product-marketplace/dpm-text-motion";
+import { HydrationButton } from "@/components/ui/hydration-button";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { blockchainConfig } from "@/lib/blockchain-config";
+
+const smoothEase = [0.22, 1, 0.36, 1] as const;
 
 export function BcIndustries() {
   const { industries } = blockchainConfig;
-  const [activeId, setActiveId] = useState(industries.items[0].id);
-  const active =
-    industries.items.find((item) => item.id === activeId) ?? industries.items[0];
+  const reducedMotion = usePrefersReducedMotion();
+  const [active, setActive] = useState(0);
+  const [imgFailed, setImgFailed] = useState<Record<string, boolean>>({});
+  const sector = industries.items[active];
+  const sectorImage =
+    imgFailed[sector.id] && "fallbackImage" in sector && sector.fallbackImage
+      ? sector.fallbackImage
+      : sector.image;
 
   return (
-    <section
-      className="border-t border-white/10 bg-black py-10 md:py-12 lg:py-14"
-      aria-labelledby="bc-industries-heading"
-    >
+    <section className="border-t border-white/10 bg-black py-12 md:py-16 lg:py-20" aria-labelledby="bc-industries-heading">
       <div className="container-app">
-        <FadeIn>
-          <h2 id="bc-industries-heading" className="max-w-4xl text-h3 font-bold text-white sm:text-h2">
-            {industries.title}
-          </h2>
-        </FadeIn>
+        <BlurFadeIn as="h2" id="bc-industries-heading" className="max-w-4xl text-h3 font-bold text-white sm:text-h2">
+          {industries.title}
+        </BlurFadeIn>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
-          <FadeIn delay={0.06}>
-            <ul className="flex gap-2 overflow-x-auto pb-1 lg:flex-col lg:overflow-visible lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {industries.items.map((item) => {
-                const selected = item.id === activeId;
-                return (
-                  <li key={item.id} className="shrink-0 lg:shrink">
-                    <button
-                      type="button"
-                      onClick={() => setActiveId(item.id)}
-                      aria-pressed={selected}
-                      className={`w-full rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${
-                        selected
-                          ? "border-primary/50 bg-primary/10 text-white"
-                          : "border-white/10 text-white/55 hover:border-white/25 lg:w-full"
-                      }`}
-                    >
-                      {item.title}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <AnimatePresence mode="wait">
-              <motion.article
-                key={active.id}
-                initial={{ opacity: 0, x: 12 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -8 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-[1.5rem] border border-border-strong bg-surface-elevated p-6 sm:p-8"
+        <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,0.38fr)_minmax(0,1fr)] lg:items-stretch lg:gap-8">
+          <div className="flex flex-wrap gap-2 lg:flex-col" role="tablist">
+            {industries.items.map((item, i) => (
+              <HydrationButton
+                key={item.id}
+                type="button"
+                role="tab"
+                aria-selected={i === active}
+                onClick={() => setActive(i)}
+                className={`min-h-12 flex-1 rounded-xl border px-4 py-3.5 text-left text-sm font-semibold transition-all lg:flex-none ${
+                  i === active
+                    ? "border-white/25 text-white"
+                    : "border-white/10 bg-black/30 text-white/55 hover:border-white/20"
+                }`}
+                style={
+                  i === active
+                    ? { borderColor: `${item.accent}66`, backgroundColor: `${item.accent}14` }
+                    : undefined
+                }
               >
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                  Industry vertical
-                </p>
-                <h3 className="mt-2 text-h3 font-bold text-white sm:text-h2">{active.title}</h3>
-                <p className="mt-4 text-para leading-relaxed text-white/65">{active.description}</p>
-              </motion.article>
-            </AnimatePresence>
-          </FadeIn>
+                {item.title}
+              </HydrationButton>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.article
+              key={sector.id}
+              role="tabpanel"
+              initial={reducedMotion ? false : { opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.35, ease: smoothEase }}
+              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-black/55 shadow-[0_32px_80px_-40px_rgba(0,0,0,0.65)]"
+            >
+              <div className="relative h-56 sm:h-64 md:h-72">
+                <Image
+                  src={sectorImage}
+                  alt={sector.title}
+                  fill
+                  quality={92}
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className={sector.image.endsWith(".png") ? "object-contain p-8" : "object-cover"}
+                  style={{ objectPosition: sector.imagePosition ?? "center center" }}
+                  onError={() => setImgFailed((prev) => ({ ...prev, [sector.id]: true }))}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" aria-hidden />
+                <h3 className="absolute bottom-5 left-5 right-5 text-h4 font-bold text-white sm:text-h3">
+                  {sector.title}
+                </h3>
+              </div>
+              <div className="p-5 sm:p-7">
+                <p className="text-para leading-relaxed text-white/65">{sector.description}</p>
+                <Link
+                  href="/contact-us#free-consultation"
+                  className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full px-8 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: sector.accent }}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </motion.article>
+          </AnimatePresence>
         </div>
       </div>
     </section>

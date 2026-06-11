@@ -1,71 +1,86 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FadeIn } from "@/components/motion/fade-in";
+import { BlurFadeIn } from "@/components/digital-product-marketplace/dpm-text-motion";
+import { FmTestimonialVideo } from "@/components/freelance-marketplace/fm-testimonial-video";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { blockchainConfig } from "@/lib/blockchain-config";
+
+const smoothEase = [0.22, 1, 0.36, 1] as const;
+
+function WhyCard({
+  title,
+  description,
+  reducedMotion,
+}: {
+  title: string;
+  description: string;
+  reducedMotion: boolean;
+}) {
+  return (
+    <motion.article
+      whileHover={reducedMotion ? undefined : { y: -4 }}
+      transition={{ duration: 0.35, ease: smoothEase }}
+      className="flex h-full flex-col rounded-2xl border border-white/10 bg-surface-elevated/80 p-5 backdrop-blur-sm sm:p-6"
+    >
+      <h3 className="text-subtitle font-bold text-white">{title}</h3>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-white/60 sm:text-para">{description}</p>
+    </motion.article>
+  );
+}
 
 export function BcWhyUs() {
   const { whyUs } = blockchainConfig;
+  const reducedMotion = usePrefersReducedMotion();
+  const [expertise, innovative, trackRecord, global] = whyUs.items;
 
   return (
-    <section
-      className="border-t border-white/10 bg-surface-dark py-10 text-primary-foreground md:py-12 lg:py-14"
-      aria-labelledby="bc-why-us-heading"
-    >
+    <section className="border-t border-white/10 bg-surface-dark py-12 md:py-16 lg:py-20" aria-labelledby="bc-why-us-heading">
       <div className="container-app">
-        <FadeIn>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Why Us</p>
-          <h2 id="bc-why-us-heading" className="mt-3 max-w-3xl text-h3 font-bold text-white sm:text-h2">
-            {whyUs.title}
-          </h2>
-        </FadeIn>
+        <BlurFadeIn as="p" className="text-sm font-semibold uppercase tracking-[0.22em] text-[#627EEA]">
+          Why Us
+        </BlurFadeIn>
+        <BlurFadeIn as="h2" id="bc-why-us-heading" delay={0.04} className="mt-3 max-w-4xl text-h3 font-bold text-white sm:text-h2">
+          {whyUs.title}
+        </BlurFadeIn>
 
-        <div className="mt-10 grid gap-4 lg:mt-12 lg:grid-cols-2 lg:gap-5 lg:items-stretch">
-          <FadeIn delay={0.06}>
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] border border-border-strong bg-surface-elevated sm:aspect-[5/6] lg:aspect-auto lg:min-h-[420px]">
-              <Image
-                src={whyUs.promoImage.src}
-                alt={whyUs.promoImage.alt}
-                fill
-                quality={92}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                className="object-cover object-center"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-                aria-hidden
-              />
-            </div>
-          </FadeIn>
+        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:grid-rows-4 lg:items-stretch lg:gap-6">
+          <BlurFadeIn delay={0.06} className="h-full lg:col-start-1 lg:row-start-1">
+            <WhyCard {...expertise} reducedMotion={reducedMotion} />
+          </BlurFadeIn>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {whyUs.items.map((item, i) => (
-              <FadeIn key={item.title} delay={0.08 + i * 0.05}>
-                <motion.article
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.25 }}
-                  className="flex h-full flex-col rounded-2xl border border-border-strong bg-surface-elevated p-5 sm:p-6"
-                >
-                  <h3 className="text-subtitle font-bold text-white">{item.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-white/60 sm:text-para">
-                    {item.description}
-                  </p>
-                </motion.article>
-              </FadeIn>
-            ))}
-          </div>
+          <FmTestimonialVideo
+            src={whyUs.video.src}
+            poster={whyUs.video.poster}
+            title={whyUs.video.title}
+            fillHeight
+            className="h-full min-h-[260px] sm:min-h-[300px] lg:col-start-2 lg:row-start-1 lg:row-span-4 lg:min-h-0"
+          />
+
+          <BlurFadeIn delay={0.08} className="h-full lg:col-start-1 lg:row-start-2">
+            <WhyCard {...innovative} reducedMotion={reducedMotion} />
+          </BlurFadeIn>
+
+          <BlurFadeIn delay={0.1} className="h-full lg:col-start-1 lg:row-start-3">
+            <WhyCard {...trackRecord} reducedMotion={reducedMotion} />
+          </BlurFadeIn>
+
+          <BlurFadeIn delay={0.12} className="h-full lg:col-start-1 lg:row-start-4">
+            <WhyCard {...global} reducedMotion={reducedMotion} />
+          </BlurFadeIn>
         </div>
 
-        <FadeIn delay={0.15} className="mt-8 text-center lg:mt-10">
-          <Link
-            href="/contact-us#free-consultation"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-white shadow-[0_12px_40px_-12px_rgba(26,105,253,0.45)] transition-colors hover:bg-primary-hover"
-          >
-            {whyUs.cta}
-          </Link>
-        </FadeIn>
+        <BlurFadeIn delay={0.14} className="mt-10 text-center">
+          <motion.div whileHover={reducedMotion ? undefined : { scale: 1.03 }} transition={{ duration: 0.3, ease: smoothEase }}>
+            <Link
+              href="/contact-us#free-consultation"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
+            >
+              {whyUs.cta}
+            </Link>
+          </motion.div>
+        </BlurFadeIn>
       </div>
     </section>
   );

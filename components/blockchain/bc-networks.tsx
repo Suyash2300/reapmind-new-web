@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { FadeIn } from "@/components/motion/fade-in";
+import { BlurFadeIn } from "@/components/digital-product-marketplace/dpm-text-motion";
+import { HydrationButton } from "@/components/ui/hydration-button";
 import { blockchainConfig } from "@/lib/blockchain-config";
 
 const CHAIN_COLORS: Record<string, string> = {
@@ -34,33 +35,32 @@ export function BcNetworks() {
       />
 
       <div className="container-app relative">
-        <FadeIn>
-          <h2 id="bc-networks-heading" className="text-h3 font-bold text-white sm:text-h2">
-            {networks.title}
-          </h2>
-          <p className="mt-4 max-w-4xl text-para leading-relaxed text-white/60">
-            {networks.subtitle}
-          </p>
-        </FadeIn>
+        <BlurFadeIn as="h2" id="bc-networks-heading" className="text-h3 font-bold text-white sm:text-h2">
+          {networks.title}
+        </BlurFadeIn>
+        <BlurFadeIn as="p" delay={0.06} className="mt-4 max-w-4xl text-para leading-relaxed text-white/60">
+          {networks.subtitle}
+        </BlurFadeIn>
 
-        <FadeIn delay={0.06} className="mt-8">
-          <div className="flex flex-wrap gap-2 sm:gap-3">
+        <BlurFadeIn delay={0.08} className="mt-8">
+          <div className="flex flex-wrap gap-2 sm:gap-3" role="tablist">
             {networks.chains.map((chain) => {
-              const active = chain.ticker === activeTicker;
+              const isActive = chain.ticker === activeTicker;
               const color = CHAIN_COLORS[chain.ticker] ?? "#1a69fd";
               return (
-                <button
+                <HydrationButton
                   key={chain.ticker}
                   type="button"
+                  role="tab"
+                  aria-selected={isActive}
                   onClick={() => setActiveTicker(chain.ticker)}
-                  aria-pressed={active}
                   className={`inline-flex min-h-11 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
-                    active
+                    isActive
                       ? "border-white/25 bg-white/[0.08] text-white"
                       : "border-white/10 text-white/50 hover:border-white/20 hover:text-white/80"
                   }`}
                   style={
-                    active
+                    isActive
                       ? { boxShadow: `0 0 24px -6px ${color}88` }
                       : undefined
                   }
@@ -72,13 +72,13 @@ export function BcNetworks() {
                   />
                   {chain.name}
                   <span className="text-xs font-bold text-white/40">{chain.ticker}</span>
-                </button>
+                </HydrationButton>
               );
             })}
           </div>
-        </FadeIn>
+        </BlurFadeIn>
 
-        <FadeIn delay={0.1} className="mt-6">
+        <div className="mt-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={active.ticker}
@@ -103,7 +103,7 @@ export function BcNetworks() {
               <p className="mt-4 text-para leading-relaxed text-white/65">{active.description}</p>
             </motion.div>
           </AnimatePresence>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );
