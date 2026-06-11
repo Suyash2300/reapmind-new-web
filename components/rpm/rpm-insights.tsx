@@ -26,7 +26,7 @@ export function RpmInsights() {
         <div className="flex gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {articles.map((article, index) => (
             <motion.div
-              key={article.slug}
+              key={article.link}
               className="w-[min(88vw,340px)] shrink-0"
               initial={reduced ? false : { opacity: 0, x: 60 }}
               whileInView={reduced ? undefined : { opacity: 1, x: 0 }}

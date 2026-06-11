@@ -99,7 +99,7 @@ function NavMegaGroupColumn({ group }: { group: NavGroup }) {
             <NavIconBadge>
               <NavGroupIcon title={group.title} />
             </NavIconBadge>
-            <p className="text-xs font-bold uppercase leading-tight tracking-[0.06em] text-muted">
+            <p className="text-sm font-bold uppercase leading-tight tracking-[0.06em] text-muted">
               {group.title}
             </p>
           </div>
@@ -113,7 +113,7 @@ function NavMegaGroupColumn({ group }: { group: NavGroup }) {
           <li key={`${group.title ?? "links"}-${link.label}-${link.href}`} className="m-0 p-0">
             <Link
               href={link.href}
-              className="flex min-h-9 items-center py-1.5 text-sm font-medium leading-5 tracking-normal text-secondary transition-colors hover:text-primary"
+              className="flex min-h-10 items-center py-2 text-base font-semibold leading-6 tracking-normal text-secondary transition-colors hover:text-primary"
               {...(isExternal(link.href)
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}

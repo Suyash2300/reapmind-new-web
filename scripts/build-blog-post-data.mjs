@@ -1,4 +1,32 @@
+import https from "node:https";
 import { writeFileSync } from "node:fs";
+
+function fetchText(url) {
+  return new Promise((resolve, reject) => {
+    https
+      .get(url, (res) => {
+        if (res.statusCode === 301 || res.statusCode === 302) {
+          const next = res.headers.location?.startsWith("http")
+            ? res.headers.location
+            : `https://reapmind.com${res.headers.location}`;
+          fetchText(next).then(resolve).catch(reject);
+          return;
+        }
+        let data = "";
+        res.on("data", (chunk) => {
+          data += chunk;
+        });
+        res.on("end", () => {
+          if (res.statusCode && res.statusCode >= 400) {
+            reject(new Error(`${url}: ${res.statusCode}`));
+            return;
+          }
+          resolve(data);
+        });
+      })
+      .on("error", reject);
+  });
+}
 
 const slugs = [
   "how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry",
@@ -116,9 +144,7 @@ function extractAuthorDate(html) {
 
 async function fetchOne(slug) {
   const url = `https://reapmind.com/${slug}/`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`${slug}: ${res.status}`);
-  const html = await res.text();
+  const html = await fetchText(url);
 
   const h1Match = html.match(
     /<h1[^>]*class="[^"]*elementor-heading-title[^"]*"[^>]*>([\s\S]*?)<\/h1>/i,

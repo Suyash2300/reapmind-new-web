@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="an-bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/><stop offset="0.5" stop-color="#121A35"/><stop offset="1" stop-color="#0A1628"/>
+    </linearGradient>
+    <radialGradient id="an-glow" cx="0" cy="0" r="1" gradientTransform="translate(520 180) scale(280)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A69FD" stop-opacity="0.45"/><stop offset="1" stop-color="#1A69FD" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="an-glow2" cx="0" cy="0" r="1" gradientTransform="translate(200 320) scale(200)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A855F7" stop-opacity="0.35"/><stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#an-bg)"/>
+  <rect width="800" height="500" fill="url(#an-glow)"/>
+  <rect width="800" height="500" fill="url(#an-glow2)"/>
+  <circle cx="400" cy="250" r="120" stroke="#1A69FD" stroke-opacity="0.25" stroke-width="1"/>
+  <circle cx="400" cy="250" r="80" stroke="#A855F7" stroke-opacity="0.2" stroke-width="1"/>
+  <circle cx="280" cy="200" r="18" fill="#1A69FD" fill-opacity="0.8"/>
+  <circle cx="520" cy="180" r="14" fill="#06B6D4" fill-opacity="0.75"/>
+  <circle cx="480" cy="320" r="16" fill="#A855F7" fill-opacity="0.7"/>
+  <circle cx="300" cy="310" r="12" fill="#1A69FD" fill-opacity="0.6"/>
+  <line x1="280" y1="200" x2="400" y2="250" stroke="#1A69FD" stroke-opacity="0.35"/>
+  <line x1="520" y1="180" x2="400" y2="250" stroke="#06B6D4" stroke-opacity="0.35"/>
+  <line x1="480" y1="320" x2="400" y2="250" stroke="#A855F7" stroke-opacity="0.35"/>
+  <line x1="300" y1="310" x2="400" y2="250" stroke="#1A69FD" stroke-opacity="0.3"/>
+  <rect x="340" y="210" width="8" height="80" rx="4" fill="#1A69FD" fill-opacity="0.5"/>
+  <rect x="356" y="190" width="8" height="120" rx="4" fill="#06B6D4" fill-opacity="0.55"/>
+  <rect x="372" y="200" width="8" height="100" rx="4" fill="#A855F7" fill-opacity="0.5"/>
+  <rect x="388" y="175" width="8" height="150" rx="4" fill="#1A69FD" fill-opacity="0.65"/>
+  <rect x="404" y="195" width="8" height="110" rx="4" fill="#06B6D4" fill-opacity="0.5"/>
+  <rect x="420" y="205" width="8" height="90" rx="4" fill="#A855F7" fill-opacity="0.45"/>
+  <rect x="436" y="185" width="8" height="130" rx="4" fill="#1A69FD" fill-opacity="0.55"/>
+  <path d="M620 120 Q660 100 690 130 Q720 160 680 190" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+  <ellipse cx="150" cy="380" rx="90" ry="30" fill="#1A69FD" fill-opacity="0.08"/>
+</svg>

@@ -43,19 +43,22 @@ export function AmConsultationSection({
             <p className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-white/50">
               {consultation.trustLine}
             </p>
-            <ul className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <ul className="mt-5 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {consultation.clientLogos.map((logo) => (
                 <li
                   key={logo.name}
-                  className="flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-3 sm:h-16"
+                  className="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-4 sm:h-28 md:h-32"
                 >
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={120}
-                    height={48}
-                    className="h-auto max-h-10 w-auto max-w-[100px] object-contain brightness-0 invert opacity-90"
-                  />
+                  <div className="relative h-16 w-full max-w-[200px] sm:h-20 md:h-24">
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 640px) 160px, 200px"
+                      className="object-contain brightness-0 invert opacity-95"
+                    />
+                  </div>
                 </li>
               ))}
             </ul>

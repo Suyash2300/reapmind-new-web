@@ -42,7 +42,7 @@ export function ClientLogoShowcase({
   const rowTwo = [...[...logos].reverse(), ...[...logos].reverse()];
   const rowMinH =
     size === "large"
-      ? "min-h-[10rem] sm:min-h-[12rem] md:min-h-[14rem]"
+      ? "min-h-[12rem] sm:min-h-[14rem] md:min-h-[16rem] lg:min-h-[18rem]"
       : "min-h-[8.5rem] sm:min-h-[10rem] md:min-h-[11rem]";
 
   return (
@@ -101,8 +101,8 @@ const logoSizeStyles: Record<LogoSize, { slot: string; sizes: string }> = {
     sizes: "(max-width: 640px) 150px, 200px",
   },
   large: {
-    slot: "h-20 w-[190px] sm:h-24 sm:w-[230px] md:h-28 md:w-[270px] lg:h-32 lg:w-[300px]",
-    sizes: "(max-width: 640px) 190px, (max-width: 1024px) 230px, 300px",
+    slot: "h-24 w-[220px] sm:h-28 sm:w-[260px] md:h-32 md:w-[300px] lg:h-36 lg:w-[340px]",
+    sizes: "(max-width: 640px) 220px, (max-width: 1024px) 260px, 340px",
   },
 };
 
@@ -118,7 +118,7 @@ function LogoItem({ logo, size = "default" }: { logo: Logo; size?: LogoSize }) {
         quality={100}
         unoptimized
         sizes={s.sizes}
-        className="object-contain opacity-90 brightness-0 invert"
+        className="object-contain brightness-0 invert"
       />
     </div>
   );
