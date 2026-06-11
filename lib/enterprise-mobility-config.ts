@@ -1,3 +1,4 @@
+import { hireTestimonialImages } from "./hire-testimonial-images";
 export const enterpriseMobilityConfig = {
   meta: {
     title: "Top-Notch Enterprise Mobility Solutions | ReapMind",
@@ -255,37 +256,37 @@ export const enterpriseMobilityConfig = {
     {
       name: "Miss Gunjan Jain",
       role: "Founder and CEO of Internationally Awarded Healthtech Ventures",
-      image: "/enterprise-mobility/testimonial-0.jpg",
+      image: hireTestimonialImages.gunjan,
       quote: "At Vytal, our collaboration with Reapmind on two applications was exceptional. Their dynamic team grasped our unique needs, collaborating closely with our own. They not only created visually appealing apps but also ensured functionality and user-friendliness. Prompt issue resolution, transparent communication, and adaptable professionalism defined our experience. Highly recommend!"
     },
     {
       name: "Mr. Matthew Carter",
       role: "CTO of Leep Rideshare LLC",
-      image: "/enterprise-mobility/testimonial-1.jpg",
+      image: hireTestimonialImages.matthew,
       quote: "Partnering with Reapmind was a game-changer for Leep Rideshare. Their deep understanding and close collaboration resulted in appealing and user-friendly apps. Quick issue resolution, clear communication, and a flexible and professional approach made the journey remarkable. We highly recommend Reapmind for its exceptional relationship-driven solutions."
     },
     {
       name: "Mr. Jeremy Del Zotto",
       role: "Founder & CEO - & Connection INC. (Canada)",
-      image: "/enterprise-mobility/testimonial-2.jpg",
+      image: hireTestimonialImages.jeremy,
       quote: "Reapmind has been an outstanding product partner for & Connection INC. Their exceptional technical support has brought to life unique and innovative features that have significantly elevated our app's functionality and user experience. Reapmind’s commitment to delivering excellence has been instrumental in our success. Highly recommended for top-notch app development services."
     },
     {
       name: "S. D. Shibulal",
       role: "Founder: Innovations Investment Management India Private Ltd (INDIA)",
-      image: "/enterprise-mobility/testimonial-sd.jpg",
+      image: hireTestimonialImages.shibulal,
       quote: "Reapmind's e-commerce web application development has been instrumental in our success. Their expertise has enabled us to establish a comprehensive e-retail ecosystem, and their contribution has added significant value to our business, enhancing our overall system and driving our success forward. Highly recommended!"
     },
     {
       name: "Roland Owens",
       role: "Director: Synerphase, Inc., Silicon Valley (USA)",
-      image: "/enterprise-mobility/testimonial-5.jpg",
+      image: hireTestimonialImages.roland,
       quote: "At Synerphase, Inc., our collaboration with Reapmind has been transformational. Their unwavering support for technological innovation turned our concept into a functional product. Reapmind's expertise and commitment breathed life into our vision. We highly recommend Reapmind to those seeking a partner capable of translating innovative concepts into tangible, efficient solutions."
     },
     {
       name: "Dr. Murugan Kandasamy",
       role: "CEO- Deutsch Quality Systems (India)",
-      image: "/enterprise-mobility/testimonial-6.jpg",
+      image: hireTestimonialImages.murugan,
       quote: "At Deutsch Quality Systems (India), our collaboration with Reapmind speaks volumes. They developed a unique offline auditor app, a rarity that demanded an exceptional team. Reapmind crafted a solution that not only addressed our specific needs but also added significant value to our business. The app's innovative approach, efficient time-saving, and user-friendly navigation have been remarkable!"
     }
   ],
