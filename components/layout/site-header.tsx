@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 import { useNavMenuScrollLock } from "@/components/providers/smooth-scroll-provider";
 import { HydrationButton } from "@/components/ui/hydration-button";
 import { mainNav, site } from "@/lib/site-config";
@@ -10,15 +11,25 @@ import { NavMegaMenuPanel, NavMenuTrigger } from "./nav-mega-menu";
 import { NavGroupIcon, NavIconBadge } from "./nav-icons";
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openNav, setOpenNav] = useState<string | null>(null);
   const openItem = mainNav.find((item) => item.label === openNav);
   const setNavMenuOpen = useNavMenuScrollLock();
 
+  const closeMenus = useCallback(() => {
+    setMobileOpen(false);
+    setOpenNav(null);
+  }, []);
+
   useEffect(() => {
-    setNavMenuOpen?.(Boolean(openNav));
+    closeMenus();
+  }, [pathname, closeMenus]);
+
+  useEffect(() => {
+    setNavMenuOpen?.(Boolean(openNav) || mobileOpen);
     return () => setNavMenuOpen?.(false);
-  }, [openNav, setNavMenuOpen]);
+  }, [openNav, mobileOpen, setNavMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -28,7 +39,7 @@ export function SiteHeader() {
         onMouseLeave={() => setOpenNav(null)}
       >
         <div className="container-app flex h-[80px] items-center justify-between gap-4">
-          <Link href="/" className="relative block h-12 w-[172px] shrink-0 sm:h-14 sm:w-[200px]">
+          <Link href="/" className="relative block h-12 w-[172px] shrink-0 sm:h-14 sm:w-[200px]" onClick={closeMenus}>
             <Image
               src={site.logo}
               alt={site.name}
@@ -49,6 +60,7 @@ export function SiteHeader() {
                 item={item}
                 isOpen={openNav === item.label}
                 onOpen={() => setOpenNav(item.label)}
+                onLinkClick={closeMenus}
               />
             ))}
           </nav>
@@ -57,6 +69,7 @@ export function SiteHeader() {
             <Link
               href={site.contactUrl}
               className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover sm:inline-flex"
+              onClick={closeMenus}
             >
               {site.ctaLabel}
             </Link>
@@ -82,7 +95,7 @@ export function SiteHeader() {
         </div>
 
         {openItem?.groups?.length ? (
-          <NavMegaMenuPanel item={openItem} />
+          <NavMegaMenuPanel item={openItem} onLinkClick={closeMenus} />
         ) : null}
       </div>
 
@@ -118,7 +131,7 @@ export function SiteHeader() {
                           <Link
                             href={link.href}
                             className="flex min-h-10 items-center py-1.5 text-sm font-medium leading-5 text-secondary hover:text-primary"
-                            onClick={() => setMobileOpen(false)}
+                            onClick={closeMenus}
                             {...(link.href.startsWith("http")
                               ? { target: "_blank", rel: "noopener noreferrer" }
                               : {})}
@@ -135,7 +148,7 @@ export function SiteHeader() {
             <Link
               href={site.contactUrl}
               className="inline-flex w-full justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
-              onClick={() => setMobileOpen(false)}
+              onClick={closeMenus}
             >
               {site.ctaLabel}
             </Link>

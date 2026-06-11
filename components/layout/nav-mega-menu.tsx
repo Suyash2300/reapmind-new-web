@@ -25,10 +25,12 @@ export function NavMenuTrigger({
   item,
   isOpen,
   onOpen,
+  onLinkClick,
 }: {
   item: NavItem;
   isOpen: boolean;
   onOpen: () => void;
+  onLinkClick?: () => void;
 }) {
   const hasPanel = Boolean(item.groups?.length);
   const triggerClass = [
@@ -44,7 +46,7 @@ export function NavMenuTrigger({
 
   if (!hasPanel) {
     return item.href ? (
-      <Link href={item.href} className={triggerClass}>
+      <Link href={item.href} className={triggerClass} onClick={onLinkClick}>
         <span className="whitespace-nowrap">{item.label}</span>
       </Link>
     ) : (
@@ -64,7 +66,7 @@ export function NavMenuTrigger({
   return (
     <div className="relative" onMouseEnter={onOpen}>
       {item.href ? (
-        <Link href={item.href} className={triggerClass} aria-expanded={isOpen}>
+        <Link href={item.href} className={triggerClass} aria-expanded={isOpen} onClick={onLinkClick}>
           {inner}
         </Link>
       ) : (
@@ -82,7 +84,7 @@ export function NavMenuTrigger({
   );
 }
 
-function NavMegaGroupColumn({ group }: { group: NavGroup }) {
+function NavMegaGroupColumn({ group, onLinkClick }: { group: NavGroup; onLinkClick?: () => void }) {
   const hasTitle = Boolean(group.title?.trim());
 
   return (
@@ -114,6 +116,7 @@ function NavMegaGroupColumn({ group }: { group: NavGroup }) {
             <Link
               href={link.href}
               className="flex min-h-10 items-center py-2 text-base font-semibold leading-6 tracking-normal text-secondary transition-colors hover:text-primary"
+              onClick={onLinkClick}
               {...(isExternal(link.href)
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
@@ -128,7 +131,13 @@ function NavMegaGroupColumn({ group }: { group: NavGroup }) {
 }
 
 /** Full-width dropdown aligned to site container */
-export function NavMegaMenuPanel({ item }: { item: NavItem }) {
+export function NavMegaMenuPanel({
+  item,
+  onLinkClick,
+}: {
+  item: NavItem;
+  onLinkClick?: () => void;
+}) {
   const groups = item.groups ?? [];
   if (!groups.length) return null;
 
@@ -152,6 +161,7 @@ export function NavMegaMenuPanel({ item }: { item: NavItem }) {
                 <Link
                   href={link.href}
                   className="group/link flex min-h-10 items-center gap-2.5 py-2 text-sm font-medium leading-5 text-secondary transition-colors hover:text-primary"
+                  onClick={onLinkClick}
                   {...(isExternal(link.href)
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
@@ -172,6 +182,7 @@ export function NavMegaMenuPanel({ item }: { item: NavItem }) {
               <NavMegaGroupColumn
                 key={group.title ?? group.links[0]?.href}
                 group={group}
+                onLinkClick={onLinkClick}
               />
             ))}
           </div>
