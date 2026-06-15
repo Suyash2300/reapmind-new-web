@@ -111,7 +111,7 @@ function NavMegaGroupColumn({ group, onLinkClick }: { group: NavGroup; onLinkCli
       </div>
 
       <ul className="m-0 flex list-none flex-col p-0">
-        {group.links.map((link) => (
+        {group.links.filter((link) => link.label?.trim()).map((link) => (
           <li key={`${group.title ?? "links"}-${link.label}-${link.href}`} className="m-0 p-0">
             <Link
               href={link.href}
@@ -156,7 +156,7 @@ export function NavMegaMenuPanel({
       >
         {isSimpleList ? (
           <ul className="m-0 grid list-none gap-x-10 gap-y-0 p-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {groups[0].links.map((link) => (
+            {groups[0].links.filter((link) => link.label?.trim()).map((link) => (
               <li key={`${link.label}-${link.href}`} className="m-0 p-0">
                 <Link
                   href={link.href}

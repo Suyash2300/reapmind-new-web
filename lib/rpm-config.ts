@@ -64,7 +64,7 @@ export const rpmConfig = {
       "Imagine being able to monitor, report, and evaluate your patients' acute and chronic diseases from anywhere on the planet. Clinicians and program directors can watch patients remotely in real-time with remote patient monitoring equipment.",
     primaryCta: "Reach out to get started on your requirements",
     secondaryCta: "Have a Idea? Contact Us",
-    image: "/rpm/hero-banner.png",
+    image: "/rpm/blog-intranet.png",
     accentColor: "#0EA5E9",
   },
   clientLogos: {
@@ -85,7 +85,7 @@ export const rpmConfig = {
     title: "Various type of Remote Patient Monitoring System",
     intro:
       "The use of a remote patient monitoring system contributes to the development of trust and transparency. Users get a better understanding of diseases and treatments, allowing them to take more control over the treatment regimens.",
-    image: "/rpm/features-monitoring.png",
+    image: "/generative-ai/Featured-Image-scaled.png",
     envisionedTitle:
       "Why Choose ReapMind as your Envisioned Remote Patient Monitoring System Partner?",
   },

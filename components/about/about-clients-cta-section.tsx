@@ -20,7 +20,7 @@ export function AboutClientsCtaSection() {
         </FadeIn>
 
         <FadeIn delay={0.08}>
-          <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-10">
+          <ul className="mt-8 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-12 lg:gap-y-12">
             {aboutOurCompanyClients.logos.map((logo) => (
               <li
                 key={logo.name}
@@ -29,9 +29,9 @@ export function AboutClientsCtaSection() {
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  width={140}
-                  height={56}
-                  className="h-10 w-auto max-w-[120px] object-contain brightness-0 invert sm:h-12 sm:max-w-[140px]"
+                  width={220}
+                  height={88}
+                  className="h-14 w-auto max-w-[170px] object-contain brightness-0 invert sm:h-16 sm:max-w-[200px] md:h-[4.5rem] md:max-w-[240px]"
                 />
               </li>
             ))}
