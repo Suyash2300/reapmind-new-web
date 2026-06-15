@@ -3,8 +3,8 @@ import https from "https";
 import fs from "fs";
 import path from "path";
 
-export async function GET() {
-  return new Promise((resolve) => {
+export async function GET(): Promise<NextResponse> {
+  return new Promise<NextResponse>((resolve) => {
     https.get('https://reapmind.com/top-product-design-and-development-company-in-india/', { timeout: 10000 }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);

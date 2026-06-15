@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { androidHireConfig } from "@/lib/android-hire-config";
 
 export function AndroidHirePortfolio() {
@@ -34,11 +35,9 @@ export function AndroidHirePortfolio() {
         <div className="mx-auto max-w-5xl">
           <div className="relative min-h-[440px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 sm:min-h-[500px]">
             <AnimatePresence mode="wait" custom={dir}>
-              <motion.a
+              <PortfolioCaseLink
                 key={item.title}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 custom={dir}
                 initial={{ opacity: 0, rotateY: dir > 0 ? 70 : -70, x: dir > 0 ? 80 : -80 }}
                 animate={{ opacity: 1, rotateY: 0, x: 0 }}
@@ -56,7 +55,7 @@ export function AndroidHirePortfolio() {
                   </span>
                   <h3 className="mt-3 text-h3 font-bold text-white">{item.title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             </AnimatePresence>
           </div>
 

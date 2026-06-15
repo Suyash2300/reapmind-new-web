@@ -1,6 +1,14 @@
-import { blogPostContent } from "@/lib/blog-post-content";
+import {
+  blogPostContent,
+  blogSlugs,
+  type BlogPostContent,
+  type BlogPostSection,
+} from "@/lib/blog-post-content";
 import { blogSlugAliases } from "@/lib/blog-routes";
 
+// ─── Shared types ────────────────────────────────────────────────────────────
+
+/** Kept for backwards-compat with older consumers. */
 export type InsightCard = {
   title: string;
   category: string;
@@ -10,128 +18,249 @@ export type InsightCard = {
   image?: string;
 };
 
-const insightArticleMeta: Omit<InsightCard, "link">[] = [
+/** Richer insight-card type used by healthcare pages. */
+export type BlogInsightCard = {
+  slug: string;
+  title: string;
+  category: string;
+  date: string;
+  author: string;
+  image: string;
+  link: string;
+};
+
+// ─── Scrape-noise filters (for healthcare-work scraped content) ───────────────
+
+const SKIP_SECTION =
+  /let's spark|contact us now|follow us|instagram|popupmaker|for project queries/i;
+const SKIP_PARAGRAPH =
+  /©20\d{2}|wppopupmaker|Bannerghatta|Development Center|All Rights Reserved|step-by-step guide/i;
+
+// ─── Canonical insight cards ──────────────────────────────────────────────────
+
+/** Card metadata for insight grids (shared across OMD, MVP, PWA, EMR, etc.). */
+export const blogInsightCards: BlogInsightCard[] = [
   {
-    title: "How Much Does It Cost to Develop an AI Agent in 2025?",
+    slug: "how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry",
+    title: "How Much Does It Cost to Develop an AI Agent for the Human Resource Industry?",
     category: "Artificial Intelligence",
     date: "Nov 5, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-hr-ai-agent.png",
+    link: "/how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry",
   },
   {
+    slug: "how-much-does-it-cost-to-develop-an-ai-agent-in-2025",
     title: "How Much Does It Cost to Develop an AI Agent in 2025?",
     category: "Artificial Intelligence",
-    date: "Nov 5, 2025",
+    date: "Oct 31, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-ai-agent-2025.png",
+    link: "/how-much-does-it-cost-to-develop-an-ai-agent-in-2025",
   },
   {
-    title: "Why Your Enterprise Needs a Custom Intranet Portal (And How to Build One That Actually Works)",
+    slug: "why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works",
+    title:
+      "Why Your Enterprise Needs a Custom Intranet Portal (And How to Build One That Actually Works)",
     category: "Offshore Development",
-    date: "Oct 18, 2025",
+    date: "Oct 14, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-intranet.png",
+    link: "/why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works",
   },
   {
-    title: "How to Build an AI-Powered Language Learning App: Features, Process & Costs (2025 Guide)",
+    slug: "how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide",
+    title:
+      "How to Build an AI-Powered Language Learning App: Features, Process & Costs (2025 Guide)",
     category: "Artificial Intelligence",
-    date: "Aug 15, 2025",
+    date: "Aug 14, 2025",
     author: "ReapMind Innovations",
+    image: "/omd/blog-language-learning.png",
+    link: "/how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide",
   },
   {
+    slug: "smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025",
     title: "Smarter School Bus Monitoring Solution with IoT & Mobility in 2025",
     category: "Uncategorized",
-    date: "Aug 15, 2025",
+    date: "Aug 14, 2025",
     author: "ReapMind Innovations",
+    image: "/omd/blog-school-bus.png",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025",
   },
   {
+    slug: "devops-automation-approaching-business-critical-functionality",
     title: "DevOps Automation: Approaching Business-Critical Functionality",
     category: "Blog",
     date: "May 7, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-devops.png",
+    link: "/devops-automation-approaching-business-critical-functionality",
   },
   {
-    title: "The Role of AI in Intelligent Document Processing and Management – Benefits and Applications",
+    slug: "the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications",
+    title:
+      "The Role of AI in Intelligent Document Processing and Management – Benefits and Applications",
     category: "Artificial Intelligence",
-    date: "Apr 6, 2025",
+    date: "May 6, 2025",
     author: "ReapMind Innovations",
+    image: "/omd/blog-document-ai.png",
+    link: "/the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications",
   },
   {
+    slug: "emr-integration-in-healthcare-systems-benefits-features-process-costs",
     title: "EMR Integration in Healthcare Systems – Benefits, Features, Process, Costs",
     category: "Technology",
     date: "May 5, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-emr.png",
+    link: "/emr-integration-in-healthcare-systems-benefits-features-process-costs",
   },
   {
+    slug: "cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories",
     title: "Cybersecurity in Manufacturing: Building Cyber Resilience for Smart Factories",
     category: "Technology",
-    date: "May 2, 2025",
+    date: "May 1, 2025",
     author: "Prakhar Lohia",
+    image: "/omd/blog-cybersecurity.png",
+    link: "/cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories",
   },
   {
+    slug: "how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app",
     title: "How Much Does It Cost to Develop a Mutual Fund Investment Portal or App?",
-    category: "Technology",
+    category: "Mobile App Development Cost",
     date: "Apr 30, 2025",
-    author: "Prakhar Lohia",
+    author: "ReapMind Innovations",
+    image: "/omd/blog-mutual-fund.png",
+    link: "/how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app",
   },
   {
-    title: "Healthcare Workforce Management Software: A Catalyst for Streamlined Business Operations",
-    category: "Healthcare",
-    date: "Apr 24, 2025",
-    author: "Prakhar Lohia",
+    slug: "healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations",
+    title:
+      "Healthcare Workforce Management Software: A Catalyst for Streamlined Business Operations",
+    category: "Technology",
+    date: "Apr 29, 2025",
+    author: "ReapMind Innovations",
+    image: "/omd/blog-emr.png",
+    link: "/healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations",
   },
   {
+    slug: "how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services",
     title: "How an AI Chatbot for Higher Education Revolutionizes Student Support Services",
     category: "Artificial Intelligence",
     date: "Apr 28, 2025",
-    author: "Prakhar Lohia",
+    author: "ReapMind Innovations",
+    image: "/omd/blog-ai-agent-2025.png",
+    link: "/how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services",
   },
 ];
 
-const canonicalSlugs = [
-  "how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry",
-  "how-much-does-it-cost-to-develop-an-ai-agent-in-2025",
-  "why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works",
-  "how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide",
-  "smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025",
-  "devops-automation-approaching-business-critical-functionality",
-  "the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications",
-  "emr-integration-in-healthcare-systems-benefits-features-process-costs",
-  "cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories",
-  "how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app",
-  "healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations",
-  "how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services",
-] as const;
+const cardBySlug = Object.fromEntries(
+  blogInsightCards.map((card) => [card.slug, card]),
+) as Record<string, BlogInsightCard>;
 
-/** Legacy short paths used on service landing pages (matches reapmind.com) */
-const legacyLinks = [
-  "/ai-agent-development-cost-for-hr-industry/",
-  "/ai-agent-development-cost-2025/",
-  "/why-your-enterprise-needs-a-custom-intranet-portal/",
-  "/how-to-build-an-ai-powered-language-learning-app/",
-  ...canonicalSlugs.slice(4).map((slug) => `/${slug}/`),
-] as const;
+// ─── Section cleaning (removes scraped footer noise) ─────────────────────────
 
-export function getInsightCards(imagePrefix = "/short-video-app/"): InsightCard[] {
-  const images = [
-    `${imagePrefix}Featured-Image-2.png`,
-    `${imagePrefix}Featured-Image-1-scaled.png`,
-    `${imagePrefix}Featured-Image-scaled.png`,
-    `${imagePrefix}Featured-Image-13-scaled.png`,
-    `${imagePrefix}Featured-Image-11-scaled.png`,
-    `${imagePrefix}Featured-Image-9-scaled.png`,
-    `${imagePrefix}Featured-Image-5-scaled.png`,
-    `${imagePrefix}Featured-Image-3-scaled.png`,
-    `${imagePrefix}Featured-Image-scaled.png`,
-    `${imagePrefix}Featured-Image-3-scaled.png`,
-    `${imagePrefix}Featured-Image-5-scaled.png`,
-    `${imagePrefix}Featured-Image-9-scaled.png`,
-  ];
+function cleanSections(sections: BlogPostSection[]): BlogPostSection[] {
+  return sections
+    .filter((section) => !SKIP_SECTION.test(section.title))
+    .map((section) => ({
+      title: section.title,
+      paragraphs: section.paragraphs.filter((p) => !SKIP_PARAGRAPH.test(p)),
+    }))
+    .filter((section) => section.paragraphs.length > 0);
+}
 
-  return insightArticleMeta.map((item, index) => ({
-    ...item,
-    link: legacyLinks[index],
-    image: images[index],
+function fallbackPost(card: BlogInsightCard): BlogPostContent {
+  return {
+    slug: card.slug,
+    canonicalPath: card.link,
+    metaTitle: `${card.title} | ReapMind`,
+    metaDescription: `Read ${card.title} — insights from ReapMind Innovations on ${card.category.toLowerCase()}.`,
+    heroTitle: card.title,
+    heroImage: card.image,
+    category: card.category,
+    author: card.author,
+    date: card.date,
+    isoDate: "",
+    sections: [
+      {
+        title: "Overview",
+        paragraphs: [
+          `${card.title} explores how modern software, AI, and digital platforms help organizations move faster with better outcomes. ReapMind Innovations partners with enterprises to design, build, and scale solutions tailored to real business needs.`,
+          "This article covers key considerations, implementation approaches, and the value drivers teams should evaluate before investing in a new platform or product initiative.",
+        ],
+      },
+    ],
+  };
+}
+
+function mergePost(card: BlogInsightCard): BlogPostContent {
+  const scraped = blogPostContent[card.slug];
+  if (!scraped) return fallbackPost(card);
+
+  const heroTitle =
+    scraped.heroTitle === card.slug || scraped.heroTitle.length < 20
+      ? card.title
+      : scraped.heroTitle;
+
+  return {
+    ...scraped,
+    heroTitle,
+    heroImage: card.image,
+    category: card.category,
+    author: card.author,
+    date: card.date || scraped.date,
+    metaTitle:
+      scraped.metaTitle === card.slug || scraped.metaTitle.length < 20
+        ? `${card.title} | ReapMind`
+        : scraped.metaTitle,
+    sections: cleanSections(scraped.sections),
+  };
+}
+
+// ─── Healthcare-work API (used by healthcare pages + BlogPostLayout) ──────────
+
+export function getAllBlogSlugs() {
+  return blogInsightCards.map((card) => card.slug);
+}
+
+export function isBlogSlug(slug: string) {
+  return slug in cardBySlug;
+}
+
+export function getBlogPost(slug: string): BlogPostContent | null {
+  const card = cardBySlug[slug];
+  if (!card) return null;
+  return mergePost(card);
+}
+
+export function getAllBlogPosts() {
+  return blogInsightCards.map((card) => mergePost(card));
+}
+
+/** Insight cards for a page — remap image prefix (e.g. /mvp/, /pwa/).
+ *  Accepts any prefix string for flexibility; typed union for known healthcare prefixes. */
+export function getInsightCards(
+  imagePrefix:
+    | "/omd/"
+    | "/emr/"
+    | "/oams/"
+    | "/ris/"
+    | "/olt/"
+    | "/mvp/"
+    | "/pwa/"
+    | "/pd/"
+    | string = "/omd/",
+): BlogInsightCard[] {
+  return blogInsightCards.map((card) => ({
+    ...card,
+    image: card.image.replace("/omd/", imagePrefix),
   }));
 }
 
+// ─── devNew / legacy API (used by BlogArticleLayout, blog-routes, etc.) ──────
+
+/** List all blog posts sorted newest-first (uses blogPostContent directly). */
 export function listBlogPosts() {
   return Object.values(blogPostContent).sort((a, b) => {
     if (a.isoDate && b.isoDate) return b.isoDate.localeCompare(a.isoDate);
@@ -139,6 +268,7 @@ export function listBlogPosts() {
   });
 }
 
+/** All slugs routable via app/[slug] — includes aliases from blog-routes. */
 export function getPublicBlogPaths(): string[] {
   const paths = new Set<string>();
   for (const slug of Object.keys(blogPostContent)) {
@@ -147,5 +277,14 @@ export function getPublicBlogPaths(): string[] {
   for (const [alias, canonical] of Object.entries(blogSlugAliases)) {
     if (blogPostContent[canonical]) paths.add(alias);
   }
+  // Also include insight-card slugs so healthcare-work routes are covered
+  for (const card of blogInsightCards) {
+    paths.add(card.slug);
+  }
   return [...paths];
 }
+
+export const knownBlogSlugs = [
+  ...blogSlugs,
+  ...blogInsightCards.map((c) => c.slug),
+] as const;

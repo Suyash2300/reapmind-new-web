@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { flutterHireConfig } from "@/lib/flutter-hire-config";
 
 export function FlutterHirePortfolio() {
@@ -24,11 +25,9 @@ export function FlutterHirePortfolio() {
 
         <div className="grid gap-6 md:grid-cols-3" style={{ perspective: 1200 }}>
           {portfolio.items.map((item, i) => (
-            <motion.a
+            <PortfolioCaseLink
               key={item.title}
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, rotateY: i % 2 === 0 ? -35 : 35, z: -80 }}
               whileInView={{ opacity: 1, rotateY: 0, z: 0 }}
               viewport={{ once: true }}
@@ -52,7 +51,7 @@ export function FlutterHirePortfolio() {
                 <span className="text-xs font-bold uppercase tracking-widest text-primary">{item.category}</span>
                 <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
               </div>
-            </motion.a>
+            </PortfolioCaseLink>
           ))}
         </div>
       </div>

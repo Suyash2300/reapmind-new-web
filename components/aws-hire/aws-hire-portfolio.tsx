@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { awsHireConfig } from "@/lib/aws-hire-config";
 
 export function AwsHirePortfolio() {
@@ -27,11 +28,9 @@ export function AwsHirePortfolio() {
             const offset = i - active;
             const isActive = i === active;
             return (
-              <motion.a
+              <PortfolioCaseLink
                 key={item.title}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 animate={{
@@ -52,7 +51,7 @@ export function AwsHirePortfolio() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#FF9900]">{item.category}</span>
                   <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             );
           })}
         </div>

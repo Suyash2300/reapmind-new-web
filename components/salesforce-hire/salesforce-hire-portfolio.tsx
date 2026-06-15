@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { salesforceHireConfig } from "@/lib/salesforce-hire-config";
 
 export function SalesforceHirePortfolio() {
@@ -30,11 +31,9 @@ export function SalesforceHirePortfolio() {
               const isTop = offset === 0;
 
               return (
-                <motion.a
+                <PortfolioCaseLink
                   key={item.title}
                   href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={(e) => {
                     if (!isTop) {
                       e.preventDefault();
@@ -69,7 +68,7 @@ export function SalesforceHirePortfolio() {
                     </span>
                     <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
                   </div>
-                </motion.a>
+                </PortfolioCaseLink>
               );
             })}
           </div>

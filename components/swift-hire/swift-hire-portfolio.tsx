@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { swiftHireConfig } from "@/lib/swift-hire-config";
 
 export function SwiftHirePortfolio() {
@@ -21,11 +22,9 @@ export function SwiftHirePortfolio() {
 
         <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {portfolio.items.map((item, i) => (
-            <motion.a
+            <PortfolioCaseLink
               key={item.title}
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -40,7 +39,7 @@ export function SwiftHirePortfolio() {
                 <span className="text-xs font-bold uppercase tracking-widest text-[#F05138]">{item.category}</span>
                 <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
               </div>
-            </motion.a>
+            </PortfolioCaseLink>
           ))}
         </div>
       </div>

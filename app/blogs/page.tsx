@@ -5,8 +5,9 @@ import { CompanyLocations } from "@/components/company/company-locations";
 import { listBlogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog | ReapMind Innovations",
-  description: "Latest insights on mobile app development, AI, healthcare, and digital transformation from ReapMind.",
+  title: "Blogs & Insights | ReapMind Innovations",
+  description:
+    "Read the latest insights on AI, healthcare technology, enterprise software, and digital product development from ReapMind Innovations.",
   alternates: {
     canonical: "https://reapmind.com/blogs/",
   },
@@ -22,7 +23,8 @@ export default function BlogsPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Resources</p>
           <h1 className="mt-3 text-h2 font-bold text-white sm:text-h1">Latest Insights</h1>
           <p className="mt-4 max-w-2xl text-para text-white/65">
-            Expert articles on app development, AI, healthcare technology, and enterprise digital transformation.
+            Expert articles on app development, AI, healthcare technology, and enterprise digital
+            transformation.
           </p>
         </div>
       </section>
@@ -51,7 +53,9 @@ export default function BlogsPage() {
                     </div>
                   ) : null}
                   <div className="p-5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-primary">{post.category}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                      {post.category}
+                    </p>
                     <h2 className="mt-2 line-clamp-3 text-lg font-bold text-white group-hover:text-primary">
                       {post.heroTitle}
                     </h2>

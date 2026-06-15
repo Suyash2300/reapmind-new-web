@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { iosHireConfig } from "@/lib/ios-hire-config";
 
 export function IosHirePortfolio() {
@@ -22,11 +23,9 @@ export function IosHirePortfolio() {
 
         <div className="-mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4 scrollbar-none sm:-mx-6 sm:px-6">
           {portfolio.items.map((item, i) => (
-            <motion.a
+            <PortfolioCaseLink
               key={item.title}
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -41,7 +40,7 @@ export function IosHirePortfolio() {
                 <span className="text-xs font-bold uppercase tracking-widest text-primary">{item.category}</span>
                 <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
               </div>
-            </motion.a>
+            </PortfolioCaseLink>
           ))}
         </div>
       </div>

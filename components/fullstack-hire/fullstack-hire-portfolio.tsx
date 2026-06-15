@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { fullstackHireConfig } from "@/lib/fullstack-hire-config";
 
 export function FullstackHirePortfolio() {
@@ -27,11 +28,9 @@ export function FullstackHirePortfolio() {
             const offset = (i - active + portfolio.items.length) % portfolio.items.length;
             if (offset > 2) return null;
             return (
-              <motion.a
+              <PortfolioCaseLink
                 key={item.title}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 animate={{
                   rotate: offset === 0 ? 0 : offset === 1 ? 8 : -8,
                   x: offset === 0 ? 0 : offset === 1 ? 40 : -40,
@@ -57,7 +56,7 @@ export function FullstackHirePortfolio() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#6366F1]">{item.category}</span>
                   <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             );
           })}
         </div>

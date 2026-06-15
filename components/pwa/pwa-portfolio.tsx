@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GsapScrollReveal } from "@/components/motion/gsap-scroll-reveal";
@@ -21,10 +22,8 @@ export function PwaPortfolio() {
         <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pwaConfig.portfolio.map((item, i) => (
             <GsapScrollReveal key={item.title} start={`top ${85 + i * 3}%`}>
-              <a
+              <Link
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="block h-full"
               >
                 <motion.div
@@ -47,7 +46,7 @@ export function PwaPortfolio() {
                     </h3>
                   </div>
                 </motion.div>
-              </a>
+              </Link>
             </GsapScrollReveal>
           ))}
         </div>

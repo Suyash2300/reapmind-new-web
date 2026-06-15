@@ -4,7 +4,7 @@ import { BlogArticleLayout } from "@/components/blog/blog-article-layout";
 import { AmConsultationSection } from "@/components/app-mod-bangalore/am-consultation-section";
 import { CompanyLocations } from "@/components/company/company-locations";
 import { getBlogPost, toBlogSections, toTableOfContents } from "@/lib/blog-utils";
-import { getPublicBlogPaths } from "@/lib/blog-posts";
+import { getPublicBlogPaths, isBlogSlug } from "@/lib/blog-posts";
 import { resolveBlogSlug } from "@/lib/blog-routes";
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -29,14 +29,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
+      url: post.canonicalPath,
       type: "article",
-      images: post.heroImage ? [{ url: post.heroImage }] : undefined,
+      images:
+        post.heroImage && post.heroImage.startsWith("/")
+          ? [{ url: post.heroImage }]
+          : undefined,
     },
   };
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
+
+  // Guard: only render known blog slugs; let other dynamic routes fall through
+  if (!isBlogSlug(slug)) notFound();
+
   const post = getBlogPost(slug);
   if (!post) notFound();
 
