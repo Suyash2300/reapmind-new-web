@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { pythonHireConfig } from "@/lib/python-hire-config";
 
 export function PythonHirePortfolio() {
@@ -27,11 +28,9 @@ export function PythonHirePortfolio() {
             const offset = i - active;
             const isActive = i === active;
             return (
-              <motion.a
+              <PortfolioCaseLink
                 key={item.title}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={(e) => {
                   if (!isActive) {
                     e.preventDefault();
@@ -57,7 +56,7 @@ export function PythonHirePortfolio() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#3776AB]">{item.category}</span>
                   <h3 className="mt-1 text-lg font-bold text-white">{item.title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             );
           })}
         </div>

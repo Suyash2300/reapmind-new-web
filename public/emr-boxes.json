@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Patient Scheduling",
+    "description": "An electronic medical record has a tool that helps set appointment allow office staff to simply book patients, register them, and select a reason for their visit. To prevent no-shows and improve collections, this electronic medical record system sends out automatic appointment reminders via email or text.",
+    "image": ""
+  },
+  {
+    "title": "Patient Flow for Electronic Medical Record",
+    "description": "To maximize productivity, one must first understand how patients flow through the business. To reduce inefficiencies, the most useful electronic medical record track patient flows in real-time. When a clean examination room is available, patients should never be forced to wait in the waiting room.",
+    "image": ""
+  },
+  {
+    "title": "Task Management",
+    "description": "Assist in managing the routine duties that clog up the everyday agenda. Signing notes, reviewing test findings, approving prescriptions, and responding to patient messages are all things that a quality system will remind healthcare providers to do. Won’t waste time looking for misplaced charts, waiting by the fax machine, or digging for missing patient information electronic medical records will get it done.",
+    "image": ""
+  },
+  {
+    "title": "Patient History Charts",
+    "description": "Patient information such as prescriptions, allergies, current disorders, vaccines, and other crucial data points are easily accessible with an electronic medical record. The EMR instantly records clinical content so that healthcare providers can document normal conditions and abnormalities with a few simple mouse clicks, minimizing transcription time and cost.",
+    "image": ""
+  },
+  {
+    "title": "Sort Patients with Similar Condition",
+    "description": "Helps to sort patients with similar conditions, the electronic medical record system allows creating order sets and templates. Later, sorts patients with similar diagnoses, which can be re-used to save time and speed up the clinical interaction.",
+    "image": ""
+  },
+  {
+    "title": "Detailed Reports for Medical Record",
+    "description": "An electronic medical record system gives real-time access to clinical and financial data, allowing you to make better practice decisions. The ability to generate thorough reports that illustrate how progressing toward meaningful use. This will reveal where one should concentrate their efforts to qualify for those coveted government incentives.",
+    "image": ""
+  }
+]

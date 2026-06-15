@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { angularHireConfig } from "@/lib/angular-hire-config";
 
 export function AngularHirePortfolio() {
@@ -27,11 +28,9 @@ export function AngularHirePortfolio() {
           {portfolio.items.map((item, i) => {
             const isFocused = focused === i;
             return (
-              <motion.a
+              <PortfolioCaseLink
                 key={item.title}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 onMouseEnter={() => setFocused(i)}
                 onFocus={() => setFocused(i)}
                 initial={{ opacity: 0, rotateY: -25, z: -80 }}
@@ -62,7 +61,7 @@ export function AngularHirePortfolio() {
                   <span className="text-xs font-bold uppercase tracking-widest text-primary">{item.category}</span>
                   <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             );
           })}
         </div>

@@ -49,37 +49,37 @@ export const productDesignConfig = {
       title: "Deutsche Quality Systems India (DQS India) – Audit App",
       category: "Enterprise",
       image: "/portfolio/pd-dqs.jpg",
-      link: "https://reapmind.com/portfolio/deutsche-quality-systems-india-dqs-india-audit-app/"
+      link: "/portfolio/deutsche-quality-systems-india-dqs-india-audit-app"
     },
     {
       title: "Lakshya Academy: Empowering Education Through Technology",
       category: "EdTech",
       image: "/portfolio/pd-lakshya.png",
-      link: "https://reapmind.com/portfolio/lakshya-academy-empowering-education/"
+      link: "/portfolio/lakshya-academy-empowering-education"
     },
     {
       title: "MTeducare: Revolutionizing Education Management",
       category: "EdTech",
       image: "/portfolio/pd-mteducare.png",
-      link: "https://reapmind.com/portfolio/mt-educare-education-management/"
+      link: "/portfolio/mt-educare-education-management"
     },
     {
       title: "Organic World",
       category: "E-Commerce",
       image: "/portfolio/pd-organic.png",
-      link: "https://reapmind.com/portfolio/organic-world/"
+      link: "/portfolio/organic-world"
     },
     {
       title: "PawSpace",
       category: "Marketplace",
       image: "/portfolio/pd-pawspace.png",
-      link: "https://reapmind.com/portfolio/pawspace/"
+      link: "/portfolio/pawspace"
     },
     {
       title: "Municipal Banking",
       category: "FinTech",
       image: "/portfolio/pd-municipal.png",
-      link: "https://reapmind.com/portfolio/muncipal-banking/"
+      link: "/portfolio/muncipal-banking"
     }
   ],
   challenges: {

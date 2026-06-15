@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { nodejsHireConfig } from "@/lib/nodejs-hire-config";
 
 export function NodejsHirePortfolio() {
@@ -29,11 +30,9 @@ export function NodejsHirePortfolio() {
           className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {portfolio.items.map((item, i) => (
-            <motion.a
+            <PortfolioCaseLink
               key={item.title}
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.85, rotateY: -15 }}
               whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -49,7 +48,7 @@ export function NodejsHirePortfolio() {
                 <span className="text-xs font-bold uppercase tracking-widest text-[#339933]">{item.category}</span>
                 <h3 className="mt-2 text-h4 font-bold text-white">{item.title}</h3>
               </div>
-            </motion.a>
+            </PortfolioCaseLink>
           ))}
         </div>
 

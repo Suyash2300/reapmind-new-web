@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { kotlinHireConfig } from "@/lib/kotlin-hire-config";
 
 export function KotlinHirePortfolio() {
@@ -40,11 +41,9 @@ export function KotlinHirePortfolio() {
 
           <div className="relative h-[380px] w-full max-w-lg" style={{ perspective: 1200 }}>
             <AnimatePresence mode="wait">
-              <motion.a
+              <PortfolioCaseLink
                 key={portfolio.items[active].title}
                 href={portfolio.items[active].link}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, rotateY: -30, z: -100 }}
                 animate={{ opacity: 1, rotateY: 0, z: 0 }}
                 exit={{ opacity: 0, rotateY: 30, z: -100 }}
@@ -66,7 +65,7 @@ export function KotlinHirePortfolio() {
                   </span>
                   <h3 className="mt-2 text-h4 font-bold text-white">{portfolio.items[active].title}</h3>
                 </div>
-              </motion.a>
+              </PortfolioCaseLink>
             </AnimatePresence>
           </div>
         </div>

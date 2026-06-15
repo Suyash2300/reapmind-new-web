@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PortfolioCaseLink } from "@/components/shared/portfolio-case-link";
 import { javascriptHireConfig } from "@/lib/javascript-hire-config";
 
 export function JavascriptHirePortfolio() {
@@ -22,11 +23,9 @@ export function JavascriptHirePortfolio() {
 
         <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {portfolio.items.map((item, i) => (
-            <motion.a
+            <PortfolioCaseLink
               key={item.title}
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -41,7 +40,7 @@ export function JavascriptHirePortfolio() {
                 <span className="text-xs font-bold uppercase tracking-widest text-[#F7DF1E]">{item.category}</span>
                 <h3 className="mt-1 text-lg font-bold text-white">{item.title}</h3>
               </div>
-            </motion.a>
+            </PortfolioCaseLink>
           ))}
         </div>
       </div>

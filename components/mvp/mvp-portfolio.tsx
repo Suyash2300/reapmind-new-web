@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { mvpConfig } from "@/lib/mvp-config";
@@ -23,7 +24,7 @@ export function MvpPortfolio() {
         >
           {mvpConfig.portfolio.map((item) => (
             <motion.div key={item.title} variants={mvpMotionVariants.scaleIn} className="h-full">
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+              <Link href={item.link} className="block h-full">
                 <motion.article
                   whileHover={{ y: -8 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -54,7 +55,7 @@ export function MvpPortfolio() {
                     </p>
                   </div>
                 </motion.article>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

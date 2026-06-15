@@ -20,7 +20,7 @@ export function PdPortfolio() {
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productDesignConfig.portfolio.map((item, i) => (
             <GsapScrollReveal key={item.title} start={`top ${85 + i * 3}%`}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+              <Link href={item.link} className="block h-full">
                 <motion.div
                   className="group relative flex flex-col justify-end overflow-hidden rounded-[2rem] border border-white/10 bg-surface-header aspect-[4/3] transition-all duration-500 hover:scale-[1.02] cursor-pointer"
                   whileHover={{ y: -6 }}
@@ -52,7 +52,7 @@ export function PdPortfolio() {
                     </div>
                   </div>
                 </motion.div>
-              </a>
+              </Link>
             </GsapScrollReveal>
           ))}
         </div>
