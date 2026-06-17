@@ -230,7 +230,7 @@ export const salesforceDevelopmentConfig = {
         title: "Financial services",
         description:
           "Complex customer data, complex onboarding processes, and rigid regulatory compliance can all restrict efficiency. We lay out the Salesforce solutions that revamp the processes, simplify data administration, and assure industry compliance.",
-        image: "/chatbots/vertical-finance.jpg",
+        image: "/salesforce-development/sf-industry-finance.png",
         imagePosition: "center center",
         accent: "#60A5FA",
       },
@@ -239,7 +239,7 @@ export const salesforceDevelopmentConfig = {
         title: "Insurance",
         description:
           "Handling policies, claims, and customer data across numerous systems can result in delays and inconsistent experiences. Our solutions consolidate data, automate procedures, and streamline communication to boost efficiency and customer satisfaction.",
-        image: "/chatbots/vertical-security.jpg",
+        image: "/salesforce-development/sf-industry-insurance.png",
         imagePosition: "center center",
         accent: "#34D399",
       },
@@ -248,8 +248,8 @@ export const salesforceDevelopmentConfig = {
         title: "Healthcare & Life Science",
         description:
           "Patient data protection, complex research pathways, and dispersed care coordination all pose operational challenges. We create HIPAA-compliant Salesforce solutions that protect information, improve research procedures, and allow providers to collaborate seamlessly.",
-        image: "/chatbots/vertical-healthcare.jpg",
-        imagePosition: "center 30%",
+        image: "/salesforce-development/sf-industry-healthcare.png",
+        imagePosition: "center center",
         accent: "#F472B6",
       },
       {
@@ -257,7 +257,7 @@ export const salesforceDevelopmentConfig = {
         title: "Manufacturing",
         description:
           "Disparate systems, poor manufacturing visibility, and complex supply chain logistics can lead to operational delays. Our apps connect data, enable real-time production tracking, and streamline the whole supply chain to increase productivity.",
-        image: "/company/hero-office.jpg",
+        image: "/salesforce-development/sf-industry-manufacturing.png",
         imagePosition: "center center",
         accent: "#FBBF24",
       },
@@ -266,9 +266,8 @@ export const salesforceDevelopmentConfig = {
         title: "Retail and Consumer Goods",
         description:
           "Analyzing customer behavior, scattered inventory data, and disconnected sales channels all represent issues. We simplify customer data, centralize inventory management, and streamline sales procedures to provide a personalized and seamless purchasing experience",
-        image: "/portfolio/organic-world-banner.jpg",
-        fallbackImage: "/portfolio/organic-world.png",
-        imagePosition: "center 35%",
+        image: "/salesforce-development/sf-industry-retail.png",
+        imagePosition: "center center",
         accent: "#C084FC",
       },
       {
@@ -276,8 +275,8 @@ export const salesforceDevelopmentConfig = {
         title: "Technology",
         description:
           "Monitoring complex sales cycles, examining project progress, and offering prompt support can all result in jams. Our Salesforce solutions simplify sales pipelines, improve project management, and establish effective customer service channels.",
-        image: "/salesforce-hire/hero-ai.png",
-        imagePosition: "center top",
+        image: "/salesforce-development/sf-industry-technology.png",
+        imagePosition: "center center",
         accent: SF_ACCENT,
       },
     ],

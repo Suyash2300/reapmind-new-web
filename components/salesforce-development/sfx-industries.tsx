@@ -15,13 +15,7 @@ export function SfxIndustries() {
   const { industries } = salesforceDevelopmentConfig;
   const reducedMotion = usePrefersReducedMotion();
   const [active, setActive] = useState(0);
-  const [imgFailed, setImgFailed] = useState<Record<string, boolean>>({});
   const sector = industries.items[active];
-  const sectorImage =
-    imgFailed[sector.id] && "fallbackImage" in sector && sector.fallbackImage
-      ? sector.fallbackImage
-      : sector.image;
-  const isPng = sectorImage.endsWith(".png");
 
   return (
     <section className="border-t border-white/10 bg-black py-12 md:py-16 lg:py-20" aria-labelledby="sfx-industries-heading">
@@ -70,14 +64,13 @@ export function SfxIndustries() {
             >
               <div className="relative h-56 sm:h-64 md:h-72">
                 <Image
-                  src={sectorImage}
+                  src={sector.image}
                   alt={sector.title}
                   fill
                   quality={92}
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className={isPng ? "object-contain p-8" : "object-cover"}
+                  className="object-cover"
                   style={{ objectPosition: sector.imagePosition ?? "center center" }}
-                  onError={() => setImgFailed((prev) => ({ ...prev, [sector.id]: true }))}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" aria-hidden />
                 <h3 className="absolute bottom-5 left-5 right-5 text-h4 font-bold text-white sm:text-h3">
