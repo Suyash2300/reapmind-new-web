@@ -118,7 +118,7 @@ function DeskConnectors({ activeIndex }: { activeIndex: number }) {
       preserveAspectRatio="none"
       aria-hidden
     >
-      {deskPositions.map((pos, index) => (
+      {deskPositions.slice(0, team.members.length).map((pos, index) => (
         <path
           key={pos.path}
           d={pos.path}

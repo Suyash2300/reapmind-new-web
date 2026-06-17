@@ -186,7 +186,7 @@ export const shortVideoAppPortfolio: PortfolioItem[] = [
   { title: "Muncipal banking", category: "FinTech", image: "/short-video-app/Municipal-Bank-hero-image.png", link: "/portfolio/muncipal-banking" },
 ];
 
-export const shortVideoAppInsights = getInsightCards("/short-video-app/");
+export const shortVideoAppInsights = getInsightCards();
 
 export const shortVideoAppTestimonialIds = [
   "gunjan-jain", "matthew-carter", "jeremy-del-zotto", "sd-shibulal", "roland-owens", "murugan-kandasamy",

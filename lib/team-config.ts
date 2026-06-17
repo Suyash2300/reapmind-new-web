@@ -21,11 +21,11 @@ export const teamConfig = {
       role: "Head of Business Strategies",
       image: "/portfolio/Bhaskar_370x400-370x400-1.jpg"
     },
-    {
-      name: "Keith Wallace",
-      role: "Head of Operational Strategies",
-      image: "/portfolio/imgpsh_fullsize_anim-18-370x400-1.jpeg"
-    },
+    // {
+    //   name: "Keith Wallace",
+    //   role: "Head of Operational Strategies",
+    //   image: "/portfolio/imgpsh_fullsize_anim-18-370x400-1.jpeg"
+    // },
     {
       name: "Venkatashwara Kakula",
       role: "Enterprise Architect",

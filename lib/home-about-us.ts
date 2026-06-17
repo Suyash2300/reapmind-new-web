@@ -22,28 +22,18 @@ export const homeAboutUs = {
     subtitle:
       "Leading the way to digital transformation with brilliant minds — strategy, operations, and architecture under one roof.",
     badges: teamConfig.highlights,
-    members: [
-      {
-        ...teamConfig.members[0],
-        focus:
-          "Sets the vision for ReapMind — blending innovation, client trust, and global growth.",
-      },
-      {
-        ...teamConfig.members[1],
-        focus:
-          "Shapes business strategy and partnerships that turn ambitious ideas into scalable wins.",
-      },
-      {
-        ...teamConfig.members[2],
-        focus:
-          "Orchestrates delivery excellence — keeping projects on track, on quality, and on time.",
-      },
-      {
-        ...teamConfig.members[3],
-        focus:
-          "Architects enterprise-grade systems built to scale, integrate, and endure.",
-      },
-    ],
+    members: teamConfig.members.slice(0, 4).map((member, index) => {
+      const focuses = [
+        "Sets the vision for ReapMind — blending innovation, client trust, and global growth.",
+        "Shapes business strategy and partnerships that turn ambitious ideas into scalable wins.",
+        "Orchestrates delivery excellence — keeping projects on track, on quality, and on time.",
+        "Architects enterprise-grade systems built to scale, integrate, and endure.",
+      ];
+      return {
+        ...member,
+        focus: focuses[index] || "Drives success through strategic leadership and technical innovation.",
+      };
+    }),
     cta: { label: "Meet our team", href: "/team-reapmind" },
   },
   proof: {

@@ -41,33 +41,10 @@ export const companyConfig = {
     { title: "Youngster-Driven", description: "A dynamic team bringing fresh perspectives and boundless energy to every challenge." }
   ],
   locations: [
-    {
-      title: "Mumbai",
-      address:
-        "Kalpataru Plaza, 503, Chincholi Bunder Rd, Malad, Nadiyawala Colony 2, W, Mumbai, Maharashtra 400064",
-      flag: "/flags/in.svg",
-      flagLabel: "India",
-    },
-    {
-      title: "Bangalore",
-      address:
-        "175, Bannerghatta Main Rd, Dollars Colony, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560076",
-      flag: "/flags/in.svg",
-      flagLabel: "India",
-    },
-    {
-      title: "Development Center",
-      address:
-        "4th Floor, Business Hub, IDFC Bank, 401, Sykes Extension, Kolhapur, Maharashtra, 416001",
-      flag: "/flags/in.svg",
-      flagLabel: "India",
-    },
-    {
-      title: "USA",
-      address: "Atlanta, Georgia, United States of America (USA).",
-      flag: "/flags/us.svg",
-      flagLabel: "United States",
-    },
+    { title: "Mumbai", address: "Kalpataru Plaza, 503, Chincholi Bunder Rd, Malad, Nadiyawala Colony 2, W, Mumbai, Maharashtra 400064" },
+    { title: "Bangalore", address: "175, Bannerghatta Main Rd, Dollars Colony, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560076" },
+    { title: "Development Center", address: "4th Floor, Business Hub, IDFC Bank, 401, Sykes Extension, Kolhapur, Maharashtra, 416001" },
+    { title: "USA", address: "Atlanta, Georgia, United States of America (USA)." }
   ],
   cta: {
     title: "Take the first step towards a new project or collaboration. Let's connect!",
