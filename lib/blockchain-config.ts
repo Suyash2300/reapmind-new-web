@@ -22,8 +22,8 @@ export const blockchainConfig = {
       "Revolutionizing industries with innovative and secure blockchain solutions. We are the leading blockchain development company in Dubai you can trust.",
     cta: "Reach out to get started on your requirements",
     formTitle: "Have a Idea? Contact Us",
-    image: "/generative-ai/Municipal-Bank-hero-image.png",
-    fallbackImage: "/portfolio/municipal-bank.png",
+    image: "/blockchain-development/bc-hero.png",
+    fallbackImage: "/blockchain-development/bc-hero.png",
   },
   clientSuccess: {
     title: "Celebrating Success Stories",
@@ -50,8 +50,8 @@ export const blockchainConfig = {
         description:
           "At ReapMind, we understand that every business has unique needs, and we provide comprehensive blockchain consulting services in Dubai to help our clients understand the potential of blockchain technology and how it can be applied to their specific industries. Our team of experts works closely with clients to identify the best blockchain solutions for their needs, enabling them to optimize their operations and reduce costs. We help businesses analyze their current processes and identify areas where blockchain technology can add value, and then provide a roadmap for implementing blockchain solutions. Our blockchain consulting services are designed to deliver measurable results, enabling businesses to stay ahead of the competition.",
         tags: ["Strategy", "Roadmap", "Dubai"],
-        image: "/company/team-2.jpg",
-        imagePosition: "center 25%",
+        image: "/blockchain-development/bc-service-consulting.png",
+        imagePosition: "center center",
       },
       {
         id: "development",
@@ -60,9 +60,8 @@ export const blockchainConfig = {
         description:
           "Our team of experienced blockchain developers in Dubai leverages the latest tools, technologies, and frameworks to develop customized blockchain solutions that are secure, scalable, and transparent. From supply chain management to finance, healthcare, and more, we offer end-to-end blockchain development services that meet the specific needs of each client. Our focus is on delivering high-quality solutions that are built to last, enabling our clients to leverage the full potential of blockchain technology for their businesses. We work closely with our clients to understand their unique requirements and provide tailored solutions that meet their specific needs.",
         tags: ["Custom chains", "Scalable", "Secure"],
-        image: "/generative-ai/Municipal-Bank-hero-image.png",
-        fallbackImage: "/portfolio/municipal-bank.png",
-        imagePosition: "center top",
+        image: "/blockchain-development/bc-service-development.png",
+        imagePosition: "center center",
       },
       {
         id: "smart-contracts",
@@ -71,7 +70,7 @@ export const blockchainConfig = {
         description:
           "We offer end-to-end smart contract development services in Dubai that enable your business to automate processes, reduce costs, and enhance security. Smart contracts are self-executing contracts that can be programmed to execute automatically when certain conditions are met. Our team of experts has a deep understanding of smart contracts and their potential applications in various industries, enabling us to deliver customized solutions that meet the unique needs of each client. We provide comprehensive smart contract development services, including design, development, testing, and deployment.",
         tags: ["Solidity", "Testing", "Deployment"],
-        image: "/chatbots/vertical-finance.jpg",
+        image: "/blockchain-development/bc-service-smart-contracts.png",
         imagePosition: "center center",
       },
     ],
@@ -198,7 +197,7 @@ export const blockchainConfig = {
         title: "Finance and Banking",
         description:
           "Our blockchain professionals specialize in developing secure and transparent blockchain-based solutions for the finance and banking industry. Our services include digital asset management, fraud detection, and fast, cost-effective financial transactions.",
-        image: "/chatbots/vertical-finance.jpg",
+        image: "/blockchain-development/bc-industry-finance.png",
         imagePosition: "center center",
         accent: "#60A5FA",
       },
@@ -207,8 +206,8 @@ export const blockchainConfig = {
         title: "Healthcare",
         description:
           "With our out-of-the-box blockchain development services, healthcare providers can store and share medical data securely and transparently. This can help prevent data breaches and improve patient care.",
-        image: "/chatbots/vertical-healthcare.jpg",
-        imagePosition: "center 30%",
+        image: "/blockchain-development/bc-industry-healthcare.png",
+        imagePosition: "center center",
         accent: "#34D399",
       },
       {
@@ -216,8 +215,7 @@ export const blockchainConfig = {
         title: "Supply Chain Management",
         description:
           "We help businesses in the supply chain management industry track and trace products, ensuring transparency and authenticity. This can reduce inefficiencies and prevent counterfeit products from entering the market.",
-        image: "/chatbots/vertical-retail.jpg",
-        fallbackImage: "/generative-ai/logistics-1.png",
+        image: "/blockchain-development/bc-industry-supply-chain.png",
         imagePosition: "center center",
         accent: "#818CF8",
       },
@@ -226,9 +224,8 @@ export const blockchainConfig = {
         title: "Real Estate",
         description:
           "We offer blockchain-based solutions that streamline the real estate buying and selling process, including secure and transparent smart contracts. This ensures that transactions are safe and transparent.",
-        image: "/portfolio/pd-municipal.png",
-        fallbackImage: "/portfolio/municipal-bank.png",
-        imagePosition: "center top",
+        image: "/blockchain-development/bc-industry-real-estate.png",
+        imagePosition: "center center",
         accent: "#FBBF24",
       },
       {
@@ -236,7 +233,7 @@ export const blockchainConfig = {
         title: "Energy and Utilities",
         description:
           "We as reliable blockchain service providers in Dubai unleash the blockchain solutions for energy and utility companies including energy trading, renewable energy certification, and carbon credit tracking.",
-        image: "/company/hero-office.jpg",
+        image: "/blockchain-development/bc-industry-energy.png",
         imagePosition: "center center",
         accent: "#4ADE80",
       },
@@ -245,7 +242,7 @@ export const blockchainConfig = {
         title: "Gaming",
         description:
           "We empower secure and transparent in-game asset management, decentralized gaming platforms, and player reward systems. This ensures that players have a fair and enjoyable experience.",
-        image: "/generative-ai/cinema.png",
+        image: "/blockchain-development/bc-industry-gaming.png",
         imagePosition: "center center",
         accent: "#F472B6",
       },

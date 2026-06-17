@@ -40,7 +40,7 @@ export const generativeAiConfig = {
         description:
           "Address back-breaking business challenges one to one with our exclusive business-driven approach to generative AI. Our team harnesses a diverse toolkit of machine learning algorithms — including RNNs, Transformers, Markov Chain, GANs, and Autoencoders to ship out incredible AI solutions that enable you to sparkle in a competitive evolving market.",
         tags: ["RNNs", "Transformers", "GANs", "Autoencoders"],
-        image: "/services/2022-0022-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+        image: "/generative-ai/gai-service-model-dev.png",
       },
       {
         id: "replication",
@@ -49,7 +49,7 @@ export const generativeAiConfig = {
         description:
           "We are not just imitating the other AI models but facilitating your business to be a leader in the AI revolution. We arm you with the tools to kick off innovation, open up new avenues for expansion, and overstep your rivals by leveraging our specialty in replicating industry titans such as ChatGPT and DALL-E.",
         tags: ["ChatGPT", "DALL-E", "Custom LLMs"],
-        image: "/services/2022-991-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+        image: "/generative-ai/gai-service-replication.png",
       },
       {
         id: "integration",
@@ -58,7 +58,7 @@ export const generativeAiConfig = {
         description:
           "We prioritize providing a personalized approach to AI. We dig deeper into your business requirements, assuring the safe and smooth integration of custom-made generative AI models. Our all-inclusive services watch out every step of the process, from selecting and customizing models to rigorously testing and deploying them.",
         tags: ["MLOps", "API Integration", "Testing"],
-        image: "/services/2022-132-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+        image: "/generative-ai/gai-service-integration.png",
       },
       {
         id: "maintenance",
@@ -67,7 +67,7 @@ export const generativeAiConfig = {
         description:
           "By accessing our AI upgrade and Maintenance service, you can be stress-free that your AI solutions are innovative and scalable. Our lively approach will teach you about minute flaws and resolve any arising problems, ensuring the unbroken and effective operation of your systems.",
         tags: ["Monitoring", "Scaling", "Support"],
-        image: "/services/2022-021-rl7hnl5trrqfp99u5uxzqaap41f85j9gx6sui66osw.jpg",
+        image: "/generative-ai/gai-service-maintenance.png",
       },
     ],
   },
