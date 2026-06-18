@@ -225,13 +225,21 @@ export function getAllBlogSlugs() {
 }
 
 export function isBlogSlug(slug: string) {
-  return slug in cardBySlug;
+  // Accept slugs from both the curated insight-card registry AND
+  // the raw blogPostContent map (e.g. pci-compliant, ai-data-center-ops)
+  return slug in cardBySlug || slug in blogPostContent;
 }
 
 export function getBlogPost(slug: string): BlogPostContent | null {
   const card = cardBySlug[slug];
-  if (!card) return null;
-  return mergePost(card);
+  // Slug is registered in blogInsightCards — use full merge pipeline
+  if (card) return mergePost(card);
+
+  // Slug only exists in blogPostContent (e.g. related-article links)
+  const scraped = blogPostContent[slug];
+  if (!scraped) return null;
+  const cleaned = cleanSections([...scraped.sections]);
+  return { ...scraped, sections: cleaned.length > 0 ? cleaned : scraped.sections };
 }
 
 export function getAllBlogPosts() {

@@ -477,7 +477,7 @@ export const instashopBlogConfig = {
         "While it's often associated with cryptocurrencies like Bitcoin, blockchain has the potential to revolutionize various aspects of your business operations. Imagine a digital ledger that keeps an unchangeable record of transactions or information, shared across a network of computers. This ensures security, transparency, and trust…",
       date: "July 17, 2024",
       author: "Reapmind Innovation",
-      link: "/blogs",
+      link: "/how-blockchain-is-transforming-enterprise-benefits-use-cases-features",
       image: "/instashop-blog/blockchain-enterprise-1024x599.png",
     },
   ],

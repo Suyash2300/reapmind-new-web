@@ -29,7 +29,7 @@ export function MvpInsights() {
         >
           {mvpConfig.insights.articles.map((article) => (
             <motion.div key={article.title} variants={mvpMotionVariants.fadeUp} className="h-full">
-              <a href={article.link} target="_blank" rel="noopener noreferrer" className="group block h-full">
+              <Link href={article.link} className="group block h-full">
                 <motion.article
                   whileHover={{ y: -6 }}
                   className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-surface-dark"
@@ -55,7 +55,7 @@ export function MvpInsights() {
                     <p className="mt-4 pt-4 text-xs text-white/50">By {article.author}</p>
                   </div>
                 </motion.article>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

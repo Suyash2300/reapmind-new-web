@@ -32,10 +32,8 @@ export function PwaInsights() {
         <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pwaConfig.insights.articles.map((article, i) => (
             <GsapScrollReveal key={article.title} start={`top ${84 + i * 2}%`}>
-              <a
+              <Link
                 href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group block h-full"
               >
                 <motion.div
@@ -70,7 +68,7 @@ export function PwaInsights() {
                     </div>
                   </div>
                 </motion.div>
-              </a>
+              </Link>
             </GsapScrollReveal>
           ))}
         </div>
