@@ -26,7 +26,7 @@ export function TeamCTA() {
           
           <div className="mt-12 flex flex-col items-center justify-center gap-6">
             <Link 
-              href="/contact-reapmind"
+              href="/contact-us"
               className="inline-flex min-h-[64px] items-center justify-center rounded-full bg-primary px-12 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-primary-hover hover:shadow-[0_0_40px_rgba(var(--primary),0.4)]"
             >
               {teamConfig.cta.buttonText}

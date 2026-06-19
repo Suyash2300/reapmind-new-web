@@ -46,7 +46,7 @@ export function PdWhyUs() {
 
         <GsapScrollReveal className="mt-16 text-center">
           <Link
-            href="/contact-reapmind"
+            href="/contact-us"
             className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-14 text-xl font-bold text-white hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.4)] transition-all"
           >
             {productDesignConfig.whyUs.cta}

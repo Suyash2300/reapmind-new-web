@@ -11,7 +11,7 @@ export const site = {
     "175, Bannerghatta Main Rd, Dollars Colony, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560076",
   mapsUrl: "https://goo.gl/maps/KC9S2Dk7E6wC4iKX9",
   contactUrl: "/contact-us",
-  ctaLabel: "Get free consultation now",
+  ctaLabel: "Contact Us",
   exploreBlurb:
     "With our innovative technology solutions, you can experience the future of technology today and stay ahead of the curve in the rapidly evolving digital landscape. Experience the power of technology in action.",
   copyright: "©2023. Reapmind Innovations Pvt Ltd. All Rights Reserved.",

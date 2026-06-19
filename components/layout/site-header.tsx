@@ -38,15 +38,15 @@ export function SiteHeader() {
         className="relative border-b border-border bg-white/95 backdrop-blur-md"
         onMouseLeave={() => setOpenNav(null)}
       >
-        <div className="container-app flex h-[80px] items-center justify-between gap-4">
-          <Link href="/" className="relative block h-12 w-[172px] shrink-0 sm:h-14 sm:w-[200px]" onClick={closeMenus}>
+        <div className="container-app flex h-[100px] items-center justify-between gap-4">
+          <Link href="/" className="relative block h-24 w-[320px] shrink-0 sm:h-24 sm:w-[320px]" onClick={closeMenus}>
             <Image
               src={site.logo}
               alt={site.name}
               fill
               className="object-contain object-left"
               priority
-              sizes="200px"
+              sizes="320px"
             />
           </Link>
 

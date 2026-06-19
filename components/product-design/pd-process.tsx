@@ -16,7 +16,7 @@ export function PdProcess() {
           </h2>
           <div className="mt-10">
             <Link
-              href="/contact-reapmind"
+              href="/contact-us"
               className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 font-bold text-white hover:scale-105 transition-transform"
             >
               {productDesignConfig.process.title}

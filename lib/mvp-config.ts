@@ -335,7 +335,7 @@ export const mvpConfig = {
         date: "Nov 5, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-hr-ai-agent.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry/",
+        link: "/how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry/",
       },
       {
         title: "How Much Does It Cost to Develop an AI Agent in 2025?",
@@ -343,7 +343,7 @@ export const mvpConfig = {
         date: "Oct 31, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-ai-agent-2025.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-an-ai-agent-in-2025/",
+        link: "/how-much-does-it-cost-to-develop-an-ai-agent-in-2025/",
       },
       {
         title: "Why Your Enterprise Needs a Custom Intranet Portal (And How to Build One That Actually Works)",
@@ -351,7 +351,7 @@ export const mvpConfig = {
         date: "Oct 14, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-intranet.png",
-        link: "https://reapmind.com/why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works/",
+        link: "/why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works/",
       },
       {
         title: "How to Build an AI-Powered Language Learning App: Features, Process & Costs (2025 Guide)",
@@ -359,7 +359,7 @@ export const mvpConfig = {
         date: "Aug 14, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-language-learning.png",
-        link: "https://reapmind.com/how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide/",
+        link: "/how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide/",
       },
       {
         title: "Smarter School Bus Monitoring Solution with IoT & Mobility in 2025",
@@ -367,7 +367,7 @@ export const mvpConfig = {
         date: "Aug 14, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-school-bus.png",
-        link: "https://reapmind.com/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
+        link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
       },
       {
         title: "DevOps Automation: Approaching Business-Critical Functionality",
@@ -375,7 +375,7 @@ export const mvpConfig = {
         date: "May 7, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-devops.png",
-        link: "https://reapmind.com/devops-automation-approaching-business-critical-functionality/",
+        link: "/devops-automation-approaching-business-critical-functionality/",
       },
       {
         title: "The Role of AI in Intelligent Document Processing and Management – Benefits and Applications",
@@ -383,7 +383,7 @@ export const mvpConfig = {
         date: "May 6, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-document-ai.png",
-        link: "https://reapmind.com/the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications/",
+        link: "/the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications/",
       },
       {
         title: "EMR Integration in Healthcare Systems – Benefits, Features, Process, Costs",
@@ -391,7 +391,7 @@ export const mvpConfig = {
         date: "May 5, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-emr.png",
-        link: "https://reapmind.com/emr-integration-in-healthcare-systems-benefits-features-process-costs/",
+        link: "/emr-integration-in-healthcare-systems-benefits-features-process-costs/",
       },
       {
         title: "Cybersecurity in Manufacturing: Building Cyber Resilience for Smart Factories",
@@ -399,7 +399,7 @@ export const mvpConfig = {
         date: "May 1, 2025",
         author: "Prakhar Lohia",
         image: "/mvp/blog-cybersecurity.png",
-        link: "https://reapmind.com/cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories/",
+        link: "/cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories/",
       },
       {
         title: "How Much Does It Cost to Develop a Mutual Fund Investment Portal or App?",
@@ -407,7 +407,7 @@ export const mvpConfig = {
         date: "Apr 30, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-mutual-fund.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app/",
+        link: "/how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app/",
       },
       {
         title: "Healthcare Workforce Management Software: A Catalyst for Streamlined Business Operations",
@@ -415,7 +415,7 @@ export const mvpConfig = {
         date: "Apr 29, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-workforce.png",
-        link: "https://reapmind.com/healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations/",
+        link: "/healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations/",
       },
       {
         title: "How an AI Chatbot for Higher Education Revolutionizes Student Support Services",
@@ -423,7 +423,7 @@ export const mvpConfig = {
         date: "Apr 28, 2025",
         author: "ReapMind Innovations",
         image: "/mvp/blog-chatbot-edu.png",
-        link: "https://reapmind.com/how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services/",
+        link: "/how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services/",
       },
     ],
   },

@@ -517,7 +517,7 @@ export const telemedicineInsights = [
     category: "Uncategorized",
     date: "Aug 15, 2025",
     author: "ReapMind Innovations",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-11-scaled.png",
   },
   {
@@ -525,7 +525,7 @@ export const telemedicineInsights = [
     category: "Blog",
     date: "May 7, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-9-scaled.png",
   },
   {
@@ -533,7 +533,7 @@ export const telemedicineInsights = [
     category: "Artificial Intelligence",
     date: "Apr 6, 2025",
     author: "ReapMind Innovations",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-5-scaled.png",
   },
   {
@@ -541,7 +541,7 @@ export const telemedicineInsights = [
     category: "Technology",
     date: "May 5, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-3-scaled.png",
   },
   {
@@ -549,7 +549,7 @@ export const telemedicineInsights = [
     category: "Technology",
     date: "May 2, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-scaled.png",
   },
   {
@@ -557,7 +557,7 @@ export const telemedicineInsights = [
     category: "Technology",
     date: "Apr 30, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-3-scaled.png",
   },
   {
@@ -565,7 +565,7 @@ export const telemedicineInsights = [
     category: "Healthcare",
     date: "Apr 24, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-5-scaled.png",
   },
   {
@@ -573,7 +573,7 @@ export const telemedicineInsights = [
     category: "Artificial Intelligence",
     date: "Apr 28, 2025",
     author: "Prakhar Lohia",
-    link: "/blogs",
+    link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
     image: "/telemedicine/Featured-Image-9-scaled.png",
   },
 ] as const;

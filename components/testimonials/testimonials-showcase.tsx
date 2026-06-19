@@ -63,7 +63,7 @@ function ClientPhotoPanel({ item }: { item: Testimonial }) {
           width={item.imageWidth}
           height={item.imageHeight}
           sizes="300px"
-          className="h-auto w-[min(100%,300px)] object-contain"
+          className="h-[350px] w-full object-cover"
           priority={false}
         />
       </div>
@@ -185,11 +185,10 @@ export function TestimonialsShowcase({
                 onClick={() => goTo(index)}
                 aria-label={`View testimonial from ${item.name}`}
                 aria-pressed={active}
-                className={`relative size-14 overflow-hidden rounded-full border-2 transition-[border-color,box-shadow,transform] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:size-16 ${
-                  active
+                className={`relative size-14 overflow-hidden rounded-full border-2 transition-[border-color,box-shadow,transform] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:size-16 ${active
                     ? "scale-110 border-primary shadow-[0_0_24px_-4px_rgba(26,105,253,0.65)]"
                     : "border-white/15 opacity-70 hover:border-primary/40 hover:opacity-100"
-                }`}
+                  }`}
               >
                 <Image
                   src={item.thumbImage}

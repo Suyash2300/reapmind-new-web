@@ -51,7 +51,7 @@ export function PdHero() {
           <FadeIn delay={0.7}>
             <div className="mt-12 flex flex-wrap gap-4">
               <Link
-                href="/contact-reapmind"
+                href="/contact-us"
                 className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-10 text-lg font-bold text-white transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]"
               >
                 {productDesignConfig.hero.cta}

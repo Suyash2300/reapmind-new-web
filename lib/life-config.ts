@@ -56,7 +56,8 @@ export const lifeConfig = {
     title: "Careers",
     heading: "Join our team today",
     description: "Once you fill out this form, our sales representatives will contact you within 24 hours.",
-    buttonText: "Apply Now"
+    buttonText: "Apply Now",
+    href: "/contact-us"
   },
   stats: [
     { value: "200+", label: "Projects" },

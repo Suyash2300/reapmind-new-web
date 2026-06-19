@@ -34,7 +34,7 @@ export function ErpElevate() {
             
             <GsapScrollReveal className="mt-12" delay={0.3}>
               <Link 
-                href="/contact-reapmind"
+                href="/contact-us"
                 className="inline-flex h-14 items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 font-bold text-white transition-all hover:bg-white hover:text-black"
               >
                 {erpConfig.elevate.cta}

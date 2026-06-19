@@ -438,7 +438,7 @@ export const topNodejsConfig = {
         excerpt:
           "The global healthcare scene is undergoing a remarkable shift, all thanks to technologies such as artificial intelligence and the Internet of Things.",
         image: "/top-nodejs/imgpsh_fullsize_anim-32-1024x599.png",
-        link: "/blogs",
+        link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
       },
       {
         title: "Go Beyond Hospital WallsWith Remote PatientMonitoring System",
@@ -452,7 +452,7 @@ export const topNodejsConfig = {
         excerpt:
           "The world of pharmaceuticals continues to evolve at an unprecedented pace, and the demand for efficient and innovative pharmacy management solutions has never been greater.",
         image: "/top-nodejs/imgpsh_fullsize_anim-1-1024x599.jpg",
-        link: "/blogs",
+        link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
       },
     ],
   },

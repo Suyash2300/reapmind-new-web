@@ -308,7 +308,7 @@ export const pwaConfig = {
         date: "Nov 5, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-hr-ai-agent.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry/",
+        link: "/how-much-does-it-cost-to-develop-an-ai-agent-for-the-human-resource-industry/",
       },
       {
         title: "How Much Does It Cost to Develop an AI Agent in 2025?",
@@ -316,7 +316,7 @@ export const pwaConfig = {
         date: "Oct 31, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-ai-agent-2025.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-an-ai-agent-in-2025/",
+        link: "/how-much-does-it-cost-to-develop-an-ai-agent-in-2025/",
       },
       {
         title:
@@ -325,7 +325,7 @@ export const pwaConfig = {
         date: "Oct 14, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-intranet.png",
-        link: "https://reapmind.com/why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works/",
+        link: "/why-your-enterprise-needs-a-custom-intranet-portal-and-how-to-build-one-that-actually-works/",
       },
       {
         title:
@@ -334,7 +334,7 @@ export const pwaConfig = {
         date: "Aug 14, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-language-learning.png",
-        link: "https://reapmind.com/how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide/",
+        link: "/how-to-build-an-ai-powered-language-learning-app-features-process-costs-2025-guide/",
       },
       {
         title:
@@ -343,7 +343,7 @@ export const pwaConfig = {
         date: "Aug 14, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-school-bus.png",
-        link: "https://reapmind.com/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
+        link: "/smarter-school-bus-monitoring-solution-with-iot-mobility-in-2025/",
       },
       {
         title:
@@ -352,7 +352,7 @@ export const pwaConfig = {
         date: "May 7, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-devops.png",
-        link: "https://reapmind.com/devops-automation-approaching-business-critical-functionality/",
+        link: "/devops-automation-approaching-business-critical-functionality/",
       },
       {
         title:
@@ -361,7 +361,7 @@ export const pwaConfig = {
         date: "May 6, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-document-ai.png",
-        link: "https://reapmind.com/the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications/",
+        link: "/the-role-of-ai-in-intelligent-document-processing-and-management-benefits-and-applications/",
       },
       {
         title:
@@ -370,7 +370,7 @@ export const pwaConfig = {
         date: "May 5, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-emr.png",
-        link: "https://reapmind.com/emr-integration-in-healthcare-systems-benefits-features-process-costs/",
+        link: "/emr-integration-in-healthcare-systems-benefits-features-process-costs/",
       },
       {
         title:
@@ -379,7 +379,7 @@ export const pwaConfig = {
         date: "May 1, 2025",
         author: "Prakhar Lohia",
         image: "/pwa/blog-cybersecurity.png",
-        link: "https://reapmind.com/cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories/",
+        link: "/cybersecurity-in-manufacturing-building-cyber-resilience-for-smart-factories/",
       },
       {
         title:
@@ -388,7 +388,7 @@ export const pwaConfig = {
         date: "Apr 30, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-mutual-fund.png",
-        link: "https://reapmind.com/how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app/",
+        link: "/how-much-does-it-cost-to-develop-a-mutual-fund-investment-portal-or-app/",
       },
       {
         title:
@@ -397,7 +397,7 @@ export const pwaConfig = {
         date: "Apr 29, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-workforce.png",
-        link: "https://reapmind.com/healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations/",
+        link: "/healthcare-workforce-management-software-a-catalyst-for-streamlined-business-operations/",
       },
       {
         title:
@@ -406,7 +406,7 @@ export const pwaConfig = {
         date: "Apr 28, 2025",
         author: "ReapMind Innovations",
         image: "/pwa/blog-chatbot-edu.png",
-        link: "https://reapmind.com/how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services/",
+        link: "/how-an-ai-chatbot-for-higher-education-revolutionizes-student-support-services/",
       },
     ],
   },

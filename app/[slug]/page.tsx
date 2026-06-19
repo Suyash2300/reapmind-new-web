@@ -42,8 +42,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
 
+  const resolvedSlug = resolveBlogSlug(slug);
+
   // Guard: only render known blog slugs; let other dynamic routes fall through
-  if (!isBlogSlug(slug)) notFound();
+  if (!isBlogSlug(resolvedSlug) && !isBlogSlug(slug)) notFound();
 
   const post = getBlogPost(slug);
   if (!post) notFound();

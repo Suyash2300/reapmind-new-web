@@ -59,7 +59,7 @@ export function PdPortfolio() {
 
         <GsapScrollReveal className="mt-16 text-center">
           <Link
-            href="/contact-reapmind"
+            href="/contact-us"
             className="inline-flex h-16 items-center justify-center rounded-full border border-white/20 px-12 text-lg font-bold text-white transition-all hover:bg-primary hover:border-primary"
           >
             Get a Callback from Expert
