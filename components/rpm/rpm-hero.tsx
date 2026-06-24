@@ -38,7 +38,7 @@ export function RpmHero() {
           </nav>
 
           <h1 className="text-h1 font-black leading-[1.08] text-white md:text-display">
-            {chars.map((char, i) => (
+            {chars.map((char: string, i: number) => (
               <motion.span
                 key={`${char}-${i}`}
                 className="inline-block"

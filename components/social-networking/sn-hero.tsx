@@ -50,7 +50,7 @@ export function SnHero() {
         <motion.div className="absolute inset-0" style={{ y: bgY }}>
           <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover opacity-[0.23]" priority onError={() => setImgFailed(true)} />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/94 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_65%_50%_at_8%_0%,rgba(168,85,247,0.22),transparent_58%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_38%_at_92%_18%,rgba(6,182,212,0.16),transparent)]" />
       </div>

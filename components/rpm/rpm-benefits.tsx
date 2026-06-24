@@ -21,7 +21,7 @@ export function RpmBenefits() {
         </motion.h2>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {benefits.items.map((item, index) => (
+          {benefits.items.map((item: any, index: number) => (
             <motion.article
               key={item.title}
               className="rounded-2xl border border-white/10 bg-surface-elevated p-6"

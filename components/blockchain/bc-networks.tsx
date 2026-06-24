@@ -20,7 +20,7 @@ const CHAIN_COLORS: Record<string, string> = {
 
 export function BcNetworks() {
   const { networks } = blockchainConfig;
-  const [activeTicker, setActiveTicker] = useState(networks.chains[0].ticker);
+  const [activeTicker, setActiveTicker] = useState<string>(networks.chains[0].ticker);
   const active =
     networks.chains.find((chain) => chain.ticker === activeTicker) ?? networks.chains[0];
 

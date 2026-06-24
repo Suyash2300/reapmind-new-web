@@ -42,7 +42,7 @@ export function AnHero() {
         <motion.div className="absolute inset-0" style={{ y: bgY }}>
           <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover opacity-[0.26]" priority onError={() => setImgFailed(true)} />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/94 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_10%_0%,rgba(168,85,247,0.22),transparent_58%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_90%_20%,rgba(26,105,253,0.16),transparent)]" />
       </div>

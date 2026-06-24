@@ -10,7 +10,7 @@ function MarqueeRow({
   logos,
   reverse,
 }: {
-  logos: typeof reactHireConfig.clientLogos.logos;
+  logos: readonly { name: string; src: string }[];
   reverse?: boolean;
 }) {
   const track = [...logos, ...logos];

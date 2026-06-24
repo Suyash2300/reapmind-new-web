@@ -63,9 +63,9 @@ export function AndroidHireTechnologies() {
                 transition={{ repeat: Infinity, duration: 3 + (i % 5) * 0.4, ease: "easeInOut" }}
                 className="flex flex-col items-center gap-2 px-3 py-4"
               >
-                {tech.icon ? (
+                {('icon' in tech) && tech.icon && typeof tech.icon === 'string' ? (
                   <div className="relative h-10 w-10 sm:h-12 sm:w-12">
-                    <Image src={tech.icon} alt={tech.name} fill className="object-contain" sizes="48px" />
+                    <Image src={tech.icon as string} alt={tech.name} fill className="object-contain" sizes="48px" />
                   </div>
                 ) : (
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-sm font-black text-primary">

@@ -12,9 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "var(--primary)",
-          hover: "var(--color-primary-hover)",
+          DEFAULT: "rgb(26 105 253)",
+          hover: "rgb(12 79 203)",
           foreground: "var(--primary-foreground)",
+          light: "rgb(100 149 255)",
         },
         accent: {
           DEFAULT: "var(--color-accent-yellow)",
@@ -23,9 +24,9 @@ const config: Config = {
         muted: "var(--color-text-muted)",
         secondary: "var(--color-text-secondary)",
         surface: {
-          dark: "var(--color-bg-dark)",
-          header: "var(--color-bg-header)",
-          elevated: "var(--color-bg-elevated)",
+          dark: "rgb(0 0 0)",
+          header: "rgb(15 15 15)",
+          elevated: "rgb(29 31 32)",
           warm: "var(--color-bg-warm)",
         },
         border: {
@@ -57,6 +58,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

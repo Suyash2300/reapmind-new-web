@@ -39,7 +39,7 @@ export function FmsHero() {
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_30%_0%,rgba(16,185,129,0.25),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_45%_at_90%_70%,rgba(26,105,253,0.12),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">

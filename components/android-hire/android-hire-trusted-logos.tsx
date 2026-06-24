@@ -22,7 +22,7 @@ const itemVariants = {
     y: 0,
     scale: 1,
     filter: "blur(0px)",
-    transition: { type: "spring", stiffness: 140, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 140, damping: 18 },
   },
 };
 

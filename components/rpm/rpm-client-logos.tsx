@@ -22,17 +22,17 @@ export function RpmClientLogos() {
         </motion.h2>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
-          {rpmConfig.clientLogos.logos.map((logo, index) => (
+          {rpmConfig.clientLogos.logos.map((logo: any, index: number) => (
             <motion.div
               key={logo.name}
-              className="relative flex h-[88px] items-center justify-center rounded-2xl border border-white/8 bg-white/[0.03] p-4 sm:h-[100px]"
+              className="relative flex h-[100px] sm:h-[120px]"
               initial={reduced ? false : { opacity: 0, scale: 0.85 }}
               whileInView={reduced ? undefined : { opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.06, type: "spring", stiffness: 280, damping: 22 }}
               whileHover={reduced ? undefined : { y: -4, borderColor: "rgba(6,182,212,0.4)" }}
             >
-              <Image src={logo.src} alt={logo.name} fill className="object-contain p-3" sizes="180px" />
+              <Image src={logo.src} alt={logo.name} fill className="object-contain p-1" sizes="180px" />
             </motion.div>
           ))}
         </div>

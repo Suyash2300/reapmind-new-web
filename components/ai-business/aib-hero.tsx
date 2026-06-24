@@ -37,7 +37,7 @@ export function AibHero() {
             background: `radial-gradient(ellipse 80% 60% at 30% -10%, rgba(139,92,246,0.3), transparent), radial-gradient(ellipse 50% 45% at 90% 80%, rgba(34,211,238,0.15), transparent)`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/60 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/60 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">

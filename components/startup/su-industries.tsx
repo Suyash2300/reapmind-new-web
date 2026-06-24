@@ -8,7 +8,7 @@ import { startupConfig } from "@/lib/startup-config";
 
 export function SuIndustries() {
   const { industries } = startupConfig;
-  const [activeId, setActiveId] = useState(industries.items[0].id);
+  const [activeId, setActiveId] = useState<string>(industries.items[0].id);
   const active = industries.items.find((item) => item.id === activeId) ?? industries.items[0];
 
   return (

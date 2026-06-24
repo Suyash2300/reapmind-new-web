@@ -33,7 +33,7 @@ export function TeamHero() {
           priority
           className="object-cover opacity-50 mix-blend-luminosity grayscale-[30%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/70 to-transparent" />
       </motion.div>
 
       <motion.div 

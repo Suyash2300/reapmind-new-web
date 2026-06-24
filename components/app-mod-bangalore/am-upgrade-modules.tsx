@@ -18,7 +18,7 @@ const ICONS: Record<string, string> = {
 
 export function AmUpgradeModules() {
   const { serviceHighlights } = appModBangaloreConfig;
-  const [activeId, setActiveId] = useState(serviceHighlights.items[0].id);
+  const [activeId, setActiveId] = useState<string>(serviceHighlights.items[0].id);
   const active =
     serviceHighlights.items.find((i) => i.id === activeId) ?? serviceHighlights.items[0];
 

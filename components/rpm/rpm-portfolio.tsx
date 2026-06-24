@@ -28,7 +28,7 @@ export function RpmPortfolio() {
           ref={ref}
           className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {rpmConfig.portfolio.map((item, index) => (
+          {rpmConfig.portfolio.map((item: any, index: number) => (
             <PortfolioCaseLink
               key={item.title}
               href={item.link}

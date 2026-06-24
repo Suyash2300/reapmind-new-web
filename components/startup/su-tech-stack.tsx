@@ -17,7 +17,7 @@ const TECH_COLORS: Record<string, string> = {
 
 export function SuTechStack() {
   const { techStack } = startupConfig;
-  const [activeId, setActiveId] = useState(techStack.items[0].id);
+  const [activeId, setActiveId] = useState<string>(techStack.items[0].id);
   const active = techStack.items.find((item) => item.id === activeId) ?? techStack.items[0];
   const color = TECH_COLORS[active.id] ?? "#1a69fd";
 

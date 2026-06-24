@@ -9,7 +9,7 @@ import { offshoreBangaloreConfig } from "@/lib/offshore-bangalore-config";
 
 export function ObDifferentiators() {
   const { differentiators } = offshoreBangaloreConfig;
-  const [activeId, setActiveId] = useState(differentiators.items[0].id);
+  const [activeId, setActiveId] = useState<string>(differentiators.items[0].id);
   const active =
     differentiators.items.find((item) => item.id === activeId) ?? differentiators.items[0];
 

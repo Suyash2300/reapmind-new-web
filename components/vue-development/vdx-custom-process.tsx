@@ -42,7 +42,7 @@ export function VdxCustomProcess() {
               <ul className="mt-3 space-y-1.5">
                 {step.bullets.map((bullet) => (
                   <li key={bullet} className="flex gap-2 text-sm text-white/60">
-                    <span style={{ color: VUE_ACCENT }} aria-hidden>
+                    <span aria-hidden>
                       •
                     </span>
                     {bullet}
@@ -53,13 +53,13 @@ export function VdxCustomProcess() {
           ))}
         </div>
 
+        <div style={{
+            borderColor: `${VUE_ACCENT}33`,
+            background: `linear-gradient(to bottom right, ${VUE_ACCENT}14, black, rgba(53,73,94,0.08))`,
+          }}>
         <BlurFadeIn
           delay={0.12}
           className="mt-12 rounded-[1.75rem] border p-6 sm:p-8"
-          style={{
-            borderColor: `${VUE_ACCENT}33`,
-            background: `linear-gradient(to bottom right, ${VUE_ACCENT}14, black, rgba(53,73,94,0.08))`,
-          }}
         >
           <h3 className="text-h5 font-bold text-white">{customProcess.hireTitle}</h3>
           <p className="mt-3 max-w-3xl text-para leading-relaxed text-white/65">{customProcess.hireBody}</p>
@@ -71,12 +71,12 @@ export function VdxCustomProcess() {
             <Link
               href={customProcess.hireHref}
               className="inline-flex min-h-11 items-center justify-center rounded-full px-8 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-              style={{ backgroundColor: VUE_ACCENT }}
             >
               {customProcess.hireCta}
             </Link>
           </motion.div>
         </BlurFadeIn>
+        </div>
       </div>
     </section>
   );

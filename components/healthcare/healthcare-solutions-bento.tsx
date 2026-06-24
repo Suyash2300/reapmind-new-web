@@ -142,7 +142,7 @@ function BentoDecorativeCard() {
           fill
           className="object-cover object-left mask-image-linear-to-r"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-black/80 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-2xl mb-8 md:mb-0 w-full md:w-[70%]">

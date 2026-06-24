@@ -47,7 +47,7 @@ function PolaroidCard({
   position: (typeof deskPositions)[number];
 }) {
   const side = "left" in position ? "left" : "right";
-  const offset = position[side as "left" | "right"];
+  const offset = (position as any)[side];
 
   return (
     <motion.div

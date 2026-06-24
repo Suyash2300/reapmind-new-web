@@ -13,7 +13,7 @@ import {
 } from "@/lib/services-page";
 
 export function ServicesSupportingSection() {
-  const [activeId, setActiveId] = useState(servicesSupporting.items[0].id);
+  const [activeId, setActiveId] = useState<string>(servicesSupporting.items[0].id);
   const active =
     servicesSupporting.items.find((item) => item.id === activeId) ??
     servicesSupporting.items[0];

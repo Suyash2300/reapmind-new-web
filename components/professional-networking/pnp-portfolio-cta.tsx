@@ -27,7 +27,7 @@ export function PnpPortfolioCta() {
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
             )}
-            <span className="relative rounded-full bg-surface-dark/80 px-1">{professionalNetworkingConfig.portfolioCta}</span>
+            <span className="relative rounded-full bg-black/80 px-1">{professionalNetworkingConfig.portfolioCta}</span>
           </Link>
         </BlurFadeIn>
       </div>

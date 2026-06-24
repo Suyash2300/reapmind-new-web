@@ -61,7 +61,7 @@ export function PnpFeatures() {
             ref={panelRef}
             onMouseMove={onPanelMove}
             className="relative min-h-[220px] flex-1 overflow-hidden rounded-2xl border border-white/10 bg-surface-elevated/70 p-6 sm:p-8"
-            style={{ transformPerspective: 900 }}
+            style={{ perspective: 900 }}
           >
             <motion.div className="pointer-events-none absolute inset-0" style={{ background: spotlight }} />
             <AnimatePresence mode="wait">

@@ -87,7 +87,7 @@ export function EbsHero() {
           onError={() => setImgFailed(true)}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-20%,rgba(26,105,253,0.35),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
         <motion.div
           className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-primary/20 blur-[120px]"
           animate={reducedMotion ? undefined : { x: [0, 40, 0], y: [0, -30, 0] }}

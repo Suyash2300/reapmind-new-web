@@ -56,9 +56,6 @@ export function NdxCustomProcess() {
         <BlurFadeIn
           delay={0.12}
           className="mt-12 rounded-[1.75rem] border border-white/15 p-6 sm:p-8"
-          style={{
-            background: `linear-gradient(to bottom right, rgba(0,112,243,0.12), black, rgba(255,255,255,0.04))`,
-          }}
         >
           <h3 className="text-h5 font-bold text-white">{customProcess.hireTitle}</h3>
           <p className="mt-3 max-w-3xl text-para leading-relaxed text-white/65">{customProcess.hireBody}</p>

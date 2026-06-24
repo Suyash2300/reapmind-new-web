@@ -29,7 +29,7 @@ export function IosHero() {
           className="absolute inset-0"
           style={{ background: `radial-gradient(ellipse 85% 65% at 50% -15%, rgba(10,132,255,0.32), transparent)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">

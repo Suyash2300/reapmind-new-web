@@ -105,7 +105,7 @@ export function createHealthcareServiceConfig(
       title: "Catering to Diverse Sectors: Our Targeted Industry Solutions",
       items: healthcareSectors(assetPrefix),
     },
-    testimonials: healthcareTestimonials,
+    testimonials: { title: healthcareTestimonials.title, items: [...healthcareTestimonials.items] },
     insights: {
       title: "Latest Insights",
       articles: getInsightCards(assetPrefix),

@@ -14,7 +14,7 @@ type ServiceProcessSectionProps = {
   title: string;
   subtitle: string;
   intro?: string;
-  steps: ProcessStep[];
+  steps: readonly ProcessStep[] | ProcessStep[];
 };
 
 export function ServiceProcessSection({

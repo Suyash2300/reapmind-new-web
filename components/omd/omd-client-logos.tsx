@@ -32,7 +32,7 @@ export function OmdClientLogos() {
               key={`${logo.name}-${idx}`}
               className="relative flex h-20 w-[170px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:h-24 sm:w-[210px]"
             >
-              <Image src={logo.src} alt={logo.name} fill className="object-contain p-3" sizes="220px" />
+              <Image src={logo.src} alt={logo.name} fill className="object-contain p-1" sizes="220px" />
             </div>
           ))}
         </motion.div>

@@ -32,7 +32,7 @@ export function GaiHero() {
     <section className="relative overflow-hidden bg-surface-dark pb-10 pt-10 text-primary-foreground md:pb-12 md:pt-12 lg:pt-14">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <HeroImage />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/80 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_80%_0%,rgba(26,105,253,0.2),transparent)]" />
       </div>
 

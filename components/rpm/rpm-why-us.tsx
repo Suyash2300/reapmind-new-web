@@ -23,7 +23,7 @@ export function RpmWhyUs() {
         <p className="mt-5 max-w-4xl text-para leading-relaxed text-white/75">{whyUs.intro}</p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {whyUs.items.map((item, index) => (
+          {whyUs.items.map((item: any, index: number) => (
             <motion.article
               key={item.title}
               className="rounded-2xl border border-white/10 bg-surface-elevated p-6"

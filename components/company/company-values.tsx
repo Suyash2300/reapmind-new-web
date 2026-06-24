@@ -15,7 +15,7 @@ export function CompanyValues() {
           className="object-cover opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-transparent to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-transparent to-black" />
       </div>
 
       <div className="container-app relative z-10">

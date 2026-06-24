@@ -28,7 +28,7 @@ export function B2mHero() {
     <section className="relative overflow-hidden bg-surface-dark pb-12 pt-10 text-primary-foreground md:pb-14 md:pt-12 lg:pt-14">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover opacity-[0.2]" priority onError={() => setImgFailed(true)} />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/75 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_18%_0%,rgba(26,105,253,0.26),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_90%_25%,rgba(139,92,246,0.15),transparent)]" />
       </div>

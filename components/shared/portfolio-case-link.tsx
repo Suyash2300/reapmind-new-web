@@ -20,9 +20,9 @@ export function PortfolioCaseLink({
   if (isInternalAppHref(href)) {
     return (
       <Link href={href} className={className}>
-        <motion.div className="flex h-full w-full flex-col" {...motionProps}>
+        <motion.a className="flex h-full w-full flex-col" {...motionProps}>
           {children}
-        </motion.div>
+        </motion.a>
       </Link>
     );
   }

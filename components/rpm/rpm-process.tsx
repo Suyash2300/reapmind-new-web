@@ -29,7 +29,7 @@ export function RpmProcess() {
           )}
 
           <div className="space-y-5">
-            {rpmConfig.process.steps.map((step, index) => (
+            {rpmConfig.process.steps.map((step: any, index: number) => (
               <motion.div
                 key={step}
                 className="relative flex items-center gap-5 pl-4"

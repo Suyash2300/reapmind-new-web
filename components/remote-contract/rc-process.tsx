@@ -9,7 +9,7 @@ import { remoteContractConfig } from "@/lib/remote-contract-config";
 
 export function RcProcess() {
   const { process } = remoteContractConfig;
-  const [activeId, setActiveId] = useState(process.items[0].id);
+  const [activeId, setActiveId] = useState<string>(process.items[0].id);
   const active = process.items.find((item) => item.id === activeId) ?? process.items[0];
 
   return (

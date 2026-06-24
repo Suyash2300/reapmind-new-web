@@ -42,7 +42,7 @@ export function RdxCustomProcess() {
               <ul className="mt-3 space-y-1.5">
                 {step.bullets.map((bullet) => (
                   <li key={bullet} className="flex gap-2 text-sm text-white/60">
-                    <span style={{ color: REACT_ACCENT }} aria-hidden>
+                    <span aria-hidden>
                       •
                     </span>
                     {bullet}
@@ -53,13 +53,13 @@ export function RdxCustomProcess() {
           ))}
         </div>
 
+        <div style={{
+            borderColor: `${REACT_ACCENT}33`,
+            background: `linear-gradient(to bottom right, ${REACT_ACCENT}14, black, rgba(26,105,253,0.05))`,
+          }}>
         <BlurFadeIn
           delay={0.12}
           className="mt-12 rounded-[1.75rem] border p-6 sm:p-8"
-          style={{
-            borderColor: `${REACT_ACCENT}33`,
-            background: `linear-gradient(to bottom right, ${REACT_ACCENT}14, black, rgba(26,105,253,0.05))`,
-          }}
         >
           <h3 className="text-h5 font-bold text-white">{customProcess.hireTitle}</h3>
           <p className="mt-3 max-w-3xl text-para leading-relaxed text-white/65">{customProcess.hireBody}</p>
@@ -71,12 +71,12 @@ export function RdxCustomProcess() {
             <Link
               href={customProcess.hireHref}
               className="inline-flex min-h-11 items-center justify-center rounded-full px-8 text-sm font-semibold text-[#0a1628] transition-opacity hover:opacity-90"
-              style={{ backgroundColor: REACT_ACCENT }}
             >
               {customProcess.hireCta}
             </Link>
           </motion.div>
         </BlurFadeIn>
+        </div>
       </div>
     </section>
   );

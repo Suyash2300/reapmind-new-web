@@ -185,7 +185,7 @@ function DimensionTower({
 export function HomeStrategicHiringSection() {
   const reducedMotion = usePrefersReducedMotion();
   const { eyebrow, title, intro, dimensions, cta } = homeStrategicHiring;
-  const [selectedId, setSelectedId] = useState(dimensions[0].items[0].id);
+  const [selectedId, setSelectedId] = useState<string>(dimensions[0].items[0].id);
 
   const selected = useMemo(() => {
     for (const dim of dimensions) {

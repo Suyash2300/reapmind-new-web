@@ -1,0 +1,124 @@
+﻿components/ai-copilot/ac-consultation-section.tsx(27,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/android-hire/android-hire-about.tsx(24,24): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+components/android-hire/android-hire-about.tsx(27,23): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+components/android-hire/android-hire-about.tsx(44,21): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+components/android-hire/android-hire-technologies.tsx(66,23): error TS2339: Property 'icon' does not exist on type '{ readonly name: "Kotlin"; readonly icon: "/android-hire/tech-kotlin.png"; } | { readonly name: "Android SDK"; readonly icon: "/android-hire/tech-android-sdk.png"; } | { readonly name: "Java"; readonly icon: "/android-hire/tech-java.png"; } | ... 26 more ... | { ...; }'.
+  Property 'icon' does not exist on type '{ readonly name: "Jetpack Glance"; }'.
+components/android-hire/android-hire-technologies.tsx(68,38): error TS2339: Property 'icon' does not exist on type '{ readonly name: "Kotlin"; readonly icon: "/android-hire/tech-kotlin.png"; } | { readonly name: "Android SDK"; readonly icon: "/android-hire/tech-android-sdk.png"; } | { readonly name: "Java"; readonly icon: "/android-hire/tech-java.png"; } | ... 26 more ... | { ...; }'.
+  Property 'icon' does not exist on type '{ readonly name: "Jetpack Glance"; }'.
+components/android-hire/android-hire-trusted-logos.tsx(44,11): error TS2322: Type '{ hidden: { opacity: number; y: number; scale: number; filter: string; }; visible: { opacity: number; y: number; scale: number; filter: string; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; scale: number; filter: string; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; scale: number; filter: string; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; scale: number; filter: string; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/app-mod-bangalore/am-upgrade-modules.tsx(69,46): error TS2345: Argument of type '"security" | "features" | "performance" | "cloud" | "stack-migration" | "ux"' is not assignable to parameter of type 'SetStateAction<"stack-migration">'.
+  Type '"security"' is not assignable to type 'SetStateAction<"stack-migration">'.
+components/blockchain/bc-consultation-section.tsx(27,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/blockchain/bc-core-services.tsx(78,23): error TS2322: Type '{}' is not assignable to type 'string | StaticImport'.
+components/blockchain/bc-industries.tsx(69,19): error TS2322: Type '{}' is not assignable to type 'string | StaticImport'.
+components/enterprise-mobility/em-process.tsx(12,7): error TS4104: The type 'readonly [{ readonly step: "01"; readonly title: "Planning"; readonly description: "In the planning phase, we engage in discussions with your organization to understand your business objectives, challenges, and specific mobility requirements. We analyze your target audience and their needs to align the mobile soluti...' is 'readonly' and cannot be assigned to the mutable type 'ProcessStep[]'.
+components/enterprise-mobility/em-sectors.tsx(8,55): error TS4104: The type 'readonly [{ readonly name: "Healthcare"; readonly icon: "/enterprise-mobility/doctor.png"; }, { readonly name: "Banking"; readonly icon: "/enterprise-mobility/mobile-payment.png"; }, { ...; }, ... 8 more ..., { ...; }]' is 'readonly' and cannot be assigned to the mutable type 'SectorItem[]'.
+components/generative-ai/gai-consultation-section.tsx(30,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/home/home-brilliant-professionals.tsx(50,18): error TS7053: Element implicitly has an 'any' type because expression of type '"left" | "right"' can't be used to index type '{ readonly top: "4%"; readonly left: "2%"; readonly rotate: -9; readonly path: "M50,50 C35,38 18,22 12,14"; } | { readonly top: "6%"; readonly right: "1%"; readonly rotate: 7; readonly path: "M50,50 C62,36 78,20 88,12"; } | { ...; } | { ...; }'.
+  Property 'left' does not exist on type '{ readonly top: "4%"; readonly left: "2%"; readonly rotate: -9; readonly path: "M50,50 C35,38 18,22 12,14"; } | { readonly top: "6%"; readonly right: "1%"; readonly rotate: 7; readonly path: "M50,50 C62,36 78,20 88,12"; } | { ...; } | { ...; }'.
+components/home/home-strategic-hiring-section.tsx(230,17): error TS2322: Type 'Dispatch<SetStateAction<"contract">>' is not assignable to type '(id: string) => void'.
+  Types of parameters 'value' and 'id' are incompatible.
+    Type 'string' is not assignable to type 'SetStateAction<"contract">'.
+components/metaverse/mv-consultation-section.tsx(27,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/mvp/mvp-hero.tsx(80,19): error TS2322: Type '{ hidden: { opacity: number; y: number; rotateX: number; }; visible: { opacity: number; y: number; rotateX: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; rotateX: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; rotateX: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; rotateX: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+components/nextjs-development/ndx-custom-process.tsx(59,11): error TS2322: Type '{ children: Element[]; delay: number; className: string; style: { background: string; }; }' is not assignable to type 'IntrinsicAttributes & BlurFadeInProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & BlurFadeInProps'.
+components/nft-marketplace/nft-consultation-section.tsx(27,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/nodejs-hire/nodejs-hire-logos.tsx(61,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/nodejs-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/nodejs-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/nodejs-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/nodejs-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/nodejs-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/nodejs-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/nodejs-hire/nodejs-hire-logos.tsx(62,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/nodejs-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/nodejs-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/nodejs-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/nodejs-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/nodejs-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/nodejs-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/professional-networking/pnp-features.tsx(64,22): error TS2353: Object literal may only specify known properties, and 'transformPerspective' does not exist in type 'Properties<string | number, string & {}>'.
+components/python-hire/python-hire-logos.tsx(47,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/python-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/python-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/python-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/python-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/python-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/python-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/python-hire/python-hire-logos.tsx(48,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/python-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/python-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/python-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/python-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/python-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/python-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/react-development/rdx-custom-process.tsx(59,11): error TS2322: Type '{ children: Element[]; delay: number; className: string; style: { borderColor: string; background: string; }; }' is not assignable to type 'IntrinsicAttributes & BlurFadeInProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & BlurFadeInProps'.
+components/react-hire/react-hire-logos.tsx(65,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/react-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/react-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/react-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/react-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/react-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/react-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/react-hire/react-hire-logos.tsx(66,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/react-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/react-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/react-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/react-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/react-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/react-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/remote-contract/rc-pricing.tsx(40,25): error TS2339: Property 'highlight' does not exist on type '{ readonly region: "USA"; readonly rates: readonly ["$50 ΓÇô $100", "$80 ΓÇô $150", "$120 ΓÇô $200+"]; } | { readonly region: "Western Europe"; readonly rates: readonly ["$40 ΓÇô $80", "$60 ΓÇô $120", "$100 ΓÇô $180+"]; } | { ...; } | { ...; } | { ...; }'.
+  Property 'highlight' does not exist on type '{ readonly region: "USA"; readonly rates: readonly ["$50 ΓÇô $100", "$80 ΓÇô $150", "$120 ΓÇô $200+"]; }'.
+components/shared/portfolio-case-link.tsx(23,10): error TS2322: Type '{ children: ((string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...>) & (string | ... 8 more ... | MotionValueString)) | null | undefined; ... 345 more ...; className: string; }' is not assignable to type 'Omit<HTMLMotionProps<"div">, "ref">'.
+  Types of property 'onCopy' are incompatible.
+    Type 'ClipboardEventHandler<HTMLAnchorElement> | undefined' is not assignable to type 'ClipboardEventHandler<HTMLDivElement> | undefined'.
+      Type 'ClipboardEventHandler<HTMLAnchorElement>' is not assignable to type 'ClipboardEventHandler<HTMLDivElement>'.
+        Property 'align' is missing in type 'HTMLAnchorElement' but required in type 'HTMLDivElement'.
+components/startup/su-consultation-section.tsx(27,26): error TS2339: Property 'value' does not exist on type 'never'.
+components/swift-hire/swift-hire-logos.tsx(58,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/swift-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/swift-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/swift-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/swift-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/swift-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/swift-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/swift-hire/swift-hire-logos.tsx(59,25): error TS2322: Type '({ readonly name: "Bosch"; readonly src: "/swift-hire/bosch.png"; } | { readonly name: "Oracle"; readonly src: "/swift-hire/oracle.png"; } | { readonly name: "Disney"; readonly src: "/swift-hire/disney-client.png"; } | ... 5 more ... | { ...; })[]' is not assignable to type 'readonly [{ readonly name: "Bosch"; readonly src: "/swift-hire/bosch.png"; }, { readonly name: "Oracle"; readonly src: "/swift-hire/oracle.png"; }, { readonly name: "Disney"; readonly src: "/swift-hire/disney-client.png"; }, ... 5 more ..., { ...; }]'.
+  Target requires 9 element(s) but source may have fewer.
+components/vue-development/vdx-custom-process.tsx(59,11): error TS2322: Type '{ children: Element[]; delay: number; className: string; style: { borderColor: string; background: string; }; }' is not assignable to type 'IntrinsicAttributes & BlurFadeInProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & BlurFadeInProps'.
+lib/blog.ts(172,11): error TS7034: Variable 'foundUrl' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/blog.ts(174,23): error TS7005: Variable 'foundUrl' implicitly has an 'any' type.
+lib/doorstep-banking-blog-config.ts(33,23): error TS1354: 'readonly' type modifier is only permitted on array and tuple literal types.
+lib/healthcare-service-factory.ts(108,5): error TS2322: Type '{ readonly title: "What clients say about us"; readonly items: readonly [{ readonly name: "Miss Gunjan Jain"; readonly role: "Founder and CEO of Internationally Awarded Healthtech Ventures"; readonly image: "/testimonials/gunjan-jain.png"; readonly quote: "At Vytal, our collaboration with Reapmind on two application...' is not assignable to type '{ title: string; items: { name: string; role: string; image: string; quote: string; }[]; }'.
+  Types of property 'items' are incompatible.
+    The type 'readonly [{ readonly name: "Miss Gunjan Jain"; readonly role: "Founder and CEO of Internationally Awarded Healthtech Ventures"; readonly image: "/testimonials/gunjan-jain.png"; readonly quote: "At Vytal, our collaboration with Reapmind on two applications was exceptional. Their dynamic team grasped our unique needs,...' is 'readonly' and cannot be assigned to the mutable type '{ name: string; role: string; image: string; quote: string; }[]'.

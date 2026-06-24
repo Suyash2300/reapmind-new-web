@@ -65,8 +65,7 @@ export function BcIndustries() {
               className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-black/55 shadow-[0_32px_80px_-40px_rgba(0,0,0,0.65)]"
             >
               <div className="relative h-56 sm:h-64 md:h-72">
-                <Image
-                  src={sectorImage}
+                <Image src={(sectorImage as string) || ''}
                   alt={sector.title}
                   fill
                   quality={92}

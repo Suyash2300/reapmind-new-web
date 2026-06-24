@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { PythonHireTrustedLogos } from "@/components/python-hire/python-hire-trusted-logos";
 import { pythonHireConfig } from "@/lib/python-hire-config";
 
-function MarqueeRow({ logos, reverse }: { logos: typeof pythonHireConfig.clientLogos.logos; reverse?: boolean }) {
+function MarqueeRow({ logos, reverse }: { logos: readonly { name: string; src: string }[]; reverse?: boolean }) {
   const track = [...logos, ...logos];
   return (
     <div className="overflow-hidden">

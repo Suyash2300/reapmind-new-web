@@ -8,7 +8,7 @@ import { metaverseConfig } from "@/lib/metaverse-config";
 
 export function MvJourneySolutions() {
   const { journey } = metaverseConfig;
-  const [activeId, setActiveId] = useState(journey.items[0].id);
+  const [activeId, setActiveId] = useState<string>(journey.items[0].id);
   const active = journey.items.find((item) => item.id === activeId) ?? journey.items[0];
 
   return (

@@ -16,7 +16,7 @@ export function RpmSectors() {
         </h2>
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4">
-          {rpmConfig.sectors.items.map((sector, index) => (
+          {rpmConfig.sectors.items.map((sector: any, index: number) => (
             <motion.div
               key={sector.name}
               className="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-center backdrop-blur-sm sm:p-5"

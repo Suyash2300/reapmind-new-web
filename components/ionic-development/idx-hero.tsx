@@ -42,7 +42,7 @@ export function IdxHero() {
           style={{ background: `radial-gradient(ellipse 85% 65% at 50% -15%, rgba(56,128,255,0.28), transparent)` }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_40%_at_90%_75%,rgba(97,218,251,0.1),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">

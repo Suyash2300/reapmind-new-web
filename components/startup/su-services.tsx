@@ -8,7 +8,7 @@ import { startupConfig } from "@/lib/startup-config";
 
 export function SuServices() {
   const { services } = startupConfig;
-  const [activeId, setActiveId] = useState(services.items[0].id);
+  const [activeId, setActiveId] = useState<string>(services.items[0].id);
   const active = services.items.find((item) => item.id === activeId) ?? services.items[0];
 
   return (

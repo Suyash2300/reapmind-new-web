@@ -10,7 +10,7 @@ import { blockchainConfig } from "@/lib/blockchain-config";
 
 export function BcCoreServices() {
   const { coreServices } = blockchainConfig;
-  const [activeId, setActiveId] = useState(coreServices.items[0].id);
+  const [activeId, setActiveId] = useState<string>(coreServices.items[0].id);
   const [imgFailed, setImgFailed] = useState<Record<string, boolean>>({});
   const active =
     coreServices.items.find((item) => item.id === activeId) ?? coreServices.items[0];
@@ -74,8 +74,7 @@ export function BcCoreServices() {
                     transition={{ duration: 0.35 }}
                     className="absolute inset-0"
                   >
-                    <Image
-                      src={activeImage}
+                    <Image src={(activeImage as string) || ''}
                       alt={active.title}
                       fill
                       quality={92}

@@ -35,6 +35,8 @@
   --foreground: var(--color-text-black);
   --primary: var(--color-primary);
   --primary-foreground: var(--color-text-white);
+  /* RGB channel split for rgba() usage in components */
+  --primary-rgb: 26, 105, 253;
 
   /* Fluid typography — lightly scaled up for readability */
   --fs-xs: 13px;

@@ -20,7 +20,7 @@ export function RpmTestimonials() {
 
         <div className="relative mx-auto mt-12 max-w-3xl">
           <div className="mb-6 flex justify-center gap-2">
-            {items.map((_, index) => (
+            {items.map((_: any, index: number) => (
               <button
                 key={index}
                 type="button"

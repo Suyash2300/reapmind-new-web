@@ -107,7 +107,7 @@ export function VpaHero() {
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_65%_at_50%_-15%,rgba(245,158,11,0.28),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_90%_60%,rgba(6,182,212,0.12),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
         <motion.div
           className="absolute -left-24 top-1/3 h-80 w-80 rounded-full bg-amber-500/15 blur-[100px]"
           animate={reducedMotion ? undefined : { x: [0, 30, 0], y: [0, -20, 0] }}

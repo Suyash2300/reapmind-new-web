@@ -37,7 +37,7 @@ export function RcPricing() {
                 <tr
                   key={row.region}
                   className={`border-b border-white/5 ${
-                    row.highlight ? "bg-primary/10" : "bg-transparent"
+                    (row as any).highlight ? "bg-primary/10" : "bg-transparent"
                   }`}
                 >
                   <td className="px-4 py-4 font-semibold text-white">{row.region}</td>

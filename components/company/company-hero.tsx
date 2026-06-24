@@ -32,7 +32,7 @@ export function CompanyHero() {
           priority
           className="object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-transparent to-transparent" />
       </motion.div>
 

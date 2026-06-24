@@ -126,7 +126,7 @@ export const androidHireConfig = {
       { name: "Kotlin", icon: "/android-hire/tech-kotlin.png" },
       { name: "Android SDK", icon: "/android-hire/tech-android-sdk.png" },
       { name: "Java", icon: "/android-hire/tech-java.png" },
-      { name: "Jetpack Glance" },
+      { name: "Jetpack Glance", icon: "" },
       { name: "Jetpack Compose", icon: "/android-hire/tech-jetpack-compose.png" },
       { name: "Room Persistence Library", icon: "/android-hire/tech-room.png" },
       { name: "Android Architecture Components", icon: "/android-hire/tech-architecture.png" },

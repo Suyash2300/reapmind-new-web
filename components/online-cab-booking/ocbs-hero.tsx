@@ -39,7 +39,7 @@ export function OcbsHero() {
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_65%_at_50%_-15%,rgba(139,92,246,0.28),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_40%_at_90%_80%,rgba(26,105,253,0.14),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/70 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
         <motion.div
           className="absolute -right-20 top-1/4 h-72 w-72 rounded-full bg-violet-500/15 blur-[100px]"
           animate={reducedMotion ? undefined : { x: [0, -25, 0], y: [0, 20, 0] }}

@@ -10,7 +10,7 @@ import { offshoreBangaloreConfig } from "@/lib/offshore-bangalore-config";
 
 export function ObProcess() {
   const { devProcess } = offshoreBangaloreConfig;
-  const [activeId, setActiveId] = useState(devProcess.items[0].id);
+  const [activeId, setActiveId] = useState<string>(devProcess.items[0].id);
   const active = devProcess.items.find((item) => item.id === activeId) ?? devProcess.items[0];
 
   return (

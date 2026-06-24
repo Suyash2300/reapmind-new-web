@@ -32,7 +32,7 @@ export function ReaHero() {
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_65%_at_50%_-15%,rgba(217,119,6,0.28),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_40%_at_90%_75%,rgba(26,105,253,0.12),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/75 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">

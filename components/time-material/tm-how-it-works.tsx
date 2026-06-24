@@ -9,7 +9,7 @@ import { timeMaterialConfig } from "@/lib/time-material-config";
 
 export function TmHowItWorks() {
   const { howItWorks } = timeMaterialConfig;
-  const [activeId, setActiveId] = useState(howItWorks.steps[0].id);
+  const [activeId, setActiveId] = useState<string>(howItWorks.steps[0].id);
   const active = howItWorks.steps.find((step) => step.id === activeId) ?? howItWorks.steps[0];
 
   return (

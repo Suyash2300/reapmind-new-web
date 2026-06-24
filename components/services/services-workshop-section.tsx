@@ -8,7 +8,7 @@ import { HydrationButton } from "@/components/ui/hydration-button";
 import { servicesPrimary } from "@/lib/services-page";
 
 export function ServicesWorkshopSection() {
-  const [activeId, setActiveId] = useState(servicesPrimary[0].id);
+  const [activeId, setActiveId] = useState<string>(servicesPrimary[0].id);
   const stationRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {

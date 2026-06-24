@@ -9,7 +9,7 @@ import { fixedCostConfig } from "@/lib/fixed-cost-config";
 
 export function FcDifferentiators() {
   const { differentiators } = fixedCostConfig;
-  const [activeId, setActiveId] = useState(differentiators.items[0].id);
+  const [activeId, setActiveId] = useState<string>(differentiators.items[0].id);
   const active =
     differentiators.items.find((item) => item.id === activeId) ?? differentiators.items[0];
 

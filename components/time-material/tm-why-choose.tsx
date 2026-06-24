@@ -9,7 +9,7 @@ import { timeMaterialConfig } from "@/lib/time-material-config";
 
 export function TmWhyChoose() {
   const { whyChoose } = timeMaterialConfig;
-  const [activeId, setActiveId] = useState(whyChoose.items[0].id);
+  const [activeId, setActiveId] = useState<string>(whyChoose.items[0].id);
   const active = whyChoose.items.find((item) => item.id === activeId) ?? whyChoose.items[0];
 
   return (

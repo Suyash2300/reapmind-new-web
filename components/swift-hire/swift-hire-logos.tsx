@@ -6,7 +6,7 @@ import { SwiftHireTrustedLogos } from "@/components/swift-hire/swift-hire-truste
 import { swiftHireConfig } from "@/lib/swift-hire-config";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
-function MarqueeRow({ logos, reverse }: { logos: typeof swiftHireConfig.clientLogos.logos; reverse?: boolean }) {
+function MarqueeRow({ logos, reverse }: { logos: readonly { name: string; src: string }[]; reverse?: boolean }) {
   const reduced = usePrefersReducedMotion();
   const track = [...logos, ...logos];
 

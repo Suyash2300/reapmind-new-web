@@ -6,7 +6,7 @@ import { NodejsHireTrustedLogos } from "@/components/nodejs-hire/nodejs-hire-tru
 import { nodejsHireConfig } from "@/lib/nodejs-hire-config";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
-function MarqueeRow({ logos, reverse }: { logos: typeof nodejsHireConfig.clientLogos.logos; reverse?: boolean }) {
+function MarqueeRow({ logos, reverse }: { logos: readonly { name: string; src: string }[]; reverse?: boolean }) {
   const reduced = usePrefersReducedMotion();
   const doubled = [...logos, ...logos];
 

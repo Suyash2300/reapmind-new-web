@@ -21,7 +21,7 @@ export function ServicesHeroSection() {
         priority
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/95 to-surface-dark/70"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface-dark via-black/95 to-black/70"
         aria-hidden
       />
 

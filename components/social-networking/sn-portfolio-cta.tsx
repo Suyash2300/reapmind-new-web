@@ -33,7 +33,7 @@ export function SnPortfolioCta() {
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               />
             )}
-            <span className="relative rounded-full bg-surface-dark/90 px-4 py-2.5 transition-colors group-hover:bg-surface-dark/70">
+            <span className="relative rounded-full bg-black/90 px-4 py-2.5 transition-colors group-hover:bg-black/70">
               {socialNetworkingConfig.portfolioCta}
             </span>
           </Link>

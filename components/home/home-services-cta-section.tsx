@@ -61,11 +61,11 @@ function ServiceMarquee() {
     <div className="relative mt-8 sm:mt-10">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-surface-dark via-surface-dark/90 to-transparent sm:w-20"
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-surface-dark via-black/90 to-transparent sm:w-20"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-surface-dark via-surface-dark/90 to-transparent sm:w-20"
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-surface-dark via-black/90 to-transparent sm:w-20"
       />
 
       <MarqueeRow track={rowOne} duration="48s" />

@@ -12,7 +12,7 @@ const smoothEase = [0.22, 1, 0.36, 1] as const;
 export function BcExtendedServices() {
   const { extendedServices } = blockchainConfig;
   const reducedMotion = usePrefersReducedMotion();
-  const [activeId, setActiveId] = useState(extendedServices.items[0].id);
+  const [activeId, setActiveId] = useState<string>(extendedServices.items[0].id);
   const active =
     extendedServices.items.find((item) => item.id === activeId) ?? extendedServices.items[0];
 

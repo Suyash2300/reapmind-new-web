@@ -8,7 +8,7 @@ import { timeMaterialConfig } from "@/lib/time-material-config";
 
 export function TmTechStack() {
   const { techStack } = timeMaterialConfig;
-  const [activeId, setActiveId] = useState(techStack.categories[0].id);
+  const [activeId, setActiveId] = useState<string>(techStack.categories[0].id);
   const active =
     techStack.categories.find((cat) => cat.id === activeId) ?? techStack.categories[0];
 

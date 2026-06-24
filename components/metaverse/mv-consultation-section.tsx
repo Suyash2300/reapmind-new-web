@@ -16,7 +16,7 @@ export function MvConsultationSection() {
             <h2 className="text-h3 font-bold text-white sm:text-h2">{consultation.title}</h2>
             <p className="mt-3 text-para text-white/60">{consultation.subtitle}</p>
             <ul className="mt-6 space-y-3 text-para text-white/75">
-              {consultation.contacts.map((item) => (
+              {consultation.contacts.map((item: { label: string; value: string; href?: string }) => (
                 <li key={item.label}>
                   <span className="font-semibold text-white">{item.label}: </span>
                   {item.href ? (

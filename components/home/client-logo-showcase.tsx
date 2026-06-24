@@ -30,9 +30,9 @@ export function ClientLogoShowcase({
 
   if (reducedMotion) {
     return (
-      <ul className="grid grid-cols-2 gap-10 sm:grid-cols-3 sm:gap-12 lg:grid-cols-5 lg:gap-14">
+      <ul className="grid grid-cols-3 gap-6 sm:grid-cols-4 lg:grid-cols-5">
         {logos.map((logo) => (
-          <LogoItem key={logo.name} logo={logo} size={size} />
+          <LogoItem key={logo.name} logo={logo} size={size} animated={false} />
         ))}
       </ul>
     );
@@ -40,13 +40,10 @@ export function ClientLogoShowcase({
 
   const rowOne = [...logos, ...logos];
   const rowTwo = [...[...logos].reverse(), ...[...logos].reverse()];
-  const rowMinH =
-    size === "large"
-      ? "min-h-[12rem] sm:min-h-[14rem] md:min-h-[16rem] lg:min-h-[18rem]"
-      : "min-h-[8.5rem] sm:min-h-[10rem] md:min-h-[11rem]";
 
   return (
-    <div className={`pointer-events-none relative select-none ${rowMinH}`}>
+    <div className="pointer-events-none relative select-none overflow-hidden">
+      {/* Edge fades */}
       <div
         className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r ${fadeClass} to-transparent sm:w-28`}
       />
@@ -80,45 +77,64 @@ function LogoRow({
   size?: LogoSize;
 }) {
   return (
-    <div className={`overflow-hidden py-1 ${className}`}>
+    <div className={`overflow-hidden py-2 ${className}`}>
       <div
-        className={`flex w-max items-center gap-12 animate-logo-marquee sm:gap-16 md:gap-20 lg:gap-24 ${
+        className={`flex w-max items-center gap-10 animate-logo-marquee sm:gap-14 md:gap-20 ${
           reverse ? "[animation-direction:reverse]" : ""
         }`}
         style={{ animationDuration: duration }}
       >
         {track.map((logo, i) => (
-          <LogoItem key={`${logo.name}-${i}`} logo={logo} size={size} />
+          <LogoItem key={`${logo.name}-${i}`} logo={logo} size={size} animated />
         ))}
       </div>
     </div>
   );
 }
 
+/**
+ * Every logo slot has the SAME fixed height + width.
+ * object-contain makes sure both wide wordmarks and compact icons
+ * fill the box proportionally — no logo ever looks bigger/smaller.
+ */
 const logoSizeStyles: Record<LogoSize, { slot: string; sizes: string }> = {
   default: {
-    slot: "h-16 w-[150px] sm:h-20 sm:w-[180px] md:h-24 md:w-[200px]",
-    sizes: "(max-width: 640px) 150px, 200px",
+    // h-16 = 64px tall, w-40 = 160px wide — comfortable for all logo types
+    slot: "h-16 w-40 sm:h-20 sm:w-48 md:h-20 md:w-52",
+    sizes: "(max-width: 640px) 160px, 208px",
   },
   large: {
-    slot: "h-24 w-[220px] sm:h-28 sm:w-[260px] md:h-32 md:w-[300px] lg:h-36 lg:w-[340px]",
-    sizes: "(max-width: 640px) 220px, (max-width: 1024px) 260px, 340px",
+    slot: "h-20 w-52 sm:h-24 sm:w-60 md:h-28 md:w-72 lg:h-32 lg:w-80",
+    sizes: "(max-width: 640px) 208px, (max-width: 1024px) 240px, 320px",
   },
 };
 
-function LogoItem({ logo, size = "default" }: { logo: Logo; size?: LogoSize }) {
+function LogoItem({
+  logo,
+  size = "default",
+  animated = true,
+}: {
+  logo: Logo;
+  size?: LogoSize;
+  animated?: boolean;
+}) {
   const s = logoSizeStyles[size];
 
   return (
-    <div className={`relative shrink-0 ${s.slot}`}>
+    <div
+      className={`relative shrink-0 ${s.slot} ${
+        animated
+          ? "pointer-events-auto transition-transform duration-300 ease-out hover:scale-110"
+          : ""
+      }`}
+    >
       <Image
         src={logo.src}
         alt={logo.name}
         fill
-        quality={100}
         unoptimized
         sizes={s.sizes}
-        className="object-contain brightness-0 invert"
+        className="object-contain brightness-0 invert opacity-75 transition-opacity duration-300 hover:opacity-100"
       />
     </div>
   );

@@ -36,7 +36,7 @@ export function RpmInterfaces() {
           )}
 
           <div className="space-y-4">
-            {rpmConfig.interfaces.map((iface, index) => {
+            {rpmConfig.interfaces.map((iface: any, index: number) => {
               const isOpen = open === index;
               return (
                 <motion.article
@@ -75,7 +75,7 @@ export function RpmInterfaces() {
                         transition={{ duration: 0.35 }}
                         className="overflow-hidden border-t border-white/8 px-5 pb-5"
                       >
-                        {iface.items.map((item, pi) => (
+                        {iface.items.map((item: any, pi: number) => (
                           <motion.li
                             key={item.label}
                             className="mt-4 border-l-2 border-amber-500/50 pl-4"

@@ -38,7 +38,7 @@ export function RisClientLogos() {
               className="relative flex h-20 w-[170px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 sm:h-24 sm:w-[210px]"
               whileHover={reduced ? undefined : { scale: 1.05, borderColor: "rgba(167,139,250,0.5)" }}
             >
-              <Image src={logo.src} alt={logo.name} fill className="object-contain p-3" sizes="220px" />
+              <Image src={logo.src} alt={logo.name} fill className="object-contain p-1" sizes="220px" />
             </motion.div>
           ))}
         </motion.div>

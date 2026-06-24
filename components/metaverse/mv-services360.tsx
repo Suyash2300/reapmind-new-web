@@ -8,7 +8,7 @@ import { metaverseConfig } from "@/lib/metaverse-config";
 
 export function MvServices360() {
   const { services360 } = metaverseConfig;
-  const [activeId, setActiveId] = useState(services360.items[0].id);
+  const [activeId, setActiveId] = useState<string>(services360.items[0].id);
   const active =
     services360.items.find((item) => item.id === activeId) ?? services360.items[0];
 

@@ -36,7 +36,7 @@ export function FmHero() {
           priority
           onError={() => setImgFailed(true)}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/75 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_0%,rgba(26,105,253,0.25),transparent)]" />
       </div>
 

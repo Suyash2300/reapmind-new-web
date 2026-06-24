@@ -17,7 +17,7 @@ const wordVariant = {
     opacity: 1,
     y: 0,
     rotateX: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 };
 
@@ -130,7 +130,7 @@ export function MvpHero() {
             <motion.div
               initial={{ opacity: 0, rotateY: -25, x: 40 }}
               animate={{ opacity: 1, rotateY: 0, x: 0 }}
-              transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               style={{ perspective: 1000 }}
               className="relative aspect-square rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
             >

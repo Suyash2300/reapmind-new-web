@@ -20,11 +20,11 @@ export function SuHero() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover opacity-22"
+          className="object-cover opacity-20"
           priority
           onError={() => setImgFailed(true)}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/85 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_75%_0%,rgba(26,105,253,0.2),transparent)]" />
       </div>
 

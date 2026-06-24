@@ -11,7 +11,7 @@ type SectorItem = {
 
 type ServiceSectorsSectionProps = {
   title: string;
-  items: SectorItem[];
+  items: readonly SectorItem[] | SectorItem[];
 };
 
 export function ServiceSectorsSection({ title, items }: ServiceSectorsSectionProps) {

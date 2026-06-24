@@ -10,7 +10,7 @@ import { aiCopilotConfig } from "@/lib/ai-copilot-config";
 
 export function AcServices() {
   const { services } = aiCopilotConfig;
-  const [activeId, setActiveId] = useState(services.items[0].id);
+  const [activeId, setActiveId] = useState<string>(services.items[0].id);
   const active = services.items.find((item) => item.id === activeId) ?? services.items[0];
 
   return (

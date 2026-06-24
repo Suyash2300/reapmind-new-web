@@ -30,7 +30,7 @@ export type DsbSection = {
   paragraphs?: readonly string[];
   bullets?: readonly string[];
   subsections?: readonly DsbSubsection[];
-  nestedSubsections?: readonly { title: string; subsections: readonly DsbSubsection[] };
+  nestedSubsections?: { title: string; subsections: readonly DsbSubsection[] };
   stats?: readonly { value: string; label: string }[];
   priceBands?: readonly { range: string; label: string }[];
   faqs?: readonly DsbFaq[];

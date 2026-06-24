@@ -31,7 +31,7 @@ export function DpmHero() {
           quality={90}
           onError={() => setImgFailed(true)}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/80 via-surface-dark/94 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/95 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_60%_at_15%_0%,rgba(26,105,253,0.22),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_90%_20%,rgba(139,92,246,0.12),transparent)]" />
       </div>

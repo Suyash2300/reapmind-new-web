@@ -37,7 +37,7 @@ export function BcHero() {
             background: `radial-gradient(ellipse 75% 55% at 20% -5%, ${BC_ACCENT}44, transparent), radial-gradient(ellipse 45% 40% at 85% 90%, ${BC_GOLD}22, transparent)`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/65 via-surface-dark/95 to-surface-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/95 to-black" />
       </div>
 
       <div className="container-app relative">
