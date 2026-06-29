@@ -5,8 +5,14 @@ import { BlogPost } from '../types/blog';
 
 const BLOGS_DIR = path.join(process.cwd(), 'data', 'blogs');
 
+let cachedBlogs: BlogPost[] | null = null;
+
 // Read all JSON files from the data directory
 export async function getAllBlogs(): Promise<BlogPost[]> {
+  if (cachedBlogs) {
+    return cachedBlogs;
+  }
+
   if (!fs.existsSync(BLOGS_DIR)) {
     return [];
   }
@@ -28,7 +34,8 @@ export async function getAllBlogs(): Promise<BlogPost[]> {
   }
 
   // Sort by date descending
-  return blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  cachedBlogs = blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return cachedBlogs;
 }
 
 export async function getBlogBySlug(slug: string): Promise<BlogPost | null> {
