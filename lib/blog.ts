@@ -86,14 +86,11 @@ export function sanitizeBlogContent(rawHtml: string): string {
   
   // Remove elementor-specific empty elements or layout blocks that add no content
   // Sometimes Elementor has deeply nested empty divs
-  let emptyDivsFound = true;
-  while (emptyDivsFound) {
+  // Remove empty divs up to a maximum depth of 5 to avoid infinite loops
+  for (let i = 0; i < 5; i++) {
     const emptyDivs = $('div:empty');
-    if (emptyDivs.length > 0) {
-      emptyDivs.remove();
-    } else {
-      emptyDivsFound = false;
-    }
+    if (emptyDivs.length === 0) break;
+    emptyDivs.remove();
   }
   
   // Remove inline styles from all elements to allow Tailwind Typography to style them
@@ -123,14 +120,10 @@ export function sanitizeBlogContent(rawHtml: string): string {
   });
 
   // Re-run empty div removal just in case unwrapping created new empty divs
-  emptyDivsFound = true;
-  while (emptyDivsFound) {
+  for (let i = 0; i < 5; i++) {
     const emptyDivs = $('div:empty');
-    if (emptyDivs.length > 0) {
-      emptyDivs.remove();
-    } else {
-      emptyDivsFound = false;
-    }
+    if (emptyDivs.length === 0) break;
+    emptyDivs.remove();
   }
 
   // Remove specific id/class attributes from body elements if needed
